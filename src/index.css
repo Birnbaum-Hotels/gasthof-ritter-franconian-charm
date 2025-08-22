@@ -2,39 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Gasthof Ritter St. Georg - Franconian Inn Design System
+Warm, rustic elements with modern typography. All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - warm, natural palette inspired by Franconian countryside */
+    --background: 35 25% 97%; /* warm cream */
+    --foreground: 25 15% 15%; /* deep brown */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system - warm and inviting */
+    --card: 35 20% 95%; /* slightly warmer white */
+    --card-foreground: 25 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 35 20% 95%;
+    --popover-foreground: 25 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - deep forest green (traditional Franconian) */
+    --primary: 140 30% 25%; /* deep forest green */
+    --primary-foreground: 35 25% 97%; /* warm cream */
+    
+    /* Primary variants for depth */
+    --primary-light: 140 25% 35%;
+    --primary-dark: 140 35% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - warm gold/amber (traditional inn warmth) */
+    --secondary: 42 60% 70%; /* warm gold */
+    --secondary-foreground: 25 25% 20%;
+    
+    /* Secondary variants */
+    --secondary-light: 42 50% 80%;
+    --secondary-dark: 42 70% 50%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones - natural stone colors */
+    --muted: 30 15% 88%; /* warm stone */
+    --muted-foreground: 25 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - rustic red for highlights */
+    --accent: 15 60% 60%; /* rustic red */
+    --accent-foreground: 35 25% 97%;
+    
+    /* Accent variants */
+    --accent-light: 15 50% 70%;
+    --accent-dark: 15 70% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs - subtle warm tones */
+    --border: 30 20% 85%; /* warm border */
+    --input: 30 20% 90%; /* warm input bg */
+    --ring: 140 30% 25%; /* primary ring */
+
+    /* Custom design tokens for Franconian inn theme */
+    --wood: 28 35% 40%; /* rich wood brown */
+    --wood-light: 28 25% 60%;
+    --wood-dark: 28 45% 25%;
+    
+    --stone: 25 10% 70%; /* natural stone */
+    --stone-light: 25 8% 85%;
+    --stone-dark: 25 12% 55%;
+    
+    /* Gradients for warmth and depth */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary-dark)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-wood: linear-gradient(135deg, hsl(var(--wood)) 0%, hsl(var(--wood-light)) 100%);
+    /* Animation keyframes for smooth interactions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
