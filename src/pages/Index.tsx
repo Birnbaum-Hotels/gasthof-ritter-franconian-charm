@@ -105,47 +105,260 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-background">
+      {/* USP Bar */}
+      <section className="py-12 bg-primary">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">
-              Was uns auszeichnet
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Tradition trifft auf modernen Komfort - erleben Sie echte fränkische Gastlichkeit
-            </p>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-center text-primary-foreground">
+            <div className="flex items-center gap-2">
+              <Utensils className="w-5 h-5" />
+              <span className="text-sm font-medium">Fränkische Küche</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-primary-foreground/30"></div>
+            <div className="flex items-center gap-2">
+              <Star className="w-5 h-5" />
+              <span className="text-sm font-medium">Eigener Biergarten</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-primary-foreground/30"></div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-5 h-5" />
+              <span className="text-sm font-medium">Nähe Siemens-Campus & Uni-Klinikum</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-primary-foreground/30"></div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5" />
+              <span className="text-sm font-medium">Kostenlose Parkplätze</span>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Ausgezeichnete Küche</h3>
+      {/* Seasonal Offers */}
+      <section className="py-16 bg-sand-tone-light">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+                Aktuelle Angebote
+              </h2>
               <p className="text-muted-foreground">
-                Traditionelle fränkische Spezialitäten mit frischen, regionalen Zutaten zubereitet
+                Entdecken Sie unsere saisonalen Highlights und besonderen Angebote
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Bed className="w-8 h-8 text-primary-foreground" />
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="shadow-card overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48">
+                    <img 
+                      src={restaurantImage} 
+                      alt="Saisonkarte Frühjahr" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-primary-foreground">
+                      <h3 className="text-xl font-serif font-bold mb-1">Frühjahrs-Saisonkarte</h3>
+                      <p className="text-sm opacity-90">Spargel, Bärlauch & mehr</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Genießen Sie frische Frühjahrsküche mit regionalen Spezialitäten. 
+                      Jetzt bis Ende Mai verfügbar.
+                    </p>
+                    <Button variant="outline" size="sm" className="w-full">
+                      Saisonkarte ansehen
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative h-48">
+                    <img 
+                      src={hotelImage} 
+                      alt="Bergkirchweih 2024" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-wine-red/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-primary-foreground">
+                      <h3 className="text-xl font-serif font-bold mb-1">Bergkirchweih 2024</h3>
+                      <p className="text-sm opacity-90">23. Mai - 3. Juni</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-muted-foreground text-sm mb-4">
+                      Buchen Sie jetzt Ihr Zimmer für die Bergkirchweih. 
+                      Inklusive Anreise-Tipps und Wiesn-Guide.
+                    </p>
+                    <Button variant="accent" size="sm" className="w-full">
+                      Bergkirchweih-Paket buchen
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Reviews */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+                Was unsere Gäste sagen
+              </h2>
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
+                  ))}
+                </div>
+                <span className="text-lg font-semibold text-primary">4.8</span>
+                <span className="text-muted-foreground">aus 150+ Bewertungen</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Komfortable Zimmer</h3>
-              <p className="text-muted-foreground">
-                Gemütlich eingerichtete Zimmer mit allen modernen Annehmlichkeiten
-              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <Card className="shadow-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    "Ausgezeichnete fränkische Küche in gemütlicher Atmosphäre. 
+                    Das Schäuferla war perfekt und der Service sehr freundlich."
+                  </p>
+                  <div className="text-xs text-muted-foreground">
+                    <span className="font-medium">Familie M.</span> • Google Bewertung
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    "Perfekt für Geschäftsreisen. Nah am Siemens-Campus, 
+                    saubere Zimmer und hervorragendes Frühstück."
+                  </p>
+                  <div className="text-xs text-muted-foreground">
+                    <span className="font-medium">Thomas K.</span> • Google Bewertung
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    "Unsere Hochzeit war traumhaft! Rundum-Service, 
+                    tolles Essen und wunderschöne Räumlichkeiten."
+                  </p>
+                  <div className="text-xs text-muted-foreground">
+                    <span className="font-medium">Sarah & Michael</span> • Google Bewertung
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-hero rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Perfekte Lage</h3>
+              <p className="text-muted-foreground mb-4">Vertrauen Sie auf über 150 positive Bewertungen</p>
+              <Button variant="outline">
+                Alle Bewertungen auf Google ansehen
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-16 bg-gradient-warm">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+                Perfekte Lage in Erlangen
+              </h2>
               <p className="text-muted-foreground">
-                Im Herzen Frankens gelegen - idealer Ausgangspunkt für Ihre Erkundungen
+                Zentral gelegen zwischen Siemens-Campus und Uni-Klinikum
               </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-primary mb-2">Siemens-Campus</h3>
+                      <p className="text-muted-foreground text-sm">
+                        Nur 5 Minuten Fahrtzeit zum Siemens-Campus Süd. 
+                        Ideal für Geschäftsreisende und Tagungen.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Bed className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-primary mb-2">Uni-Klinikum</h3>
+                      <p className="text-muted-foreground text-sm">
+                        10 Minuten zum Universitätsklinikum. 
+                        Flexible Aufenthalte für Angehörige und Besucher.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-primary mb-2">Verkehrsanbindung</h3>
+                      <p className="text-muted-foreground text-sm">
+                        A3/A73 in 15 Minuten. Busverbindung zur Innenstadt. 
+                        Kostenlose Parkplätze direkt am Haus.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-stone-light rounded-lg p-6">
+                <div className="aspect-video bg-stone rounded-lg flex items-center justify-center mb-4">
+                  <div className="text-center text-muted-foreground">
+                    <MapPin className="w-12 h-12 mx-auto mb-2" />
+                    <p className="text-sm">Google Maps Integration</p>
+                    <p className="text-xs">Interaktive Karte</p>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground mb-2">
+                    Ritter-von-Spix-Straße 7, 91054 Erlangen
+                  </p>
+                  <Button variant="outline" size="sm">
+                    Route planen
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

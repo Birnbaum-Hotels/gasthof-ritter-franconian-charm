@@ -13,6 +13,9 @@ import Hotel from "./pages/Hotel";
 import Angebote from "./pages/Angebote";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
+import Barrierefreiheit from "./pages/Barrierefreiheit";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +38,9 @@ const App = () => (
               <Route path="/angebote" element={<Angebote />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
+              <Route path="/barrierefreiheit" element={<Barrierefreiheit />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

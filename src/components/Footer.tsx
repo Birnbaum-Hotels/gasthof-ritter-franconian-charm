@@ -62,14 +62,14 @@ const Footer = () => {
               <div className="flex items-start gap-2 opacity-90">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <div>Hauptstraße 15</div>
-                  <div>97320 Mainstockheim</div>
+                  <div>Ritter-von-Spix-Straße 7</div>
+                  <div>91054 Erlangen</div>
                   <div>Deutschland</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 opacity-90">
                 <Phone className="w-4 h-4" />
-                <span>+49 9321 123456</span>
+                <span>+49 9131 123456</span>
               </div>
               <div className="flex items-center gap-2 opacity-90">
                 <Mail className="w-4 h-4" />
@@ -116,6 +116,12 @@ const Footer = () => {
             <Link to="/datenschutz" className="hover:opacity-100 transition-opacity">
               Datenschutz
             </Link>
+            <Link to="/barrierefreiheit" className="hover:opacity-100 transition-opacity">
+              Barrierefreiheit
+            </Link>
+            <a href="#" className="hover:opacity-100 transition-opacity">
+              AGB
+            </a>
           </div>
         </div>
       </div>
