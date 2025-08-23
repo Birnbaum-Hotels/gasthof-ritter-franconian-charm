@@ -58,6 +58,22 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Brand colors from logo
+				'wine-red': {
+					DEFAULT: 'hsl(var(--wine-red))',
+					light: 'hsl(var(--wine-red-light))',
+					dark: 'hsl(var(--wine-red-dark))'
+				},
+				'gray-tone': {
+					DEFAULT: 'hsl(var(--gray-tone))',
+					light: 'hsl(var(--gray-tone-light))',
+					dark: 'hsl(var(--gray-tone-dark))'
+				},
+				'sand-tone': {
+					DEFAULT: 'hsl(var(--sand-tone))',
+					light: 'hsl(var(--sand-tone-light))',
+					dark: 'hsl(var(--sand-tone-dark))'
+				},
 				// Franconian inn custom colors
 				wood: {
 					DEFAULT: 'hsl(var(--wood))',
@@ -83,7 +99,8 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-warm': 'var(--gradient-warm)',
-				'gradient-wood': 'var(--gradient-wood)'
+				'gradient-wood': 'var(--gradient-wood)',
+				'gradient-elegant': 'var(--gradient-elegant)'
 			},
 			boxShadow: {
 				'warm': 'var(--shadow-warm)',

@@ -7,7 +7,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Restaurant from "./pages/Restaurant";
+import Feiern from "./pages/Feiern";
+import Tagung from "./pages/Tagung";
 import Hotel from "./pages/Hotel";
+import Angebote from "./pages/Angebote";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -26,10 +29,12 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/restaurant" element={<Restaurant />} />
+              <Route path="/feiern" element={<Feiern />} />
+              <Route path="/tagung" element={<Tagung />} />
               <Route path="/hotel" element={<Hotel />} />
+              <Route path="/angebote" element={<Angebote />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

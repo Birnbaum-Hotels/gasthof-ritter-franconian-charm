@@ -31,13 +31,15 @@ const HeroSection = () => {
 
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary-foreground mb-6 leading-tight">
             Gasthof Ritter<br />
-            <span className="text-secondary">St. Georg</span>
+            <span className="text-sand-tone">St. Georg</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-            Traditionelle fränkische Gastlichkeit seit 1847. 
-            Erleben Sie authentische Küche und gemütliche Hotelzimmer 
-            im Herzen Frankens.
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 leading-relaxed">
+            <span className="text-sand-tone font-semibold">Fränkisch essen. Gut schlafen. Feier & Tagung aus einer Hand.</span>
+          </p>
+          
+          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
+            Traditionelle fränkische Gastlichkeit seit 1847 - nahe Siemens-Campus und Uni-Klinikum Erlangen.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">

@@ -8,7 +8,7 @@ Warm, rustic elements with modern typography. All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors - warm, natural palette inspired by Franconian countryside */
+    /* Base colors - warm, natural palette inspired by brand colors */
     --background: 35 25% 97%; /* warm cream */
     --foreground: 25 15% 15%; /* deep brown */
 
@@ -19,55 +19,73 @@ Warm, rustic elements with modern typography. All colors MUST be HSL.
     --popover: 35 20% 95%;
     --popover-foreground: 25 15% 15%;
 
-    /* Primary - deep forest green (traditional Franconian) */
-    --primary: 140 30% 25%; /* deep forest green */
-    --primary-foreground: 35 25% 97%; /* warm cream */
+    /* Primary - Wine Red (from logo) */
+    --primary: 345 65% 35%; /* deep wine red */
+    --primary-foreground: 0 0% 98%; /* clean white */
     
     /* Primary variants for depth */
-    --primary-light: 140 25% 35%;
-    --primary-dark: 140 35% 15%;
+    --primary-light: 345 65% 45%;
+    --primary-dark: 345 65% 25%;
 
-    /* Secondary - warm gold/amber (traditional inn warmth) */
-    --secondary: 42 60% 70%; /* warm gold */
-    --secondary-foreground: 25 25% 20%;
+    /* Secondary - Sand Tone (from logo) */
+    --secondary: 38 45% 70%; /* warm sand */
+    --secondary-foreground: 222.2 84% 4.9%;
     
     /* Secondary variants */
-    --secondary-light: 42 50% 80%;
-    --secondary-dark: 42 70% 50%;
+    --secondary-light: 38 45% 80%;
+    --secondary-dark: 38 45% 60%;
 
-    /* Muted tones - natural stone colors */
-    --muted: 30 15% 88%; /* warm stone */
-    --muted-foreground: 25 20% 45%;
+    /* Muted tones - Gray Tone (from logo) */
+    --muted: 210 15% 90%; /* light gray */
+    --muted-foreground: 210 15% 45%; /* medium gray */
 
-    /* Accent - rustic red for highlights */
-    --accent: 15 60% 60%; /* rustic red */
-    --accent-foreground: 35 25% 97%;
+    /* Accent - bright sand for highlights */
+    --accent: 25 95% 53%; /* bright sand accent */
+    --accent-foreground: 0 0% 98%;
     
     /* Accent variants */
-    --accent-light: 15 50% 70%;
-    --accent-dark: 15 70% 45%;
+    --accent-light: 25 95% 63%;
+    --accent-dark: 25 95% 43%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     /* Borders and inputs - subtle warm tones */
-    --border: 30 20% 85%; /* warm border */
-    --input: 30 20% 90%; /* warm input bg */
-    --ring: 140 30% 25%; /* primary ring */
+    --border: 214.3 31.8% 91.4%; /* neutral border */
+    --input: 214.3 31.8% 91.4%; /* neutral input bg */
+    --ring: 345 65% 35%; /* wine red ring */
+
+    /* Brand colors from logo - Weinrot, Grau, Sandton */
+    --wine-red: 345 65% 35%;
+    --wine-red-light: 345 65% 45%;
+    --wine-red-dark: 345 65% 25%;
+    --gray-tone: 210 15% 55%;
+    --gray-tone-light: 210 15% 65%;
+    --gray-tone-dark: 210 15% 45%;
+    --sand-tone: 38 45% 70%;
+    --sand-tone-light: 38 45% 80%;
+    --sand-tone-dark: 38 45% 60%;
 
     /* Custom design tokens for Franconian inn theme */
-    --wood: 28 35% 40%; /* rich wood brown */
-    --wood-light: 28 25% 60%;
-    --wood-dark: 28 45% 25%;
+    --wood: 25 35% 45%; /* rich wood brown */
+    --wood-light: 25 35% 55%;
+    --wood-dark: 25 35% 35%;
     
-    --stone: 25 10% 70%; /* natural stone */
-    --stone-light: 25 8% 85%;
-    --stone-dark: 25 12% 55%;
+    --stone: 210 15% 55%; /* natural stone gray */
+    --stone-light: 210 15% 65%;
+    --stone-dark: 210 15% 45%;
     
-    /* Gradients for warmth and depth */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary-dark)) 100%);
-    --gradient-warm: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
-    --gradient-wood: linear-gradient(135deg, hsl(var(--wood)) 0%, hsl(var(--wood-light)) 100%);
+    /* Gradients using brand colors */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--wine-red)) 0%, hsl(var(--wine-red-dark)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--sand-tone-light)) / 0.15 0%, hsl(var(--background)) 100%);
+    --gradient-wood: linear-gradient(135deg, hsl(var(--wood)) 0%, hsl(var(--wood-dark)) 100%);
+    --gradient-elegant: linear-gradient(135deg, hsl(var(--wine-red)) 0%, hsl(var(--gray-tone)) 50%, hsl(var(--sand-tone)) 100%);
+    
+    /* Shadows using brand colors */
+    --shadow-warm: 0 10px 30px -10px hsl(var(--wine-red) / 0.2);
+    --shadow-card: 0 4px 12px hsl(var(--gray-tone) / 0.1);
+    --shadow-hero: 0 20px 60px hsl(var(--wine-red) / 0.3);
+    
     /* Animation keyframes for smooth interactions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
