@@ -8,83 +8,95 @@ Warm, rustic elements with modern typography. All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors - warm, natural palette inspired by brand colors */
-    --background: 35 25% 97%; /* warm cream */
-    --foreground: 25 15% 15%; /* deep brown */
+    /* Base colors - Birnbaum Sand backgrounds */
+    --background: 58 31% 85%; /* #E6E5CD - lighter sand */
+    --foreground: 0 0% 17%; /* #2B2B2B - Graphit */
 
-    /* Card system - warm and inviting */
-    --card: 35 20% 95%; /* slightly warmer white */
-    --card-foreground: 25 15% 15%;
+    /* Card system - clean white on sand */
+    --card: 0 0% 100%; /* pure white */
+    --card-foreground: 0 0% 17%; /* Graphit */
 
-    --popover: 35 20% 95%;
-    --popover-foreground: 25 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
 
-    /* Primary - Wine Red (from logo) */
-    --primary: 345 65% 35%; /* deep wine red */
-    --primary-foreground: 0 0% 98%; /* clean white */
+    /* Primary - Ritter Weinrot (Brand-Primary) */
+    --primary: 2 89% 34%; /* #A5100A */
+    --primary-foreground: 0 0% 100%; /* white */
     
-    /* Primary variants for depth */
-    --primary-light: 345 65% 45%;
-    --primary-dark: 345 65% 25%;
+    /* Primary variants for interactions */
+    --primary-light: 2 51% 47%; /* #B7403B - soft */
+    --primary-dark: 2 89% 27%; /* #840D08 - hover */
 
-    /* Secondary - Sand Tone (from logo) */
-    --secondary: 38 45% 70%; /* warm sand */
-    --secondary-foreground: 222.2 84% 4.9%;
+    /* Secondary - Birnbaum Grün (Brand-Secondary) */
+    --secondary: 133 7% 26%; /* #3E4740 */
+    --secondary-foreground: 0 0% 100%; /* white */
     
     /* Secondary variants */
-    --secondary-light: 38 45% 80%;
-    --secondary-dark: 38 45% 60%;
+    --secondary-light: 129 3% 41%; /* #656C66 - soft */
+    --secondary-dark: 129 7% 21%; /* #323933 - hover */
 
-    /* Muted tones - Gray Tone (from logo) */
-    --muted: 210 15% 90%; /* light gray */
-    --muted-foreground: 210 15% 45%; /* medium gray */
+    /* Muted tones - neutral grays */
+    --muted: 240 5% 88%; /* #E0E0E3 - light gray borders */
+    --muted-foreground: 315 2% 47%; /* #797578 - medium gray */
 
-    /* Accent - bright sand for highlights */
-    --accent: 25 95% 53%; /* bright sand accent */
-    --accent-foreground: 0 0% 98%;
+    /* Accent - highlighting and links */
+    --accent: 2 89% 34%; /* same as primary - Weinrot */
+    --accent-foreground: 0 0% 100%;
     
     /* Accent variants */
-    --accent-light: 25 95% 63%;
-    --accent-dark: 25 95% 43%;
+    --accent-light: 2 51% 47%;
+    --accent-dark: 2 89% 27%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 2 89% 34%; /* using Weinrot for errors */
+    --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs - subtle warm tones */
-    --border: 214.3 31.8% 91.4%; /* neutral border */
-    --input: 214.3 31.8% 91.4%; /* neutral input bg */
-    --ring: 345 65% 35%; /* wine red ring */
+    /* Borders and inputs - subtle neutrals */
+    --border: 240 5% 88%; /* #E0E0E3 */
+    --input: 56 31% 89%; /* #ECEBD9 - hellere sand */
+    --ring: 2 89% 34%; /* Weinrot ring */
 
-    /* Brand colors from logo - Weinrot, Grau, Sandton */
-    --wine-red: 345 65% 35%;
-    --wine-red-light: 345 65% 45%;
-    --wine-red-dark: 345 65% 25%;
-    --gray-tone: 210 15% 55%;
-    --gray-tone-light: 210 15% 65%;
-    --gray-tone-dark: 210 15% 45%;
-    --sand-tone: 38 45% 70%;
-    --sand-tone-light: 38 45% 80%;
-    --sand-tone-dark: 38 45% 60%;
+    /* Brand colors - exact palette */
+    --wine-red: 2 89% 34%; /* #A5100A */
+    --wine-red-light: 2 51% 47%; /* #B7403B */
+    --wine-red-dark: 2 89% 27%; /* #840D08 */
+    --gray-tone: 133 7% 26%; /* #3E4740 - Birnbaum Grün */
+    --gray-tone-light: 129 3% 41%; /* #656C66 */
+    --gray-tone-dark: 129 7% 21%; /* #323933 */
+    --sand-tone: 56 31% 82%; /* #E0DEC0 - base sand */
+    --sand-tone-light: 56 31% 89%; /* #ECEBD9 */
+    --sand-tone-dark: 58 15% 65%; /* #B3B29A */
 
-    /* Custom design tokens for Franconian inn theme */
-    --wood: 25 35% 45%; /* rich wood brown */
+    /* Custom design tokens for brand palette */
+    --wood: 25 35% 45%; /* rich wood brown - legacy */
     --wood-light: 25 35% 55%;
     --wood-dark: 25 35% 35%;
     
-    --stone: 210 15% 55%; /* natural stone gray */
+    --stone: 210 15% 55%; /* natural stone gray - legacy */
     --stone-light: 210 15% 65%;
     --stone-dark: 210 15% 45%;
+
+    /* Additional neutral tones from brand palette */
+    --graphit: 0 0% 17%; /* #2B2B2B - primary text */
+    --dark-gray: 0 0% 29%; /* #4A4A4A - secondary text */
+    --medium-gray: 315 2% 47%; /* #797578 - meta text */
+    --light-gray: 315 2% 62%; /* #9E9B9F - disabled */
+    --light-gray-border: 240 5% 88%; /* #E0E0E3 - UI borders */
+
+    /* Status colors derived from brand palette */
+    --success: 142 17% 29%; /* #3E5747 - from green tones */
+    --warning: 40 52% 53%; /* #C39B4A - warm ocher */
+    --error: 2 89% 34%; /* same as wine red */
     
-    /* Gradients using brand colors */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--wine-red)) 0%, hsl(var(--wine-red-dark)) 100%);
-    --gradient-warm: linear-gradient(180deg, hsl(var(--sand-tone-light)) / 0.15 0%, hsl(var(--background)) 100%);
-    --gradient-wood: linear-gradient(135deg, hsl(var(--wood)) 0%, hsl(var(--wood-dark)) 100%);
-    --gradient-elegant: linear-gradient(135deg, hsl(var(--wine-red)) 0%, hsl(var(--gray-tone)) 50%, hsl(var(--sand-tone)) 100%);
+    /* Gradients using exact brand colors */
+    --gradient-hero: linear-gradient(135deg, hsl(2 89% 34%) 0%, hsl(2 89% 27%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(56 31% 89%) 0%, hsl(58 31% 85%) 100%);
+    --gradient-wood: linear-gradient(135deg, hsl(133 7% 26%) 0%, hsl(129 7% 21%) 100%);
+    --gradient-elegant: linear-gradient(135deg, hsl(2 89% 34%) 0%, hsl(133 7% 26%) 50%, hsl(56 31% 82%) 100%);
     
     /* Shadows using brand colors */
-    --shadow-warm: 0 10px 30px -10px hsl(var(--wine-red) / 0.2);
-    --shadow-card: 0 4px 12px hsl(var(--gray-tone) / 0.1);
-    --shadow-hero: 0 20px 60px hsl(var(--wine-red) / 0.3);
+    --shadow-warm: 0 10px 30px -10px hsl(2 89% 34% / 0.2);
+    --shadow-card: 0 4px 12px hsl(133 7% 26% / 0.1);
+    --shadow-hero: 0 20px 60px hsl(2 89% 34% / 0.3);
     
     /* Animation keyframes for smooth interactions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

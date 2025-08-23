@@ -58,7 +58,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Brand colors from logo
+				// Brand colors - exact from logo palette
 				'wine-red': {
 					DEFAULT: 'hsl(var(--wine-red))',
 					light: 'hsl(var(--wine-red-light))',
@@ -74,7 +74,30 @@ export default {
 					light: 'hsl(var(--sand-tone-light))',
 					dark: 'hsl(var(--sand-tone-dark))'
 				},
-				// Franconian inn custom colors
+				// Neutral text colors
+				'graphit': {
+					DEFAULT: 'hsl(0 0% 17%)', /* #2B2B2B */
+				},
+				'dark-gray': {
+					DEFAULT: 'hsl(0 0% 29%)', /* #4A4A4A */
+				},
+				'medium-gray': {
+					DEFAULT: 'hsl(315 2% 47%)', /* #797578 */
+				},
+				'light-gray': {
+					DEFAULT: 'hsl(315 2% 62%)', /* #9E9B9F */
+					border: 'hsl(240 5% 88%)', /* #E0E0E3 */
+				},
+				// Status colors
+				success: {
+					DEFAULT: 'hsl(142 17% 29%)', /* #3E5747 */
+					foreground: 'hsl(0 0% 100%)'
+				},
+				warning: {
+					DEFAULT: 'hsl(40 52% 53%)', /* #C39B4A */
+					foreground: 'hsl(0 0% 100%)'
+				},
+				// Legacy wood/stone colors for compatibility
 				wood: {
 					DEFAULT: 'hsl(var(--wood))',
 					light: 'hsl(var(--wood-light))',
