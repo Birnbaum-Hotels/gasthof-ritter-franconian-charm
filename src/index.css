@@ -8,11 +8,11 @@ Warm, rustic elements with modern typography. All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors - Birnbaum Sand backgrounds */
-    --background: 58 31% 85%; /* #E6E5CD - lighter sand */
+    /* Base colors - Clean white with very subtle sand accents */
+    --background: 0 0% 100%; /* Pure white for clean look */
     --foreground: 0 0% 17%; /* #2B2B2B - Graphit */
 
-    /* Card system - clean white on sand */
+    /* Card system - clean white */
     --card: 0 0% 100%; /* pure white */
     --card-foreground: 0 0% 17%; /* Graphit */
 
@@ -35,17 +35,17 @@ Warm, rustic elements with modern typography. All colors MUST be HSL.
     --secondary-light: 129 3% 41%; /* #656C66 - soft */
     --secondary-dark: 129 7% 21%; /* #323933 - hover */
 
-    /* Muted tones - neutral grays */
-    --muted: 240 5% 88%; /* #E0E0E3 - light gray borders */
-    --muted-foreground: 315 2% 47%; /* #797578 - medium gray */
+    /* Muted tones - softer neutrals */
+    --muted: 56 31% 97%; /* very light sand for subtle sections */
+    --muted-foreground: 0 0% 29%; /* #4A4A4A - readable gray */
 
-    /* Accent - highlighting and links */
-    --accent: 2 89% 34%; /* same as primary - Weinrot */
-    --accent-foreground: 0 0% 100%;
+    /* Accent - minimal brand color usage */
+    --accent: 56 31% 97%; /* subtle sand for accents */
+    --accent-foreground: 0 0% 17%;
     
     /* Accent variants */
-    --accent-light: 2 51% 47%;
-    --accent-dark: 2 89% 27%;
+    --accent-light: 56 31% 89%;
+    --accent-dark: 56 31% 82%;
 
     --destructive: 2 89% 34%; /* using Weinrot for errors */
     --destructive-foreground: 0 0% 100%;
@@ -87,16 +87,16 @@ Warm, rustic elements with modern typography. All colors MUST be HSL.
     --warning: 40 52% 53%; /* #C39B4A - warm ocher */
     --error: 2 89% 34%; /* same as wine red */
     
-    /* Gradients using exact brand colors */
-    --gradient-hero: linear-gradient(135deg, hsl(2 89% 34%) 0%, hsl(2 89% 27%) 100%);
-    --gradient-warm: linear-gradient(180deg, hsl(56 31% 89%) 0%, hsl(58 31% 85%) 100%);
-    --gradient-wood: linear-gradient(135deg, hsl(133 7% 26%) 0%, hsl(129 7% 21%) 100%);
-    --gradient-elegant: linear-gradient(135deg, hsl(2 89% 34%) 0%, hsl(133 7% 26%) 50%, hsl(56 31% 82%) 100%);
+    /* Subtle gradients for minimal design */
+    --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(56 31% 98%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-wood: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-elegant: linear-gradient(135deg, hsl(0 0% 99%) 0%, hsl(56 31% 98%) 100%);
     
-    /* Shadows using brand colors */
-    --shadow-warm: 0 10px 30px -10px hsl(2 89% 34% / 0.2);
-    --shadow-card: 0 4px 12px hsl(133 7% 26% / 0.1);
-    --shadow-hero: 0 20px 60px hsl(2 89% 34% / 0.3);
+    /* Subtle shadows for clean design */
+    --shadow-warm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-hero: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     
     /* Animation keyframes for smooth interactions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

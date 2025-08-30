@@ -12,10 +12,10 @@ const Index = () => {
       <HeroSection />
 
       {/* Welcome Section */}
-      <section className="py-20 bg-gradient-warm">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-4xl font-serif font-bold text-foreground mb-6">
               Willkommen in der fränkischen Tradition
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -35,8 +35,8 @@ const Index = () => {
                   alt="Restaurant im Gasthof Ritter St. Georg - Traditionelle fränkische Küche"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-wine-red/70 to-transparent" />
-                <div className="absolute bottom-3 left-3 text-primary-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-white">
                   <Utensils className="w-6 h-6 mb-1" />
                   <h3 className="text-lg font-serif font-bold">Restaurant</h3>
                 </div>
@@ -60,8 +60,8 @@ const Index = () => {
                   alt="Feiern im Gasthof Ritter St. Georg - Hochzeiten und Familienfeiern"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-tone/70 to-transparent" />
-                <div className="absolute bottom-3 left-3 text-primary-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-white">
                   <Star className="w-6 h-6 mb-1" />
                   <h3 className="text-lg font-serif font-bold">Feiern</h3>
                 </div>
@@ -85,8 +85,8 @@ const Index = () => {
                   alt="Hotelzimmer im Gasthof Ritter St. Georg - Komfortable Übernachtung"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-sand-tone/70 to-transparent" />
-                <div className="absolute bottom-3 left-3 text-primary-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-white">
                   <Bed className="w-6 h-6 mb-1" />
                   <h3 className="text-lg font-serif font-bold">Hotel</h3>
                 </div>
@@ -95,7 +95,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm mb-3">
                   15 Zimmer nahe Siemens-Campus & Uni-Klinikum
                 </p>
-                <Button variant="accent" className="w-full" size="sm">
+                <Button variant="default" className="w-full" size="sm">
                   <Bed className="w-4 h-4 mr-2" />
                   Zimmer buchen
                 </Button>
@@ -106,24 +106,24 @@ const Index = () => {
       </section>
 
       {/* USP Bar */}
-      <section className="py-12 bg-primary">
+      <section className="py-12 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-6 text-center text-primary-foreground">
+          <div className="flex flex-wrap justify-center items-center gap-6 text-center text-foreground">
             <div className="flex items-center gap-2">
               <Utensils className="w-5 h-5" />
               <span className="text-sm font-medium">Fränkische Küche</span>
             </div>
-            <div className="hidden md:block w-px h-6 bg-primary-foreground/30"></div>
+            <div className="hidden md:block w-px h-6 bg-border"></div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
               <span className="text-sm font-medium">Eigener Biergarten</span>
             </div>
-            <div className="hidden md:block w-px h-6 bg-primary-foreground/30"></div>
+            <div className="hidden md:block w-px h-6 bg-border"></div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span className="text-sm font-medium">Nähe Siemens-Campus & Uni-Klinikum</span>
             </div>
-            <div className="hidden md:block w-px h-6 bg-primary-foreground/30"></div>
+            <div className="hidden md:block w-px h-6 bg-border"></div>
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
               <span className="text-sm font-medium">Kostenlose Parkplätze</span>
@@ -133,11 +133,11 @@ const Index = () => {
       </section>
 
       {/* Seasonal Offers */}
-      <section className="py-16 bg-sand-tone-light">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
                 Aktuelle Angebote
               </h2>
               <p className="text-muted-foreground">
@@ -154,8 +154,8 @@ const Index = () => {
                       alt="Saisonkarte Frühjahr" 
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-primary-foreground">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-white">
                       <h3 className="text-xl font-serif font-bold mb-1">Frühjahrs-Saisonkarte</h3>
                       <p className="text-sm opacity-90">Spargel, Bärlauch & mehr</p>
                     </div>
@@ -180,8 +180,8 @@ const Index = () => {
                       alt="Bergkirchweih 2024" 
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-wine-red/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-primary-foreground">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-white">
                       <h3 className="text-xl font-serif font-bold mb-1">Bergkirchweih 2024</h3>
                       <p className="text-sm opacity-90">23. Mai - 3. Juni</p>
                     </div>
@@ -191,7 +191,7 @@ const Index = () => {
                       Buchen Sie jetzt Ihr Zimmer für die Bergkirchweih. 
                       Inklusive Anreise-Tipps und Wiesn-Guide.
                     </p>
-                    <Button variant="accent" size="sm" className="w-full">
+                    <Button variant="default" size="sm" className="w-full">
                       Bergkirchweih-Paket buchen
                     </Button>
                   </div>
@@ -207,16 +207,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
                 Was unsere Gäste sagen
               </h2>
               <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
+                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <span className="text-lg font-semibold text-primary">4.8</span>
+                <span className="text-lg font-semibold text-foreground">4.8</span>
                 <span className="text-muted-foreground">aus 150+ Bewertungen</span>
               </div>
             </div>
@@ -226,7 +226,7 @@ const Index = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                     ))}
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">
@@ -243,7 +243,7 @@ const Index = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                     ))}
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">
@@ -260,7 +260,7 @@ const Index = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-1 mb-3">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                     ))}
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">
@@ -286,11 +286,11 @@ const Index = () => {
       </section>
 
       {/* Location */}
-      <section className="py-16 bg-gradient-warm">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
                 Perfekte Lage in Erlangen
               </h2>
               <p className="text-muted-foreground">
@@ -303,10 +303,10 @@ const Index = () => {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-primary-foreground" />
+                      <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary mb-2">Siemens-Campus</h3>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Siemens-Campus</h3>
                       <p className="text-muted-foreground text-sm">
                         Nur 5 Minuten Fahrtzeit zum Siemens-Campus Süd. 
                         Ideal für Geschäftsreisende und Tagungen.
@@ -316,10 +316,10 @@ const Index = () => {
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Bed className="w-6 h-6 text-primary-foreground" />
+                      <Bed className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary mb-2">Uni-Klinikum</h3>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Uni-Klinikum</h3>
                       <p className="text-muted-foreground text-sm">
                         10 Minuten zum Universitätsklinikum. 
                         Flexible Aufenthalte für Angehörige und Besucher.
@@ -328,11 +328,11 @@ const Index = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-primary-foreground" />
+                    <div className="w-12 h-12 bg-muted-foreground rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary mb-2">Verkehrsanbindung</h3>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">Verkehrsanbindung</h3>
                       <p className="text-muted-foreground text-sm">
                         A3/A73 in 15 Minuten. Busverbindung zur Innenstadt. 
                         Kostenlose Parkplätze direkt am Haus.
@@ -342,8 +342,8 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="bg-stone-light rounded-lg p-6">
-                <div className="aspect-video bg-stone rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-muted rounded-lg p-6">
+                <div className="aspect-video bg-white border rounded-lg flex items-center justify-center mb-4">
                   <div className="text-center text-muted-foreground">
                     <MapPin className="w-12 h-12 mx-auto mb-2" />
                     <p className="text-sm">Google Maps Integration</p>
