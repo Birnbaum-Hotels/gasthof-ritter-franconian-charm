@@ -27,17 +27,19 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4">
               <div className="flex items-center gap-1">
                 <Phone className="w-4 h-4" />
-                <span>+49 123 456789</span>
+                <span className="hidden xs:inline">+49 123 456789</span>
+                <span className="xs:hidden">Tel</span>
               </div>
               <div className="flex items-center gap-1">
                 <Mail className="w-4 h-4" />
-                <span>info@gasthof-ritter-st-georg.de</span>
+                <span className="hidden sm:inline">info@gasthof-ritter-st-georg.de</span>
+                <span className="sm:hidden">Mail</span>
               </div>
             </div>
-            <div className="hidden md:flex gap-2">
+            <div className="hidden lg:flex gap-2">
               <Button variant="secondary" size="sm" className="h-7">
                 Tisch reservieren
               </Button>
@@ -52,29 +54,34 @@ const Header = () => {
       {/* Main navigation */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-hero p-2 rounded-lg">
+          <div className="flex items-center min-w-0 flex-1">
+            <Link to="/" className="flex items-center space-x-2 min-w-0">
+              <div className="bg-gradient-hero p-2 rounded-lg flex-shrink-0">
                 <span className="text-xl font-bold text-primary-foreground">RSG</span>
               </div>
-              <div className="hidden sm:block">
-                <div className="font-serif text-xl font-bold text-primary">
+              <div className="hidden md:block min-w-0">
+                <div className="font-serif text-lg lg:text-xl font-bold text-primary truncate">
                   Gasthof Ritter St. Georg
                 </div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-xs lg:text-sm text-muted-foreground truncate">
                   Traditionelle fränkische Gastlichkeit
+                </div>
+              </div>
+              <div className="hidden sm:block md:hidden min-w-0">
+                <div className="font-serif text-base font-bold text-primary truncate">
+                  Gasthof Ritter St. Georg
                 </div>
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden xl:flex items-center space-x-6 flex-shrink-0">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
                   isActive(item.href)
                     ? "text-primary border-b-2 border-primary"
                     : "text-foreground"
@@ -87,7 +94,7 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="xl:hidden flex-shrink-0">
               <Button variant="outline" size="icon">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle menu</span>
