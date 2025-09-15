@@ -48,7 +48,7 @@ const HeroSection = () => {
               Tisch reservieren
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 h-auto border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-4 h-auto border-white bg-white/10 text-white hover:bg-white hover:text-primary backdrop-blur-sm">
               <Calendar className="w-5 h-5 mr-2" />
               Zimmer buchen
               <ArrowRight className="w-5 h-5 ml-2" />
