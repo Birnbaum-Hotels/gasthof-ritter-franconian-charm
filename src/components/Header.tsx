@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Mail } from "lucide-react";
+import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,9 +57,11 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center min-w-0 flex-1">
             <Link to="/" className="flex items-center space-x-2 min-w-0">
-              <div className="bg-gradient-hero p-2 rounded-lg flex-shrink-0">
-                <span className="text-xl font-bold text-primary-foreground">RSG</span>
-              </div>
+              <img 
+                src={ritterLogo} 
+                alt="Ritter St. Georg Logo" 
+                className="h-12 w-auto object-contain flex-shrink-0"
+              />
               <div className="hidden md:block min-w-0">
                 <div className="font-serif text-lg lg:text-xl font-bold text-primary truncate">
                   Gasthof Ritter St. Georg

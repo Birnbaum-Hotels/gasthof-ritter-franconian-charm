@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
+import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
+import birnbaumLogo from "@/assets/birnbaum-hotels-logo.png";
 
 const Footer = () => {
   return (
@@ -9,10 +11,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-gradient-hero p-2 rounded-lg">
-                <span className="text-lg font-bold">RSG</span>
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src={ritterLogo} 
+                alt="Ritter St. Georg Logo" 
+                className="h-12 w-auto object-contain"
+              />
               <div>
                 <div className="font-serif text-lg font-bold">
                   Gasthof Ritter St. Georg
@@ -26,6 +30,16 @@ const Footer = () => {
               Traditionelle fränkische Küche und gemütliche Hotelzimmer 
               im Herzen Frankens. Erleben Sie echte Gastlichkeit.
             </p>
+            
+            {/* Birnbaum Hotels Logo */}
+            <div className="pt-4 border-t border-primary-foreground/20">
+              <p className="text-xs opacity-75 mb-2">Ein Betrieb der</p>
+              <img 
+                src={birnbaumLogo} 
+                alt="Birnbaum Hotels & Restaurants" 
+                className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
           </div>
 
           {/* Quick Links */}
