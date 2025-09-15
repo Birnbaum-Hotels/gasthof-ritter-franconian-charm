@@ -63,7 +63,7 @@ const Footer = () => {
               <Button variant="secondary" size="sm" className="w-full">
                 Tisch reservieren
               </Button>
-              <Button variant="outline" size="sm" className="w-full border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-wood">
+              <Button variant="outline" size="sm" className="w-full border-primary-foreground bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground hover:text-wood">
                 Zimmer buchen
               </Button>
             </div>
