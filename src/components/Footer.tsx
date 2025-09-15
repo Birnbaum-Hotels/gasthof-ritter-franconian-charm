@@ -76,18 +76,19 @@ const Footer = () => {
               <div className="flex items-start gap-2 opacity-90">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <div>
-                  <div>Ritter-von-Spix-Straße 7</div>
-                  <div>91054 Erlangen</div>
+                  <div>Herzogenauracher Damm 11</div>
+                  <div>Leipziger Str. 8-17</div>
+                  <div>91058 Erlangen</div>
                   <div>Deutschland</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 opacity-90">
                 <Phone className="w-4 h-4" />
-                <span>+49 9131 123456</span>
+                <span>+49 9131 7665-0</span>
               </div>
               <div className="flex items-center gap-2 opacity-90">
                 <Mail className="w-4 h-4" />
-                <span>info@gasthof-ritter-st-georg.de</span>
+                <span>ritter@birnbaum-hotels.de</span>
               </div>
             </div>
           </div>
