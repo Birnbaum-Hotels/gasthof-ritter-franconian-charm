@@ -29,7 +29,7 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Historische Sandstein-Fassade des Gasthof Ritter St. Georg in Erlangen"
-          className="w-full h-full object-cover object-[center_30%]"
+          className="w-full h-full object-cover object-[center_65%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/0" />
       </div>
