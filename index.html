@@ -35,7 +35,7 @@
       "email": "ritter@birnbaum-hotels.de",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Herzogenauracher Damm 11, Leipziger Str. 8-17",
+        "streetAddress": "Herzogenauracher Damm 11",
         "addressLocality": "Erlangen",
         "postalCode": "91058",
         "addressCountry": "DE"
@@ -46,12 +46,82 @@
         "longitude": "11.0089"
       },
       "openingHours": [
-        "Mo-Su 11:00-22:00"
+        "Tu-Su 17:00-22:00"
       ],
       "priceRange": "€€",
       "servesCuisine": ["Fränkische Küche", "Deutsche Küche", "Europäische Küche"],
       "acceptsReservations": true,
       "hasMap": "https://maps.google.com/?q=Herzogenauracher+Damm+11,+91058+Erlangen"
+    }
+    </script>
+
+    <!-- Birnbaum Hotels Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Birnbaum Hotels & Restaurants",
+      "url": "https://www.birnbaum-hotels.de",
+      "logo": "https://www.birnbaum-hotels.de/logo.png",
+      "description": "Hotelgruppe mit vier Häusern in Erlangen und Umgebung",
+      "subOrganization": [
+        {
+          "@type": ["Restaurant", "LodgingBusiness"],
+          "name": "Art-Hotel Erlangen",
+          "url": "https://www.art-hotel-erlangen.de",
+          "telephone": "+49-9131-7140-0",
+          "email": "art@birnbaum-hotels.de",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Äußere Brucker Straße 90",
+            "addressLocality": "Erlangen",
+            "postalCode": "91052",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "LodgingBusiness",
+          "name": "Hotel im Bauerngarten",
+          "url": "https://hotel-im-bauerngarten.de",
+          "telephone": "+49-9131-7665-0",
+          "email": "ritter@birnbaum-hotels.de",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Leipziger Straße 3",
+            "addressLocality": "Erlangen",
+            "postalCode": "91058",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": ["Restaurant", "LodgingBusiness"],
+          "name": "Gasthof & Hotel Ritter St. Georg",
+          "url": "https://gasthof-ritter-st-georg.de",
+          "telephone": "+49-9131-7665-0",
+          "email": "ritter@birnbaum-hotels.de",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Herzogenauracher Damm 11",
+            "addressLocality": "Erlangen",
+            "postalCode": "91058",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": ["Restaurant", "LodgingBusiness"],
+          "name": "Gasthof & Hotel Alte Post",
+          "url": "https://www.falkendorf-altepost.de",
+          "telephone": "+49-9132-906155-0",
+          "email": "altepost@birnbaum-hotels.de",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hauptstraße 16",
+            "addressLocality": "Falkendorf",
+            "postalCode": "91086",
+            "addressCountry": "DE"
+          }
+        }
+      ]
     }
     </script>
   </head>
