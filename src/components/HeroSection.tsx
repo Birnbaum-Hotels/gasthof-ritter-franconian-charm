@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Users, Calendar } from "lucide-react";
-import heroImage from "@/assets/hero-gasthof.jpg";
+import heroImage from "@/assets/hero-ritter-st-georg.jpg";
 
 const HeroSection = () => {
   return (
@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Gasthof Ritter St. Georg - Traditioneller fränkischer Gasthof"
+          alt="Gasthof Ritter St. Georg - Historisches Gebäude in Erlangen"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
