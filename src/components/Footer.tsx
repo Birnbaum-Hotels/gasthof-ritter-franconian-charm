@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
+import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
+import birnbaumLogo from "@/assets/birnbaum-hotels-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -163,6 +165,120 @@ const Footer = () => {
               Birnbaum Hotels
             </a>
           </p>
+        </div>
+      </div>
+
+      {/* Original Footer Content */}
+      <div className="bg-wood text-primary-foreground border-t border-neutral-800">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Brand */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <img 
+                  src={ritterLogo} 
+                  alt="Ritter St. Georg Logo" 
+                  className="h-12 w-auto object-contain"
+                />
+                <div>
+                  <div className="font-serif text-lg font-bold">
+                    Gasthof Ritter St. Georg
+                  </div>
+                  <div className="text-sm opacity-90">
+                    Fränkische Gastlichkeit seit 1847
+                  </div>
+                </div>
+              </div>
+              <p className="text-sm opacity-90">
+                Traditionelle fränkische Küche und gemütliche Hotelzimmer 
+                im Herzen Frankens. Erleben Sie echte Gastlichkeit.
+              </p>
+              
+              {/* Birnbaum Hotels Logo */}
+              <div className="pt-4 border-t border-primary-foreground/20">
+                <p className="text-xs opacity-75 mb-2">Ein Betrieb der</p>
+                <img 
+                  src={birnbaumLogo} 
+                  alt="Birnbaum Hotels & Restaurants" 
+                  className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg">Schnellzugang</h3>
+              <div className="space-y-2">
+                <Link to="/restaurant" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Restaurant & Speisekarte
+                </Link>
+                <Link to="/hotel" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Hotelzimmer
+                </Link>
+                <Link to="/about" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Über uns
+                </Link>
+                <Link to="/contact" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                  Kontakt
+                </Link>
+              </div>
+              <div className="space-y-2 pt-2">
+                <Button variant="secondary" size="sm" className="w-full">
+                  Tisch reservieren
+                </Button>
+                <Button variant="outline" size="sm" className="w-full border-primary-foreground bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground hover:text-wood">
+                  Zimmer buchen
+                </Button>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg">Kontakt</h3>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start gap-2 opacity-90">
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div>Herzogenauracher Damm 11</div>
+                    <div>91058 Erlangen</div>
+                    <div>Deutschland</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 opacity-90">
+                  <Phone className="w-4 h-4" />
+                  <a href="tel:+4991317665-0" className="hover:opacity-100">
+                    +49 9131 7665-0
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 opacity-90">
+                  <Mail className="w-4 h-4" />
+                  <a href="mailto:ritter@birnbaum-hotels.de" className="hover:opacity-100">
+                    ritter@birnbaum-hotels.de
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Opening Hours */}
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg">Öffnungszeiten</h3>
+              <div className="space-y-2 text-sm opacity-90">
+                <div className="flex items-start gap-2">
+                  <Clock className="w-4 h-4 mt-0.5" />
+                  <div>
+                    <div className="font-medium">Restaurant</div>
+                    <div>Di-So: 17:00-22:00</div>
+                    <div>Montag Ruhetag</div>
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <div className="font-medium">Hotel</div>
+                  <div>Check-in: 15:00-20:00</div>
+                  <div>Check-out: bis 11:00</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
