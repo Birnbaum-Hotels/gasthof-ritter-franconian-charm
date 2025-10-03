@@ -1,6 +1,9 @@
 import HeroSection from "@/components/HeroSection";
+import QuickLinks from "@/components/QuickLinks";
+import StickyBookingBar from "@/components/StickyBookingBar";
+import Gallery from "@/components/Gallery";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Utensils, Bed, Star, Clock, MapPin } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
 import hotelImage from "@/assets/hotel-room.jpg";
@@ -10,6 +13,14 @@ const Index = () => {
     <>
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Quick Links */}
+      <QuickLinks />
+
+      {/* Sticky Booking Bar - positioned after hero on desktop */}
+      <div className="hidden md:block">
+        <StickyBookingBar />
+      </div>
 
       {/* Welcome Section */}
       <section className="py-20 bg-white">
@@ -32,7 +43,7 @@ const Index = () => {
               <div className="relative h-48">
                 <img
                   src={restaurantImage}
-                  alt="Restaurant im Gasthof Ritter St. Georg - Traditionelle fränkische Küche"
+                  alt="Restaurant im Gasthof Ritter St. Georg - Traditionelle fränkische Küche in Erlangen"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -57,7 +68,7 @@ const Index = () => {
               <div className="relative h-48">
                 <img
                   src={restaurantImage}
-                  alt="Feiern im Gasthof Ritter St. Georg - Hochzeiten und Familienfeiern"
+                  alt="Feiern im Gasthof Ritter St. Georg - Hochzeiten und Familienfeiern in Erlangen"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -82,7 +93,7 @@ const Index = () => {
               <div className="relative h-48">
                 <img
                   src={hotelImage}
-                  alt="Hotelzimmer im Gasthof Ritter St. Georg - Komfortable Übernachtung"
+                  alt="Hotelzimmer im Gasthof Ritter St. Georg - Komfortable Übernachtung in Erlangen"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -132,75 +143,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Seasonal Offers */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
-                Aktuelle Angebote
-              </h2>
-              <p className="text-muted-foreground">
-                Entdecken Sie unsere saisonalen Highlights und besonderen Angebote
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="shadow-card overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="relative h-48">
-                    <img 
-                      src={restaurantImage} 
-                      alt="Saisonkarte Frühjahr" 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h3 className="text-xl font-serif font-bold mb-1">Frühjahrs-Saisonkarte</h3>
-                      <p className="text-sm opacity-90">Spargel, Bärlauch & mehr</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Genießen Sie frische Frühjahrsküche mit regionalen Spezialitäten. 
-                      Jetzt bis Ende Mai verfügbar.
-                    </p>
-                    <Button variant="outline" size="sm" className="w-full">
-                      Saisonkarte ansehen
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-card overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="relative h-48">
-                    <img 
-                      src={hotelImage} 
-                      alt="Bergkirchweih 2024" 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h3 className="text-xl font-serif font-bold mb-1">Bergkirchweih 2024</h3>
-                      <p className="text-sm opacity-90">23. Mai - 3. Juni</p>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Buchen Sie jetzt Ihr Zimmer für die Bergkirchweih. 
-                      Inklusive Anreise-Tipps und Wiesn-Guide.
-                    </p>
-                    <Button variant="default" size="sm" className="w-full">
-                      Bergkirchweih-Paket buchen
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Gallery */}
+      <Gallery />
 
       {/* Trust & Reviews */}
       <section className="py-16 bg-background">
@@ -276,9 +220,15 @@ const Index = () => {
 
             <div className="text-center">
               <p className="text-muted-foreground mb-4">Vertrauen Sie auf über 150 positive Bewertungen</p>
-              <Button variant="outline">
-                Alle Bewertungen auf Google ansehen
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button variant="outline" asChild>
+                <a 
+                  href="https://www.google.com/search?q=Gasthof+Ritter+St.+Georg+Erlangen" 
+                  target="_blank" 
+                  rel="nofollow noopener noreferrer"
+                >
+                  Alle Bewertungen auf Google ansehen
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
               </Button>
             </div>
           </div>
@@ -352,10 +302,16 @@ const Index = () => {
                 </div>
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-2">
-                    Ritter-von-Spix-Straße 7, 91054 Erlangen
+                    Herzogenauracher Damm 11, 91058 Erlangen, Germany
                   </p>
-                  <Button variant="outline" size="sm">
-                    Route planen
+                  <Button variant="outline" size="sm" asChild>
+                    <a 
+                      href="https://www.google.com/maps/dir/?api=1&destination=Herzogenauracher+Damm+11,+91058+Erlangen,+Germany" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Route planen
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -363,6 +319,11 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Sticky Booking Bar - fixed at bottom on mobile */}
+      <div className="md:hidden">
+        <StickyBookingBar />
+      </div>
     </>
   );
 };

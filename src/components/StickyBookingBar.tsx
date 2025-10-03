@@ -1,0 +1,146 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Calendar, Users, Phone, Clock } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card } from "@/components/ui/card";
+
+const StickyBookingBar = () => {
+  const [activeTab, setActiveTab] = useState("zimmer");
+
+  const handleBookingClick = () => {
+    // GA4 event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'booking_start', {
+        section: 'sticky_bar'
+      });
+    }
+    // Navigate to booking engine
+    window.open('https://www.booking.com', '_self');
+  };
+
+  const handleReserveClick = () => {
+    // GA4 event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'reserve_click', {
+        section: 'sticky_bar'
+      });
+    }
+    window.location.href = '/restaurant#reservieren';
+  };
+
+  const handleCallClick = () => {
+    // GA4 event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'call_click', {
+        section: 'sticky_bar'
+      });
+    }
+    window.location.href = 'tel:+4991317665-0';
+  };
+
+  return (
+    <div className="sticky bottom-0 md:relative md:bottom-auto z-40 bg-background border-t shadow-lg">
+      <div className="container mx-auto px-4 py-3 md:py-4">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <TabsList className="grid w-full grid-cols-3 mb-3">
+            <TabsTrigger value="zimmer" className="text-sm md:text-base">
+              <Calendar className="w-4 h-4 mr-2" />
+              <span className="hidden sm:inline">Zimmer</span>
+            </TabsTrigger>
+            <TabsTrigger value="tisch" className="text-sm md:text-base">
+              <Users className="w-4 h-4 mr-2" />
+              <span className="hidden sm:inline">Tisch</span>
+            </TabsTrigger>
+            <TabsTrigger value="anrufen" className="text-sm md:text-base">
+              <Phone className="w-4 h-4 mr-2" />
+              <span className="hidden sm:inline">Anrufen</span>
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="zimmer" className="mt-0">
+            <Card className="p-4 bg-muted/50">
+              <div className="flex flex-col sm:flex-row gap-3 items-end">
+                <div className="flex-1 grid grid-cols-2 gap-2">
+                  <div>
+                    <label className="text-xs text-muted-foreground mb-1 block">Anreise</label>
+                    <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
+                      <Calendar className="w-4 h-4 text-muted-foreground" />
+                      <span className="text-sm">Datum wählen</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="text-xs text-muted-foreground mb-1 block">Abreise</label>
+                    <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
+                      <Calendar className="w-4 h-4 text-muted-foreground" />
+                      <span className="text-sm">Datum wählen</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full sm:w-32">
+                  <label className="text-xs text-muted-foreground mb-1 block">Gäste</label>
+                  <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
+                    <Users className="w-4 h-4 text-muted-foreground" />
+                    <span className="text-sm">2</span>
+                  </div>
+                </div>
+                <Button onClick={handleBookingClick} className="w-full sm:w-auto">
+                  Verfügbarkeit prüfen
+                </Button>
+              </div>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="tisch" className="mt-0">
+            <Card className="p-4 bg-muted/50">
+              <div className="flex flex-col sm:flex-row gap-3 items-end">
+                <div className="flex-1 grid grid-cols-3 gap-2">
+                  <div>
+                    <label className="text-xs text-muted-foreground mb-1 block">Personen</label>
+                    <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
+                      <Users className="w-4 h-4 text-muted-foreground" />
+                      <span className="text-sm">2</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="text-xs text-muted-foreground mb-1 block">Datum</label>
+                    <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
+                      <Calendar className="w-4 h-4 text-muted-foreground" />
+                      <span className="text-sm">Heute</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="text-xs text-muted-foreground mb-1 block">Uhrzeit</label>
+                    <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
+                      <Clock className="w-4 h-4 text-muted-foreground" />
+                      <span className="text-sm">19:00</span>
+                    </div>
+                  </div>
+                </div>
+                <Button onClick={handleReserveClick} className="w-full sm:w-auto">
+                  Jetzt reservieren
+                </Button>
+              </div>
+            </Card>
+          </TabsContent>
+
+          <TabsContent value="anrufen" className="mt-0">
+            <Card className="p-4 bg-muted/50">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="text-center sm:text-left">
+                  <p className="text-sm text-muted-foreground mb-1">Rufen Sie uns direkt an</p>
+                  <p className="text-xl font-semibold">+49 9131 7665-0</p>
+                </div>
+                <Button onClick={handleCallClick} size="lg" className="w-full sm:w-auto">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Jetzt anrufen
+                </Button>
+              </div>
+            </Card>
+          </TabsContent>
+        </Tabs>
+      </div>
+    </div>
+  );
+};
+
+export default StickyBookingBar;
