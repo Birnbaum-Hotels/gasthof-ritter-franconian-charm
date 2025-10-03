@@ -48,15 +48,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-neutral-900 text-neutral-100">
+    <footer className="bg-background text-foreground">
       {/* Pre-Footer: Birnbaum Hotels Properties */}
-      <div className="border-b border-neutral-800">
+      <div className="border-b border-border">
         <div className="container mx-auto px-4 py-12 md:py-16">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-wine-red mb-2">
               Unsere Häuser – Birnbaum Hotels
             </h2>
-            <p className="text-sm text-neutral-400">
+            <p className="text-sm text-muted-foreground">
               Entdecken Sie unsere Standorte in Erlangen und Umgebung.
             </p>
           </div>
@@ -65,13 +65,13 @@ const Footer = () => {
             {properties.map((property, index) => (
               <div
                 key={index}
-                className="bg-neutral-800 rounded-lg p-6 flex flex-col h-full border border-neutral-700 hover:border-wine-red/50 transition-colors"
+                className="bg-card rounded-lg p-6 flex flex-col h-full border border-border hover:border-wine-red/50 transition-colors"
               >
                 <h3 className="font-semibold text-lg mb-1 text-wine-red">
                   {property.name}
                 </h3>
                 {property.location && (
-                  <p className="text-sm text-neutral-400 mb-3">
+                  <p className="text-sm text-muted-foreground mb-3">
                     {property.location}
                   </p>
                 )}
@@ -79,13 +79,13 @@ const Footer = () => {
                 <div className="space-y-2 mb-4 flex-grow">
                   <div className="flex items-start gap-2 text-sm">
                     <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-wine-red" />
-                    <span className="text-neutral-300">{property.address}</span>
+                    <span className="text-foreground">{property.address}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <Phone className="w-4 h-4 flex-shrink-0 text-wine-red" />
                     <a
                       href={`tel:${property.phone.replace(/\s/g, "")}`}
-                      className="text-neutral-300 underline hover:text-wine-red transition-colors"
+                      className="text-foreground underline hover:text-wine-red transition-colors"
                     >
                       {property.phone}
                     </a>
@@ -94,7 +94,7 @@ const Footer = () => {
                     <Mail className="w-4 h-4 flex-shrink-0 text-wine-red" />
                     <a
                       href={`mailto:${property.email}`}
-                      className="text-neutral-300 underline hover:text-wine-red transition-colors"
+                      className="text-foreground underline hover:text-wine-red transition-colors"
                     >
                       {property.email}
                     </a>
@@ -102,7 +102,7 @@ const Footer = () => {
                 </div>
 
                 {property.description && (
-                  <p className="text-xs text-neutral-400 mb-4">
+                  <p className="text-xs text-muted-foreground mb-4">
                     {property.description}
                   </p>
                 )}
@@ -144,7 +144,7 @@ const Footer = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full border-neutral-600 text-neutral-300 hover:bg-neutral-700 hover:text-wine-red hover:border-wine-red"
+                      className="w-full"
                     >
                       Auf Google Maps öffnen
                     </Button>
@@ -154,7 +154,7 @@ const Footer = () => {
             ))}
           </div>
 
-          <p className="text-center text-sm text-neutral-400 mt-8">
+          <p className="text-center text-sm text-muted-foreground mt-8">
             Ein Verbund der{" "}
             <a
               href="https://www.birnbaum-hotels.de"
@@ -169,7 +169,7 @@ const Footer = () => {
       </div>
 
       {/* Original Footer Content */}
-      <div className="bg-wood text-primary-foreground border-t border-neutral-800">
+      <div className="bg-background text-foreground border-t border-border">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand */}
@@ -195,12 +195,12 @@ const Footer = () => {
               </p>
               
               {/* Birnbaum Hotels Logo */}
-              <div className="pt-4 border-t border-primary-foreground/20">
-                <p className="text-xs opacity-75 mb-2">Ein Betrieb der</p>
+              <div className="pt-4 border-t border-border">
+                <p className="text-xs text-muted-foreground mb-2">Ein Betrieb der</p>
                 <img 
                   src={birnbaumLogo} 
                   alt="Birnbaum Hotels & Restaurants" 
-                  className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  className="h-8 w-auto object-contain hover:opacity-80 transition-opacity"
                 />
               </div>
             </div>
@@ -209,24 +209,24 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="font-semibold text-lg">Schnellzugang</h3>
               <div className="space-y-2">
-                <Link to="/restaurant" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                <Link to="/restaurant" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Restaurant & Speisekarte
                 </Link>
-                <Link to="/hotel" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                <Link to="/hotel" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Hotelzimmer
                 </Link>
-                <Link to="/about" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                <Link to="/about" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Über uns
                 </Link>
-                <Link to="/contact" className="block text-sm opacity-90 hover:opacity-100 transition-opacity">
+                <Link to="/contact" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Kontakt
                 </Link>
               </div>
               <div className="space-y-2 pt-2">
-                <Button variant="secondary" size="sm" className="w-full">
+                <Button variant="default" size="sm" className="w-full bg-wine-red hover:bg-wine-red-dark text-white">
                   Tisch reservieren
                 </Button>
-                <Button variant="outline" size="sm" className="w-full border-primary-foreground bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground hover:text-wood">
+                <Button variant="outline" size="sm" className="w-full">
                   Zimmer buchen
                 </Button>
               </div>
@@ -236,23 +236,23 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="font-semibold text-lg">Kontakt</h3>
               <div className="space-y-3 text-sm">
-                <div className="flex items-start gap-2 opacity-90">
-                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-2 text-muted-foreground">
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-wine-red" />
                   <div>
                     <div>Herzogenauracher Damm 11</div>
                     <div>91058 Erlangen</div>
                     <div>Deutschland</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 opacity-90">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+4991317665-0" className="hover:opacity-100">
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Phone className="w-4 h-4 text-wine-red" />
+                  <a href="tel:+4991317665-0" className="hover:text-foreground transition-colors">
                     +49 9131 7665-0
                   </a>
                 </div>
-                <div className="flex items-center gap-2 opacity-90">
-                  <Mail className="w-4 h-4" />
-                  <a href="mailto:ritter@birnbaum-hotels.de" className="hover:opacity-100">
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Mail className="w-4 h-4 text-wine-red" />
+                  <a href="mailto:ritter@birnbaum-hotels.de" className="hover:text-foreground transition-colors">
                     ritter@birnbaum-hotels.de
                   </a>
                 </div>
@@ -262,17 +262,17 @@ const Footer = () => {
             {/* Opening Hours */}
             <div className="space-y-4">
               <h3 className="font-semibold text-lg">Öffnungszeiten</h3>
-              <div className="space-y-2 text-sm opacity-90">
+              <div className="space-y-2 text-sm text-muted-foreground">
                 <div className="flex items-start gap-2">
-                  <Clock className="w-4 h-4 mt-0.5" />
+                  <Clock className="w-4 h-4 mt-0.5 text-wine-red" />
                   <div>
-                    <div className="font-medium">Restaurant</div>
+                    <div className="font-medium text-foreground">Restaurant</div>
                     <div>Di-So: 17:00-22:00</div>
                     <div>Montag Ruhetag</div>
                   </div>
                 </div>
                 <div className="pt-2">
-                  <div className="font-medium">Hotel</div>
+                  <div className="font-medium text-foreground">Hotel</div>
                   <div>Check-in: 15:00-20:00</div>
                   <div>Check-out: bis 11:00</div>
                 </div>
@@ -308,8 +308,15 @@ const Footer = () => {
                 to="/barrierefreiheit"
                 className="underline hover:text-wine-red transition-colors"
               >
-                AGB
+                Barrierefreiheit
               </Link>
+              <span className="hidden md:inline">·</span>
+              <a
+                href="#"
+                className="underline hover:text-wine-red transition-colors"
+              >
+                AGB
+              </a>
               <span className="hidden md:inline">·</span>
               <a
                 href="#"
