@@ -77,11 +77,12 @@ const Index = () => {
                   <h3 className="text-lg font-serif font-bold">Feiern</h3>
                 </div>
               </div>
-              <CardContent className="p-4">
-                <p className="text-muted-foreground text-sm mb-3">
+              <CardContent className="p-4 flex flex-col">
+                <p className="text-muted-foreground text-sm mb-3 flex-grow">
                   Hochzeiten, Familienfeiern & Events aus einer Hand
                 </p>
-                <Button variant="outline" className="w-full" size="sm">
+                <Button variant="default" className="w-full" size="sm">
+                  <Star className="w-4 h-4 mr-2" />
                   Feier anfragen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
