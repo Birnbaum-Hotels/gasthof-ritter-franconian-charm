@@ -41,7 +41,7 @@ const About = () => {
             alt="Geschichte Gasthof Ritter St. Georg - Traditionelle fränkische Gastlichkeit"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10 text-center">
