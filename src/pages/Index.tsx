@@ -281,11 +281,11 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground mb-2">
                     Herzogenauracher Damm 11, 91058 Erlangen, Germany
                   </p>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=Herzogenauracher+Damm+11,+91058+Erlangen,+Germany" target="_blank" rel="noopener noreferrer">
-                      Route planen
-                    </a>
-                  </Button>
+              <Button variant="outline" size="sm" asChild>
+                <a href="https://maps.google.com/?q=Herzogenauracher+Damm+11,+91058+Erlangen,+Germany&navigate=yes" target="_blank" rel="noopener noreferrer">
+                  Route planen
+                </a>
+              </Button>
                 </div>
               </div>
             </div>
