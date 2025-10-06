@@ -193,16 +193,6 @@ const Footer = () => {
                 Traditionelle fränkische Küche und gemütliche Hotelzimmer 
                 im Herzen Frankens. Erleben Sie echte Gastlichkeit.
               </p>
-              
-              {/* Birnbaum Hotels Logo */}
-              <div className="pt-4 border-t border-border">
-                <p className="text-xs text-muted-foreground mb-2">Ein Betrieb der</p>
-                <img 
-                  src={birnbaumLogo} 
-                  alt="Birnbaum Hotels & Restaurants" 
-                  className="h-8 w-auto object-contain hover:opacity-80 transition-opacity"
-                />
-              </div>
             </div>
 
             {/* Quick Links */}
@@ -276,6 +266,16 @@ const Footer = () => {
                   <div>Check-in: 15:00-20:00</div>
                   <div>Check-out: bis 11:00</div>
                 </div>
+              </div>
+              
+              {/* Birnbaum Hotels Logo */}
+              <div className="pt-4 border-t border-border">
+                <p className="text-xs text-muted-foreground mb-3">Ein Betrieb der</p>
+                <img 
+                  src={birnbaumLogo} 
+                  alt="Birnbaum Hotels & Restaurants" 
+                  className="h-16 w-auto object-contain hover:opacity-80 transition-opacity"
+                />
               </div>
             </div>
           </div>
