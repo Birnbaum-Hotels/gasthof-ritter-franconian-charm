@@ -39,19 +39,28 @@ const StickyBookingBar = () => {
   };
 
   return (
-    <div className="sticky bottom-0 md:relative md:bottom-auto z-40 bg-background border-t shadow-lg">
+    <div className="sticky bottom-0 md:relative md:bottom-auto z-40 bg-background border-t shadow-lg my-6">
       <div className="container mx-auto px-4 py-3 md:py-4">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-3">
-            <TabsTrigger value="zimmer" className="text-sm md:text-base">
+          <TabsList className="grid w-full grid-cols-3 mb-3 bg-transparent gap-2 p-0">
+            <TabsTrigger 
+              value="zimmer" 
+              className="text-sm md:text-base bg-primary text-primary-foreground hover:bg-primary/90 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-10"
+            >
               <Calendar className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Zimmer</span>
             </TabsTrigger>
-            <TabsTrigger value="tisch" className="text-sm md:text-base">
+            <TabsTrigger 
+              value="tisch" 
+              className="text-sm md:text-base bg-primary text-primary-foreground hover:bg-primary/90 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-10"
+            >
               <Users className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Tisch</span>
             </TabsTrigger>
-            <TabsTrigger value="anrufen" className="text-sm md:text-base">
+            <TabsTrigger 
+              value="anrufen" 
+              className="text-sm md:text-base bg-primary text-primary-foreground hover:bg-primary/90 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-10"
+            >
               <Phone className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Anrufen</span>
             </TabsTrigger>
