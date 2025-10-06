@@ -7,10 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Utensils, Bed, Star, Clock, MapPin } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
 import hotelImage from "@/assets/hotel-room.jpg";
-
 const Index = () => {
-  return (
-    <>
+  return <>
       {/* Hero Section */}
       <HeroSection />
 
@@ -41,11 +39,7 @@ const Index = () => {
             {/* Restaurant Card */}
             <Card className="overflow-hidden shadow-card hover:shadow-warm transition-shadow duration-300">
               <div className="relative h-48">
-                <img
-                  src={restaurantImage}
-                  alt="Restaurant im Gasthof Ritter St. Georg - Traditionelle fränkische Küche in Erlangen"
-                  className="w-full h-full object-cover"
-                />
+                <img src={restaurantImage} alt="Restaurant im Gasthof Ritter St. Georg - Traditionelle fränkische Küche in Erlangen" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-3 left-3 text-white">
                   <Utensils className="w-6 h-6 mb-1" />
@@ -66,23 +60,16 @@ const Index = () => {
             {/* Feiern Card */}
             <Card className="overflow-hidden shadow-card hover:shadow-warm transition-shadow duration-300">
               <div className="relative h-48">
-                <img
-                  src={restaurantImage}
-                  alt="Feiern im Gasthof Ritter St. Georg - Hochzeiten und Familienfeiern in Erlangen"
-                  className="w-full h-full object-cover"
-                />
+                <img src={restaurantImage} alt="Feiern im Gasthof Ritter St. Georg - Hochzeiten und Familienfeiern in Erlangen" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-3 left-3 text-white">
                   <Star className="w-6 h-6 mb-1" />
                   <h3 className="text-lg font-serif font-bold">Feiern</h3>
                 </div>
               </div>
-              <CardContent className="p-4 flex flex-col">
-                <p className="text-muted-foreground text-sm mb-3 flex-grow">
-                  Hochzeiten, Familienfeiern & Events aus einer Hand
-                </p>
-                <Button variant="default" className="w-full" size="sm">
-                  <Star className="w-4 h-4 mr-2" />
+              <CardContent className="p-4">
+                <p className="text-muted-foreground text-sm mb-3">Hochzeiten, Familienfeiern & Events aus einer Hand! </p>
+                <Button variant="outline" className="w-full" size="sm">
                   Feier anfragen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -92,11 +79,7 @@ const Index = () => {
             {/* Hotel Card */}
             <Card className="overflow-hidden shadow-card hover:shadow-warm transition-shadow duration-300">
               <div className="relative h-48">
-                <img
-                  src={hotelImage}
-                  alt="Hotelzimmer im Gasthof Ritter St. Georg - Komfortable Übernachtung in Erlangen"
-                  className="w-full h-full object-cover"
-                />
+                <img src={hotelImage} alt="Hotelzimmer im Gasthof Ritter St. Georg - Komfortable Übernachtung in Erlangen" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-3 left-3 text-white">
                   <Bed className="w-6 h-6 mb-1" />
@@ -157,9 +140,7 @@ const Index = () => {
               </h2>
               <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                 </div>
                 <span className="text-lg font-semibold text-foreground">4.8</span>
                 <span className="text-muted-foreground">aus 150+ Bewertungen</span>
@@ -170,9 +151,7 @@ const Index = () => {
               <Card className="shadow-card">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-1 mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">
                     "Ausgezeichnete fränkische Küche in gemütlicher Atmosphäre. 
@@ -187,9 +166,7 @@ const Index = () => {
               <Card className="shadow-card">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-1 mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">
                     "Perfekt für Geschäftsreisen. Nah am Siemens-Campus, 
@@ -204,9 +181,7 @@ const Index = () => {
               <Card className="shadow-card">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-1 mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
                   </div>
                   <p className="text-muted-foreground text-sm mb-4">
                     "Unsere Hochzeit war traumhaft! Rundum-Service, 
@@ -222,11 +197,7 @@ const Index = () => {
             <div className="text-center">
               <p className="text-muted-foreground mb-4">Vertrauen Sie auf über 150 positive Bewertungen</p>
               <Button variant="outline" asChild>
-                <a 
-                  href="https://www.google.com/search?q=Gasthof+Ritter+St.+Georg+Erlangen" 
-                  target="_blank" 
-                  rel="nofollow noopener noreferrer"
-                >
+                <a href="https://www.google.com/search?q=Gasthof+Ritter+St.+Georg+Erlangen" target="_blank" rel="nofollow noopener noreferrer">
                   Alle Bewertungen auf Google ansehen
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
@@ -306,11 +277,7 @@ const Index = () => {
                     Herzogenauracher Damm 11, 91058 Erlangen, Germany
                   </p>
                   <Button variant="outline" size="sm" asChild>
-                    <a 
-                      href="https://www.google.com/maps/dir/?api=1&destination=Herzogenauracher+Damm+11,+91058+Erlangen,+Germany" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Herzogenauracher+Damm+11,+91058+Erlangen,+Germany" target="_blank" rel="noopener noreferrer">
                       Route planen
                     </a>
                   </Button>
@@ -325,8 +292,6 @@ const Index = () => {
       <div className="md:hidden">
         <StickyBookingBar />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default Index;
