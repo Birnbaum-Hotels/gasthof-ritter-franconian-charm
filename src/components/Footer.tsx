@@ -212,14 +212,6 @@ const Footer = () => {
                   Kontakt
                 </Link>
               </div>
-              <div className="space-y-2 pt-2">
-                <Button variant="default" size="sm" className="w-full bg-wine-red hover:bg-wine-red-dark text-white">
-                  Tisch reservieren
-                </Button>
-                <Button variant="outline" size="sm" className="w-full">
-                  Zimmer buchen
-                </Button>
-              </div>
             </div>
 
             {/* Contact Info */}
@@ -274,8 +266,18 @@ const Footer = () => {
                 <img 
                   src={birnbaumLogo} 
                   alt="Birnbaum Hotels & Restaurants" 
-                  className="h-16 w-auto object-contain hover:opacity-80 transition-opacity"
+                  className="h-16 w-auto object-contain hover:opacity-80 transition-opacity mb-4"
                 />
+              </div>
+              
+              {/* Action Buttons */}
+              <div className="space-y-2">
+                <Button variant="default" size="sm" className="w-full bg-wine-red hover:bg-wine-red-dark text-white">
+                  Tisch reservieren
+                </Button>
+                <Button variant="outline" size="sm" className="w-full">
+                  Zimmer buchen
+                </Button>
               </div>
             </div>
           </div>
