@@ -8,7 +8,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Input } from "@/components/ui/input";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
-import type { DateRange } from "react-day-picker";
+
 
 const StickyBookingBar = () => {
   const [activeTab, setActiveTab] = useState("zimmer");
