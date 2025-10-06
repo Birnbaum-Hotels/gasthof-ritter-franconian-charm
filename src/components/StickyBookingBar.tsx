@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, Users, Phone, Clock } from "lucide-react";
+import { Calendar as CalendarIcon, Users, Phone, Clock } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Input } from "@/components/ui/input";
+import { format } from "date-fns";
+import { cn } from "@/lib/utils";
 
 const StickyBookingBar = () => {
   const [activeTab, setActiveTab] = useState("zimmer");
+  const [checkInDate, setCheckInDate] = useState<Date>();
+  const [checkOutDate, setCheckOutDate] = useState<Date>();
+  const [guests, setGuests] = useState(2);
 
   const handleBookingClick = () => {
     // GA4 event
@@ -72,24 +80,71 @@ const StickyBookingBar = () => {
                 <div className="flex-1 grid grid-cols-2 gap-2">
                   <div>
                     <label className="text-xs text-muted-foreground mb-1 block">Anreise</label>
-                    <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
-                      <Calendar className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm">Datum wählen</span>
-                    </div>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "w-full justify-start text-left font-normal",
+                            !checkInDate && "text-muted-foreground"
+                          )}
+                        >
+                          <CalendarIcon className="w-4 h-4 mr-2" />
+                          {checkInDate ? format(checkInDate, "dd.MM.yyyy") : "Datum wählen"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={checkInDate}
+                          onSelect={setCheckInDate}
+                          disabled={(date) => date < new Date()}
+                          initialFocus
+                          className={cn("p-3 pointer-events-auto")}
+                        />
+                      </PopoverContent>
+                    </Popover>
                   </div>
                   <div>
                     <label className="text-xs text-muted-foreground mb-1 block">Abreise</label>
-                    <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
-                      <Calendar className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm">Datum wählen</span>
-                    </div>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <Button
+                          variant="outline"
+                          className={cn(
+                            "w-full justify-start text-left font-normal",
+                            !checkOutDate && "text-muted-foreground"
+                          )}
+                        >
+                          <CalendarIcon className="w-4 h-4 mr-2" />
+                          {checkOutDate ? format(checkOutDate, "dd.MM.yyyy") : "Datum wählen"}
+                        </Button>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={checkOutDate}
+                          onSelect={setCheckOutDate}
+                          disabled={(date) => date < (checkInDate || new Date())}
+                          initialFocus
+                          className={cn("p-3 pointer-events-auto")}
+                        />
+                      </PopoverContent>
+                    </Popover>
                   </div>
                 </div>
                 <div className="w-full sm:w-32">
                   <label className="text-xs text-muted-foreground mb-1 block">Gäste</label>
-                  <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
-                    <Users className="w-4 h-4 text-muted-foreground" />
-                    <span className="text-sm">2</span>
+                  <div className="relative">
+                    <Users className="w-4 h-4 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2" />
+                    <Input
+                      type="number"
+                      min="1"
+                      max="10"
+                      value={guests}
+                      onChange={(e) => setGuests(parseInt(e.target.value) || 1)}
+                      className="pl-9"
+                    />
                   </div>
                 </div>
                 <Button onClick={handleBookingClick} className="w-full sm:w-auto">
