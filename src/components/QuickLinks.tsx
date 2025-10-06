@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const QuickLinks = () => {
   return (
-    <div className="bg-muted/50 py-3 border-y">
+    <div className="bg-muted/50 py-3 border-y my-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
           <span className="font-medium text-muted-foreground">Schnell zu:</span>
