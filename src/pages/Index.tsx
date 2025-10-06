@@ -88,7 +88,7 @@ const Index = () => {
               </div>
               <CardContent className="p-4">
                 <p className="text-muted-foreground text-sm mb-3">
-                  15 Zimmer nahe Siemens-Campus & Uni-Klinikum
+                  15 gemütliche Zimmer nahe Siemens-Campus & Uni-Klinikum
                 </p>
                 <Button variant="default" className="w-full" size="sm">
                   <Bed className="w-4 h-4 mr-2" />
