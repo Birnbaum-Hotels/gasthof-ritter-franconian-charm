@@ -46,12 +46,12 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-0.5">
               {[...Array(4)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                <Star key={i} className="w-4 h-4 fill-white/90 text-white/90" />
               ))}
               <div className="relative w-4 h-4">
-                <Star className="w-4 h-4 text-secondary absolute inset-0" />
+                <Star className="w-4 h-4 text-white/90 absolute inset-0" />
                 <div className="overflow-hidden absolute inset-0" style={{ width: '80%' }}>
-                  <Star className="w-4 h-4 fill-secondary text-secondary" />
+                  <Star className="w-4 h-4 fill-white/90 text-white/90" />
                 </div>
               </div>
             </div>
