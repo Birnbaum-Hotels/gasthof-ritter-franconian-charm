@@ -8,6 +8,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Input } from "@/components/ui/input";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import type { DateRange } from "react-day-picker";
 
 const StickyBookingBar = () => {
   const [activeTab, setActiveTab] = useState("zimmer");
@@ -55,7 +56,7 @@ const StickyBookingBar = () => {
               value="zimmer" 
               className="text-sm md:text-base bg-primary text-primary-foreground hover:bg-primary/90 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-10"
             >
-              <Calendar className="w-4 h-4 mr-2" />
+              <CalendarIcon className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Zimmer</span>
             </TabsTrigger>
             <TabsTrigger 
@@ -168,7 +169,7 @@ const StickyBookingBar = () => {
                   <div>
                     <label className="text-xs text-muted-foreground mb-1 block">Datum</label>
                     <div className="flex items-center gap-2 bg-background rounded-md px-3 py-2 border">
-                      <Calendar className="w-4 h-4 text-muted-foreground" />
+                      <CalendarIcon className="w-4 h-4 text-muted-foreground" />
                       <span className="text-sm">Heute</span>
                     </div>
                   </div>
