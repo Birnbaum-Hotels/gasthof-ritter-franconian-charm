@@ -154,7 +154,8 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div>
+            <div className="space-y-8">
+              <div className="h-[60px]" /> {/* Spacer to align with left column title */}
               <Card className="shadow-card">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
