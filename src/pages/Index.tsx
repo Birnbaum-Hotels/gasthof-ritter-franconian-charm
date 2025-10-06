@@ -265,12 +265,17 @@ const Index = () => {
               </div>
 
               <div className="bg-muted rounded-lg p-6">
-                <div className="aspect-video bg-white border rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-center text-muted-foreground">
-                    <MapPin className="w-12 h-12 mx-auto mb-2" />
-                    <p className="text-sm">Google Maps Integration</p>
-                    <p className="text-xs">Interaktive Karte</p>
-                  </div>
+                <div className="aspect-video bg-white border rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.9945978738253!2d11.015089776826644!3d49.62089334929842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57b3e6b3e6e3%3A0x6b8b8b8b8b8b8b8b!2sHerzogenauracher%20Damm%2011%2C%2091058%20Erlangen%2C%20Germany!5e0!3m2!1sen!2sde!4v1234567890123!5m2!1sen!2sde"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Gasthof Ritter St. Georg Location"
+                  />
                 </div>
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-2">
