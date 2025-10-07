@@ -54,21 +54,21 @@ const StickyBookingBar = () => {
           <TabsList className="grid w-full grid-cols-3 mb-4 bg-muted/30 gap-3 p-2.5 rounded-xl border border-border/50 shadow-inner backdrop-blur-sm">
             <TabsTrigger 
               value="zimmer" 
-              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium border-0"
             >
               <CalendarIcon className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Zimmer</span>
             </TabsTrigger>
             <TabsTrigger 
               value="tisch" 
-              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium border-0"
             >
               <Users className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Tisch</span>
             </TabsTrigger>
             <TabsTrigger 
               value="anrufen" 
-              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium border-0"
             >
               <Phone className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Anrufen</span>
