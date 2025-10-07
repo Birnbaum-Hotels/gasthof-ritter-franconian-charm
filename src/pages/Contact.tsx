@@ -61,16 +61,15 @@ const Contact = () => {
       {/* Contact Information & Form */}
       <section className="py-16 bg-gradient-warm">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
             
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-serif font-bold text-primary mb-6">
-                  Kontaktinformationen
-                </h2>
-              </div>
+            <div className="space-y-4 flex flex-col">
+              <h2 className="text-3xl font-serif font-bold text-primary">
+                Kontaktinformationen
+              </h2>
 
+              <div className="space-y-4 flex-1">
               <Card className="shadow-card">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -151,18 +150,17 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
+              </div>
             </div>
 
             {/* Contact Form */}
-            <div>
-              <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Mail className="w-5 h-5 text-primary" />
-                    Nachricht senden
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
+            <div className="space-y-4 flex flex-col">
+              <h2 className="text-3xl font-serif font-bold text-primary">
+                Nachricht senden
+              </h2>
+
+              <Card className="shadow-card flex-1">
+                <CardContent className="space-y-6 pt-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">Vorname *</Label>
