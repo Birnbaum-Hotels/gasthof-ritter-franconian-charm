@@ -149,9 +149,9 @@ const Hotel = () => {
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-accent">
-                          {room.price}
-                        </div>
+                      <div className="text-2xl font-bold text-primary">
+                        {room.price}
+                      </div>
                         <div className="text-sm text-muted-foreground">
                           pro Nacht
                         </div>
@@ -210,7 +210,7 @@ const Hotel = () => {
                 <p className="text-muted-foreground mb-4">
                   2 Übernachtungen inkl. Frühstück, 3-Gang-Menü am Abend und regionale Spezialitäten
                 </p>
-                <div className="text-2xl font-bold text-accent mb-4">
+                <div className="text-2xl font-bold text-primary mb-4">
                   ab 180€ <span className="text-sm font-normal text-muted-foreground">pro Person</span>
                 </div>
                 <Button variant="secondary" className="w-full">
@@ -230,7 +230,7 @@ const Hotel = () => {
                 <p className="text-muted-foreground mb-4">
                   3 Tage für die ganze Familie mit Ausflugstipps und Kindermenü im Restaurant
                 </p>
-                <div className="text-2xl font-bold text-accent mb-4">
+                <div className="text-2xl font-bold text-primary mb-4">
                   ab 320€ <span className="text-sm font-normal text-muted-foreground">Familie (4 Pers.)</span>
                 </div>
                 <Button variant="secondary" className="w-full">
