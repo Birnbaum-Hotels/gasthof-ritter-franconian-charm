@@ -4,8 +4,65 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Users, Calendar, Car, Route } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+
+const contactFormSchema = z.object({
+  firstName: z.string().trim().min(1, "Vorname ist erforderlich").max(100, "Vorname muss weniger als 100 Zeichen haben"),
+  lastName: z.string().trim().min(1, "Nachname ist erforderlich").max(100, "Nachname muss weniger als 100 Zeichen haben"),
+  email: z.string().trim().email("Ungültige E-Mail-Adresse").max(255, "E-Mail muss weniger als 255 Zeichen haben"),
+  phone: z.string().trim().max(50, "Telefonnummer muss weniger als 50 Zeichen haben").optional(),
+  subject: z.string().trim().min(1, "Betreff ist erforderlich").max(200, "Betreff muss weniger als 200 Zeichen haben"),
+  message: z.string().trim().min(1, "Nachricht ist erforderlich").max(2000, "Nachricht muss weniger als 2000 Zeichen haben"),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
+  const { toast } = useToast();
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      const { data: response, error } = await supabase.functions.invoke('send-contact-email', {
+        body: data
+      });
+
+      if (error) throw error;
+
+      if (response?.success) {
+        toast({
+          title: "Nachricht gesendet!",
+          description: "Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.",
+        });
+        form.reset();
+      } else {
+        throw new Error(response?.error || "Unbekannter Fehler");
+      }
+    } catch (error: any) {
+      console.error("Error sending contact form:", error);
+      toast({
+        title: "Fehler",
+        description: "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -160,61 +217,127 @@ const Contact = () => {
               </h2>
 
               <Card className="shadow-card flex-1">
-                <CardContent className="space-y-6 pt-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">Vorname *</Label>
-                      <Input id="firstName" placeholder="Ihr Vorname" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">Nachname *</Label>
-                      <Input id="lastName" placeholder="Ihr Nachname" />
-                    </div>
-                  </div>
+                <CardContent className="pt-6">
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="firstName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Vorname *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Ihr Vorname" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="lastName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Nachname *</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Ihr Nachname" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">E-Mail *</Label>
-                    <Input id="email" type="email" placeholder="ihre.email@beispiel.de" />
-                  </div>
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>E-Mail *</FormLabel>
+                            <FormControl>
+                              <Input type="email" placeholder="ihre.email@beispiel.de" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Telefon</Label>
-                    <Input id="phone" type="tel" placeholder="+49 123 456789" />
-                  </div>
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Telefon</FormLabel>
+                            <FormControl>
+                              <Input type="tel" placeholder="+49 123 456789" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Betreff *</Label>
-                    <Input id="subject" placeholder="Worum geht es?" />
-                  </div>
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Betreff *</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Worum geht es?" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Ihre Nachricht *</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Teilen Sie uns mit, wie wir Ihnen helfen können..."
-                      className="min-h-32"
-                    />
-                  </div>
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Ihre Nachricht *</FormLabel>
+                            <FormControl>
+                              <Textarea 
+                                placeholder="Teilen Sie uns mit, wie wir Ihnen helfen können..."
+                                className="min-h-32"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <div className="space-y-4">
-                    <p className="text-xs text-muted-foreground">
-                      * Pflichtfelder
-                    </p>
-                    <Button variant="accent" className="w-full" size="lg">
-                      <Mail className="w-4 h-4 mr-2" />
-                      Nachricht senden
-                    </Button>
-                  </div>
+                      <div className="space-y-4">
+                        <p className="text-xs text-muted-foreground">
+                          * Pflichtfelder
+                        </p>
+                        <Button 
+                          type="submit" 
+                          variant="accent" 
+                          className="w-full" 
+                          size="lg"
+                          disabled={form.formState.isSubmitting}
+                        >
+                          <Mail className="w-4 h-4 mr-2" />
+                          {form.formState.isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
+                        </Button>
+                      </div>
 
-                  <div className="pt-4 border-t text-center space-y-2">
-                    <p className="text-sm text-muted-foreground">
-                      Oder rufen Sie uns direkt an:
-                    </p>
-                    <Button variant="outline" className="w-full">
-                      <Phone className="w-4 h-4 mr-2" />
-                      +49 9321 123456
-                    </Button>
-                  </div>
+                      <div className="pt-4 border-t text-center space-y-2">
+                        <p className="text-sm text-muted-foreground">
+                          Oder rufen Sie uns direkt an:
+                        </p>
+                        <Button variant="outline" className="w-full" type="button" asChild>
+                          <a href="tel:+4993211234567">
+                            <Phone className="w-4 h-4 mr-2" />
+                            +49 9321 123456
+                          </a>
+                        </Button>
+                      </div>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </div>
