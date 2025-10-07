@@ -127,7 +127,7 @@ const Hotel = () => {
                       className="w-full h-64 md:h-full object-cover"
                     />
                   </div>
-                  <div className="md:w-2/3 p-6">
+                  <div className="md:w-2/3 p-6 flex flex-col">
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <div className="flex items-center gap-2 mb-2">
@@ -169,7 +169,7 @@ const Hotel = () => {
                       </div>
                     </div>
 
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 mt-auto">
                       <Button variant="accent" className="flex-1">
                         <Calendar className="w-4 h-4 mr-2" />
                         Jetzt buchen
