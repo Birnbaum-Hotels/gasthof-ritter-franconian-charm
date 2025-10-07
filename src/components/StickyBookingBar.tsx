@@ -48,36 +48,36 @@ const StickyBookingBar = () => {
   };
 
   return (
-    <div className="sticky bottom-0 md:relative md:bottom-auto z-40 bg-background border-t shadow-lg my-6">
-      <div className="container mx-auto px-4 py-3 md:py-4">
+    <div className="sticky bottom-0 md:relative md:bottom-auto z-40 bg-gradient-to-r from-background via-background to-muted/20 border-t border-border/50 shadow-2xl backdrop-blur-sm my-8">
+      <div className="container mx-auto px-4 py-5 md:py-6">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-3 bg-transparent gap-2 p-0">
+          <TabsList className="grid w-full grid-cols-3 mb-4 bg-muted/30 gap-3 p-1.5 rounded-xl border border-border/50 shadow-inner backdrop-blur-sm">
             <TabsTrigger 
               value="zimmer" 
-              className="text-sm md:text-base bg-primary text-primary-foreground hover:bg-primary/90 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-10"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
             >
               <CalendarIcon className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Zimmer</span>
             </TabsTrigger>
             <TabsTrigger 
               value="tisch" 
-              className="text-sm md:text-base bg-primary text-primary-foreground hover:bg-primary/90 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-10"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
             >
               <Users className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Tisch</span>
             </TabsTrigger>
             <TabsTrigger 
               value="anrufen" 
-              className="text-sm md:text-base bg-primary text-primary-foreground hover:bg-primary/90 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-10"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
             >
               <Phone className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Anrufen</span>
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="zimmer" className="mt-0">
-            <Card className="p-4 bg-muted/50">
-              <div className="flex flex-col sm:flex-row gap-3 items-end">
+          <TabsContent value="zimmer" className="mt-0 animate-fade-in">
+            <Card className="p-5 bg-gradient-to-br from-background to-muted/30 border-border/50 shadow-lg">
+              <div className="flex flex-col sm:flex-row gap-4 items-end">
                 <div className="flex-1 grid grid-cols-2 gap-2">
                   <div>
                     <label className="text-xs text-muted-foreground mb-1 block">Anreise</label>
@@ -148,16 +148,16 @@ const StickyBookingBar = () => {
                     />
                   </div>
                 </div>
-                <Button onClick={handleBookingClick} className="w-full sm:w-auto">
+                <Button onClick={handleBookingClick} className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow duration-300 h-11">
                   Verfügbarkeit prüfen
                 </Button>
               </div>
             </Card>
           </TabsContent>
 
-          <TabsContent value="tisch" className="mt-0">
-            <Card className="p-4 bg-muted/50">
-              <div className="flex flex-col sm:flex-row gap-3 items-end">
+          <TabsContent value="tisch" className="mt-0 animate-fade-in">
+            <Card className="p-5 bg-gradient-to-br from-background to-muted/30 border-border/50 shadow-lg">
+              <div className="flex flex-col sm:flex-row gap-4 items-end">
                 <div className="flex-1 grid grid-cols-3 gap-2">
                   <div>
                     <label className="text-xs text-muted-foreground mb-1 block">Personen</label>
@@ -181,21 +181,21 @@ const StickyBookingBar = () => {
                     </div>
                   </div>
                 </div>
-                <Button onClick={handleReserveClick} className="w-full sm:w-auto">
+                <Button onClick={handleReserveClick} className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow duration-300 h-11">
                   Jetzt reservieren
                 </Button>
               </div>
             </Card>
           </TabsContent>
 
-          <TabsContent value="anrufen" className="mt-0">
-            <Card className="p-4 bg-muted/50">
+          <TabsContent value="anrufen" className="mt-0 animate-fade-in">
+            <Card className="p-5 bg-gradient-to-br from-background to-muted/30 border-border/50 shadow-lg">
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-center sm:text-left">
-                  <p className="text-sm text-muted-foreground mb-1">Rufen Sie uns direkt an</p>
-                  <p className="text-xl font-semibold">+49 9131 7665-0</p>
+                  <p className="text-sm text-muted-foreground mb-1 font-medium">Rufen Sie uns direkt an</p>
+                  <p className="text-2xl font-bold text-primary">+49 9131 7665-0</p>
                 </div>
-                <Button onClick={handleCallClick} size="lg" className="w-full sm:w-auto">
+                <Button onClick={handleCallClick} size="lg" className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                   <Phone className="w-4 h-4 mr-2" />
                   Jetzt anrufen
                 </Button>
