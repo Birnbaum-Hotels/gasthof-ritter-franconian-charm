@@ -51,24 +51,24 @@ const StickyBookingBar = () => {
     <div className="sticky bottom-0 md:relative md:bottom-auto z-40 bg-gradient-to-r from-background via-background to-muted/20 border-t border-border/50 shadow-2xl backdrop-blur-sm my-8">
       <div className="container mx-auto px-4 py-5 md:py-6">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-4 bg-muted/30 gap-3 p-1.5 rounded-xl border border-border/50 shadow-inner backdrop-blur-sm">
+          <TabsList className="grid w-full grid-cols-3 mb-4 bg-muted/30 gap-3 p-2.5 rounded-xl border border-border/50 shadow-inner backdrop-blur-sm">
             <TabsTrigger 
               value="zimmer" 
-              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium border-0"
             >
               <CalendarIcon className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Zimmer</span>
             </TabsTrigger>
             <TabsTrigger 
               value="tisch" 
-              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium border-0"
             >
               <Users className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Tisch</span>
             </TabsTrigger>
             <TabsTrigger 
               value="anrufen" 
-              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium"
+              className="text-sm md:text-base bg-background/50 text-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-105 h-11 rounded-lg font-medium border-0"
             >
               <Phone className="w-4 h-4 mr-2" />
               <span className="hidden sm:inline">Anrufen</span>
