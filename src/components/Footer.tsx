@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import CookieSettingsDialog from "@/components/CookieSettingsDialog";
 import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
 import birnbaumLogo from "@/assets/birnbaum-hotels-logo.png";
 
@@ -46,6 +48,8 @@ const Footer = () => {
       description: "Regionale Küche. Gemütliche Zimmer.",
     },
   ];
+
+  const [cookieDialogOpen, setCookieDialogOpen] = useState(false);
 
   return (
     <footer className="bg-background text-foreground">
@@ -315,12 +319,13 @@ const Footer = () => {
                 Barrierefreiheit
               </Link>
               <span className="hidden md:inline">·</span>
-              <a
-                href="#"
+              <button
+                type="button"
+                onClick={() => setCookieDialogOpen(true)}
                 className="underline hover:text-wine-red transition-colors"
               >
-                AGB
-              </a>
+                Cookie-Einstellungen
+              </button>
               <span className="hidden md:inline">·</span>
               <a
                 href="#"
@@ -343,6 +348,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <CookieSettingsDialog open={cookieDialogOpen} onOpenChange={setCookieDialogOpen} />
     </footer>
   );
 };

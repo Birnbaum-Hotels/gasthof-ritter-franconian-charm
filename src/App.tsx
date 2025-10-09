@@ -17,13 +17,15 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Barrierefreiheit from "./pages/Barrierefreiheit";
 import NotFound from "./pages/NotFound";
+import { ConsentProvider } from "@/contexts/ConsentContext";
+import CookieBanner from "@/components/CookieBanner";
 
 const queryClient = new QueryClient();
 
-const App = () => {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <ConsentProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -46,11 +48,12 @@ const App = () => {
               </Routes>
             </main>
             <Footer />
+            <CookieBanner />
           </div>
         </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  );
-};
+      </ConsentProvider>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
 
 export default App;
