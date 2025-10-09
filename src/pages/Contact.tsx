@@ -137,9 +137,9 @@ const Contact = () => {
                 <CardContent>
                   <div className="space-y-1 text-muted-foreground">
                     <p className="font-medium">Gasthof Ritter St. Georg</p>
-                    <p>Hauptstraße 15</p>
-                    <p>97320 Mainstockheim</p>
-                    <p>Deutschland</p>
+                    <p>Herzogenauracher Damm 11</p>
+                    <p>91058 Erlangen</p>
+                    <p>Germany</p>
                   </div>
                 </CardContent>
               </Card>
@@ -353,27 +353,22 @@ const Contact = () => {
               So finden Sie uns
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Mitten im Herzen Frankens, zwischen Würzburg und Bamberg gelegen
+              Im Herzen von Erlangen, nahe der Universität und Siemens Campus
             </p>
           </div>
 
-          <Card className="max-w-4xl mx-auto shadow-card">
+          <Card className="max-w-4xl mx-auto shadow-card overflow-hidden">
             <CardContent className="p-0">
-              <div className="bg-muted h-96 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-                  <p className="text-lg font-semibold text-primary mb-2">
-                    Google Maps Karte
-                  </p>
-                  <p className="text-muted-foreground mb-4">
-                    Hauptstraße 15, 97320 Mainstockheim
-                  </p>
-                  <Button variant="secondary">
-                    <Route className="w-4 h-4 mr-2" />
-                    Route planen
-                  </Button>
-                </div>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.8234!2d11.0089!3d49.5894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDM1JzIxLjgiTiAxMcKwMDAnMzIuMCJF!5e0!3m2!1sen!2sde!4v1234567890"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Gasthof Ritter St. Georg Location"
+              />
             </CardContent>
           </Card>
         </div>
