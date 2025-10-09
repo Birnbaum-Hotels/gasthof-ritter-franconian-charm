@@ -3,8 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building, Wifi, Coffee, Car, Video, Users, Download, Phone } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
+import { useState } from "react";
 
 const Tagung = () => {
+  const [selectedPackage, setSelectedPackage] = useState(1); // Business Premium selected by default
   const packages = [
     {
       name: "Basic Tagung",
@@ -183,7 +185,15 @@ const Tagung = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
-              <Card key={index} className={`shadow-card relative ${pkg.popular ? 'ring-2 ring-wine-red' : ''}`}>
+              <Card 
+                key={index} 
+                className={`shadow-card relative cursor-pointer transition-all duration-300 ${
+                  selectedPackage === index 
+                    ? 'ring-2 ring-wine-red' 
+                    : 'hover:ring-2 hover:ring-wine-red/50'
+                }`}
+                onClick={() => setSelectedPackage(index)}
+              >
                 {pkg.popular && (
                   <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-wine-red text-white">
                     Empfohlen
@@ -204,7 +214,7 @@ const Tagung = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant={pkg.popular ? "default" : "outline"} className="w-full">
+                  <Button variant={selectedPackage === index ? "default" : "outline"} className="w-full">
                     Pauschale anfragen
                   </Button>
                 </CardContent>
