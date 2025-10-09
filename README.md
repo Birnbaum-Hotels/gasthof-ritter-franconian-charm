@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# Gasthof Ritter St. Georg – Projekt
 
-## Project info
+## Entwicklung lokal starten
 
-**URL**: https://lovable.dev/projects/2440e62f-9a0c-42f8-abd9-89387a1151e6
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/2440e62f-9a0c-42f8-abd9-89387a1151e6) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Voraussetzungen: Node.js und npm installiert – Empfehlung: Installation mit `nvm` (`https://github.com/nvm-sh/nvm#installing-and-updating`).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Repository klonen
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# In das Projektverzeichnis wechseln
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Abhängigkeiten installieren
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Entwicklungsserver starten
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## Verwendete Technologien
 
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+ 
+## Cookie Consent
 
-## How can I deploy this project?
+Eine einfache, DSGVO‑freundliche Cookie-Lösung ist integriert.
 
-Simply open [Lovable](https://lovable.dev/projects/2440e62f-9a0c-42f8-abd9-89387a1151e6) and click on Share -> Publish.
+- Zustand/Storage: `src/contexts/ConsentContext.tsx` (persistiert in `localStorage`).
+- Banner: `src/components/CookieBanner.tsx`, eingebunden in `src/App.tsx`.
+- Helper: `src/lib/consent.ts` mit `isConsentGranted('analytics' | 'marketing')`.
 
-## Can I connect a custom domain to my Lovable project?
+Beispiel:
 
-Yes, you can!
+```tsx
+import { isConsentGranted } from "@/lib/consent";
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+if (isConsentGranted('analytics')) {
+  // Analytics erst nach Einwilligung initialisieren
+}
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Hinweise:
+
+- Standard: nur essenzielle Cookies bis zur Wahl.
+- Drittskripte (Analytics, Marketing, Maps) erst nach Einwilligung laden.
+- Texte/Links im Banner an Ihre Rechtsdokumente anpassen (siehe `Datenschutz`).
+
+## Deployment
+
+Build erzeugen und anschließend auf Ihrem Hosting/Server ausliefern.
+
+```sh
+npm run build
+npm run preview
+```
