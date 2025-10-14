@@ -24,6 +24,13 @@ const Header = () => {
 
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
+      {/* Skip to content link for accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:p-4 focus:m-4 focus:rounded"
+      >
+        Zum Hauptinhalt springen
+      </a>
       {/* Top contact bar */}
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4">
@@ -60,6 +67,7 @@ const Header = () => {
               <img 
                 src={ritterLogo} 
                 alt="Ritter St. Georg Logo" 
+                title="Ritter St. Georg Logo"
                 className="h-12 w-auto object-contain flex-shrink-0"
               />
               <div className="hidden md:block min-w-0">

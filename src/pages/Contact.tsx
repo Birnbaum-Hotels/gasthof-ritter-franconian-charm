@@ -18,6 +18,9 @@ const contactFormSchema = z.object({
   phone: z.string().trim().max(50, "Telefonnummer muss weniger als 50 Zeichen haben").optional(),
   subject: z.string().trim().min(1, "Betreff ist erforderlich").max(200, "Betreff muss weniger als 200 Zeichen haben"),
   message: z.string().trim().min(1, "Nachricht ist erforderlich").max(2000, "Nachricht muss weniger als 2000 Zeichen haben"),
+  dataConsent: z.boolean().refine(val => val === true, {
+    message: "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren."
+  }),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -33,6 +36,7 @@ const Contact = () => {
       phone: "",
       subject: "",
       message: "",
+      dataConsent: false,
     },
   });
 
@@ -309,6 +313,32 @@ const Contact = () => {
                         )}
                       />
 
+                      <FormField
+                        control={form.control}
+                        name="dataConsent"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                            <FormControl>
+                              <input
+                                type="checkbox"
+                                className="h-4 w-4 mt-1 accent-primary"
+                                required
+                                aria-required="true"
+                                {...field}
+                              />
+                            </FormControl>
+                            <div className="space-y-1 leading-none">
+                              <FormLabel>
+                                Datenschutzerklärung *
+                              </FormLabel>
+                              <p className="text-xs text-muted-foreground">
+                                Ich habe die <a href="/datenschutz" className="underline focus:ring-2 focus:ring-primary focus:outline-none" target="_blank">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zum Zweck der Kontaktaufnahme zu. Diese Einwilligung kann jederzeit widerrufen werden.
+                              </p>
+                            </div>
+                          </FormItem>
+                        )}
+                      />
+
                       <div className="space-y-4">
                         <p className="text-xs text-muted-foreground">
                           * Pflichtfelder
@@ -319,8 +349,9 @@ const Contact = () => {
                           className="w-full" 
                           size="lg"
                           disabled={form.formState.isSubmitting}
+                          aria-label="Nachricht senden"
                         >
-                          <Mail className="w-4 h-4 mr-2" />
+                          <Mail className="w-4 h-4 mr-2" aria-hidden="true" />
                           {form.formState.isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
                         </Button>
                       </div>
