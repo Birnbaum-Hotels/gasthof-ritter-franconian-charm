@@ -182,6 +182,7 @@ const Footer = () => {
                 <img 
                   src={ritterLogo} 
                   alt="Ritter St. Georg Logo" 
+                  title="Ritter St. Georg Logo"
                   className="h-12 w-auto object-contain"
                 />
                 <div>
@@ -272,6 +273,7 @@ const Footer = () => {
                 <img 
                   src={birnbaumLogo} 
                   alt="Birnbaum Hotels & Restaurants" 
+                  title="Birnbaum Hotels & Restaurants"
                   className="h-16 w-auto object-contain hover:opacity-80 transition-opacity mb-4"
                 />
               </div>

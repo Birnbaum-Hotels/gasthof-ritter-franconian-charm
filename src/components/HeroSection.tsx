@@ -1,24 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Calendar, Star, CheckCircle2 } from "lucide-react";
+import { isConsentGranted } from "@/lib/consent";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-ritter-st-georg.jpg";
 
 const HeroSection = () => {
   const handleReserveClick = () => {
-    // GA4 event
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'reserve_click', {
-        section: 'hero'
-      });
+    // GA4 event only if analytics consent granted
+    if (isConsentGranted('analytics') && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'reserve_click', { section: 'hero' });
     }
   };
 
-  const handleBookingClick = () => {
-    // GA4 event
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'booking_start', {
-        section: 'hero'
-      });
+  const handleBookingClick = () => { 
+    // GA4 event only if analytics consent granted
+    if (isConsentGranted('analytics') && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'booking_start', { section: 'hero' });
     }
   };
 
@@ -29,6 +26,7 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Historische Sandstein-Fassade des Gasthof Ritter St. Georg in Erlangen"
+          title="Historische Sandstein-Fassade des Gasthof Ritter St. Georg in Erlangen"
           className="w-full h-full object-cover object-[center_65%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/0" />

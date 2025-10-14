@@ -22,12 +22,12 @@ const Barrierefreiheit = () => {
           <div className="grid gap-8">
             <Card className="shadow-card">
               <CardHeader>
-                <CardTitle className="text-xl text-primary">Barrierefreiheit unserer Website</CardTitle>
+                <CardTitle className="text-xl text-primary">Barrierefreiheitserklärung</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
                   Wir sind bestrebt, unsere Website für alle Benutzer zugänglich zu machen, unabhängig von ihren Fähigkeiten oder Technologien. 
-                  Unsere Website wurde nach den Web Content Accessibility Guidelines (WCAG) 2.1 Level AA entwickelt.
+                  Unsere Website wurde nach den Web Content Accessibility Guidelines (WCAG) 2.1 Level AA entwickelt und berücksichtigt die Anforderungen des Barrierefreiheitsstärkungsgesetzes (BFSG) und der Barrierefreie-Informationstechnik-Verordnung (BITV 2.0).
                 </p>
                 
                 <div>
@@ -39,14 +39,53 @@ const Barrierefreiheit = () => {
                     <li>Tastaturnavigation für alle interaktiven Elemente</li>
                     <li>Verständliche Sprache und klare Formulierungen</li>
                     <li>Responsive Design für verschiedene Bildschirmgrößen</li>
+                    <li>Korrekte Sprachauszeichnung (lang-Attribut)</li>
+                    <li>"Zum Hauptinhalt springen"-Link für Tastaturnutzer</li>
+                    <li>ARIA-Attribute für verbesserte Screenreader-Unterstützung</li>
+                    <li>Barrierefreie Formulare mit klaren Beschriftungen</li>
+                    <li>Zugängliche Cookie-Einstellungen und Datenschutzhinweise</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-medium text-primary mb-2">Laufende Verbesserungen</h4>
+                  <h4 className="font-medium text-primary mb-2">Konformitätsstatus</h4>
                   <p className="text-muted-foreground text-sm">
-                    Wir arbeiten kontinuierlich daran, die Barrierefreiheit unserer Website zu verbessern. 
-                    Regelmäßige Tests und Audits helfen uns dabei, Schwachstellen zu identifizieren und zu beheben.
+                    Diese Website ist teilweise konform mit den WCAG 2.1 Level AA-Richtlinien. Wir arbeiten kontinuierlich daran, 
+                    die volle Konformität zu erreichen und alle Inhalte barrierefrei zugänglich zu machen.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-medium text-primary mb-2">Bekannte Einschränkungen</h4>
+                  <p className="text-muted-foreground text-sm">
+                    Einige ältere PDF-Dokumente sind möglicherweise nicht vollständig barrierefrei. 
+                    Wir arbeiten daran, diese Dokumente zu aktualisieren oder alternative Formate anzubieten.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-medium text-primary mb-2">Feedback und Kontakt</h4>
+                  <p className="text-muted-foreground text-sm">
+                    Wir freuen uns über Ihr Feedback zur Barrierefreiheit unserer Website. 
+                    Wenn Sie auf Probleme stoßen oder Verbesserungsvorschläge haben, kontaktieren Sie uns bitte unter:
+                  </p>
+                  <div className="mt-2 flex flex-col gap-2">
+                    <a href="mailto:barrierefreiheit@gasthof-ritter-st-georg.de" className="text-primary hover:underline flex items-center gap-2">
+                      <Mail className="w-4 h-4" />
+                      <span>barrierefreiheit@gasthof-ritter-st-georg.de</span>
+                    </a>
+                    <a href="tel:+4993211234567" className="text-primary hover:underline flex items-center gap-2">
+                      <Phone className="w-4 h-4" />
+                      <span>+49 9321 123456</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-medium text-primary mb-2">Durchsetzungsverfahren</h4>
+                  <p className="text-muted-foreground text-sm">
+                    Wenn Sie mit unserer Antwort auf Ihr Feedback nicht zufrieden sind, können Sie sich an die 
+                    Bundesfachstelle für Barrierefreiheit wenden.
                   </p>
                 </div>
               </CardContent>
