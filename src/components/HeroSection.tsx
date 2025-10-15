@@ -41,8 +41,9 @@ const HeroSection = () => {
             target="_blank"
             rel="nofollow noopener noreferrer"
             className="inline-flex items-center gap-2 mb-4 text-white/90 hover:text-white transition-colors"
+            aria-label="Google Bewertungen ansehen"
           >
-            <div className="flex items-center gap-0.5">
+            <div className="flex items-center gap-0.5" aria-hidden="true">
               {[...Array(4)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-white/90 text-white/90" />
               ))}
@@ -76,11 +77,11 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <Link to="/restaurant#reservieren" onClick={handleReserveClick}>
+            <Link to="/restaurant#reservieren" onClick={handleReserveClick} aria-label="Tisch im Restaurant reservieren">
               <Button size="lg" className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 h-auto w-full sm:w-auto">
-                <Users className="w-5 h-5 mr-2" />
+                <Users className="w-5 h-5 mr-2" aria-hidden="true" />
                 Tisch reservieren
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
               </Button>
             </Link>
             <Button 
@@ -90,10 +91,10 @@ const HeroSection = () => {
               onClick={handleBookingClick}
               asChild
             >
-              <a href="https://www.booking.com" target="_self">
-                <Calendar className="w-5 h-5 mr-2" />
+              <a href="https://www.booking.com" target="_self" aria-label="Zimmer im Hotel buchen">
+                <Calendar className="w-5 h-5 mr-2" aria-hidden="true" />
                 Zimmer buchen
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
               </a>
             </Button>
           </div>

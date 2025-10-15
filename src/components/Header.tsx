@@ -36,22 +36,22 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-2 sm:gap-4">
-              <div className="flex items-center gap-1">
-                <Phone className="w-4 h-4" />
+              <a href="tel:+4991317665-0" className="flex items-center gap-1" aria-label="Telefonnummer: +49 9131 7665-0">
+                <Phone className="w-4 h-4" aria-hidden="true" />
                 <span className="hidden xs:inline">+49 9131 7665-0</span>
                 <span className="xs:hidden">Tel</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Mail className="w-4 h-4" />
+              </a>
+              <a href="mailto:ritter@birnbaum-hotels.de" className="flex items-center gap-1" aria-label="E-Mail: ritter@birnbaum-hotels.de">
+                <Mail className="w-4 h-4" aria-hidden="true" />
                 <span className="hidden sm:inline">ritter@birnbaum-hotels.de</span>
                 <span className="sm:hidden">Mail</span>
-              </div>
+              </a>
             </div>
             <div className="hidden lg:flex gap-2">
-              <Button variant="secondary" size="sm" className="h-7">
+              <Button variant="secondary" size="sm" className="h-7" aria-label="Tisch reservieren">
                 Tisch reservieren
               </Button>
-              <Button variant="accent" size="sm" className="h-7">
+              <Button variant="accent" size="sm" className="h-7" aria-label="Zimmer buchen">
                 Zimmer buchen
               </Button>
             </div>
@@ -87,7 +87,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-6 flex-shrink-0">
+          <nav className="hidden xl:flex items-center space-x-6 flex-shrink-0" aria-label="Hauptnavigation">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -97,6 +97,7 @@ const Header = () => {
                     ? "text-primary border-b-2 border-primary"
                     : "text-foreground"
                 }`}
+                aria-current={isActive(item.href) ? "page" : undefined}
               >
                 {item.name}
               </Link>
@@ -106,13 +107,19 @@ const Header = () => {
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="xl:hidden flex-shrink-0">
-              <Button variant="outline" size="icon">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
+              <Button 
+                variant="outline" 
+                size="icon"
+                aria-label="Hauptmenü öffnen"
+                aria-expanded={isOpen}
+                aria-controls="mobile-navigation"
+              >
+                <Menu className="h-5 w-5" aria-hidden="true" />
+                <span className="sr-only">Menü öffnen</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
-              <div className="flex flex-col gap-4 mt-8">
+              <div className="flex flex-col gap-4 mt-8" id="mobile-navigation" aria-label="Hauptnavigation">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -123,6 +130,7 @@ const Header = () => {
                         : "hover:bg-muted"
                     }`}
                     onClick={() => setIsOpen(false)}
+                    aria-current={isActive(item.href) ? "page" : undefined}
                   >
                     {item.name}
                   </Link>
