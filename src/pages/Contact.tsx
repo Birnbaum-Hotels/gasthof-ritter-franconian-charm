@@ -324,7 +324,11 @@ const Contact = () => {
                                 className="h-4 w-4 mt-1 accent-primary"
                                 required
                                 aria-required="true"
-                                {...field}
+                                checked={field.value}
+                                onChange={field.onChange}
+                                onBlur={field.onBlur}
+                                name={field.name}
+                                ref={field.ref}
                               />
                             </FormControl>
                             <div className="space-y-1 leading-none">

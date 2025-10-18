@@ -188,14 +188,19 @@ const Footer = () => {
             {/* Opening Hours */}
             <div className="space-y-4">
               <h3 className="font-semibold text-lg">Öffnungszeiten</h3>
-              <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="space-y-3 text-sm text-muted-foreground">
                 <div className="flex items-start gap-2">
                   <Clock className="w-4 h-4 mt-0.5 text-wine-red" />
                   <div>
                     <div className="font-medium text-foreground">Restaurant</div>
-                    <div>Di-So: 17:00-22:00</div>
-                    <div>Montag Ruhetag</div>
+                    <div>Mo. - Sa. 11:00-23:00 Uhr</div>
+                    <div>So. 11:00-22:00 Uhr</div>
                   </div>
+                </div>
+                <div className="pt-2">
+                  <div className="font-medium text-foreground">Warme Küche</div>
+                  <div>Montag bis Samstag 11:30 Uhr - 21:00 Uhr</div>
+                  <div>Sonn- und Feiertag 11:30 Uhr - 20:30 Uhr</div>
                 </div>
                 <div className="pt-2">
                   <div className="font-medium text-foreground">Hotel</div>
