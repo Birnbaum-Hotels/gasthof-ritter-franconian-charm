@@ -2,45 +2,44 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Award, Heart, Clock, MapPin, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-gasthof.jpg";
-
 const About = () => {
-  const familyMembers = [
-    {
-      name: "Hans Ritter",
-      role: "Geschäftsführer",
-      description: "Führt das Familienunternehmen in dritter Generation mit Leidenschaft für fränkische Traditionen."
-    },
-    {
-      name: "Maria Ritter",
-      role: "Küchenchefin",
-      description: "Zaubert mit regionalen Zutaten authentische fränkische Gerichte und moderne Interpretationen."
-    },
-    {
-      name: "Thomas Ritter",
-      role: "Hoteldirektor",
-      description: "Sorgt für den perfekten Aufenthalt unserer Gäste und leitet unser herzliches Serviceteam."
-    }
-  ];
-
-  const milestones = [
-    { year: "1847", event: "Gründung des Gasthofs durch Johann Ritter" },
-    { year: "1923", event: "Übernahme durch die zweite Generation" },
-    { year: "1975", event: "Erweiterung um den Hotelbetrieb" },
-    { year: "1998", event: "Umfassende Renovierung und Modernisierung" },
-    { year: "2015", event: "Auszeichnung 'Fränkischer Gasthof des Jahres'" },
-    { year: "2024", event: "Heute: Tradition trifft Moderne unter der dritten Generation" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const familyMembers = [{
+    name: "Hans Ritter",
+    role: "Geschäftsführer",
+    description: "Führt das Familienunternehmen in dritter Generation mit Leidenschaft für fränkische Traditionen."
+  }, {
+    name: "Maria Ritter",
+    role: "Küchenchefin",
+    description: "Zaubert mit regionalen Zutaten authentische fränkische Gerichte und moderne Interpretationen."
+  }, {
+    name: "Thomas Ritter",
+    role: "Hoteldirektor",
+    description: "Sorgt für den perfekten Aufenthalt unserer Gäste und leitet unser herzliches Serviceteam."
+  }];
+  const milestones = [{
+    year: "1847",
+    event: "Gründung des Gasthofs durch Johann Ritter"
+  }, {
+    year: "1923",
+    event: "Übernahme durch die zweite Generation"
+  }, {
+    year: "1975",
+    event: "Erweiterung um den Hotelbetrieb"
+  }, {
+    year: "1998",
+    event: "Umfassende Renovierung und Modernisierung"
+  }, {
+    year: "2015",
+    event: "Auszeichnung 'Fränkischer Gasthof des Jahres'"
+  }, {
+    year: "2024",
+    event: "Heute: Tradition trifft Moderne unter der dritten Generation"
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-96 flex items-center">
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="Geschichte Gasthof Ritter St. Georg - Traditionelle fränkische Gastlichkeit"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Geschichte Gasthof Ritter St. Georg - Traditionelle fränkische Gastlichkeit" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
         </div>
         
@@ -48,9 +47,7 @@ const About = () => {
           <h1 className="text-5xl font-serif font-bold text-primary-foreground mb-4">
             Über uns
           </h1>
-          <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-            175 Jahre fränkische Gastlichkeit - Eine Familientradition mit Herz und Geschichte
-          </p>
+          <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">135+ Jahre fränkische Gastlichkeit - Eine Familientradition mit Herz und Geschichte</p>
         </div>
       </section>
 
@@ -87,19 +84,24 @@ const About = () => {
                 </p>
               </div>
               <div className="space-y-6">
-                {[
-                  { icon: Heart, text: "Familientradition seit 1847" },
-                  { icon: Award, text: "Ausgezeichnete fränkische Küche" },
-                  { icon: Users, text: "Herzlicher, persönlicher Service" },
-                  { icon: MapPin, text: "Mitten im Herzen Frankens" }
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-4">
+                {[{
+                icon: Heart,
+                text: "Familientradition seit 1847"
+              }, {
+                icon: Award,
+                text: "Ausgezeichnete fränkische Küche"
+              }, {
+                icon: Users,
+                text: "Herzlicher, persönlicher Service"
+              }, {
+                icon: MapPin,
+                text: "Mitten im Herzen Frankens"
+              }].map((item, index) => <div key={index} className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
                       <item.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <span className="text-primary font-medium">{item.text}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -120,8 +122,7 @@ const About = () => {
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <Card key={index} className="shadow-card hover:shadow-warm transition-shadow duration-300">
+              {milestones.map((milestone, index) => <Card key={index} className="shadow-card hover:shadow-warm transition-shadow duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-6">
                       <div className="w-20 h-20 bg-gradient-hero rounded-lg flex items-center justify-center flex-shrink-0">
@@ -136,8 +137,7 @@ const About = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -156,8 +156,7 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {familyMembers.map((member, index) => (
-              <Card key={index} className="text-center shadow-card hover:shadow-warm transition-shadow duration-300">
+            {familyMembers.map((member, index) => <Card key={index} className="text-center shadow-card hover:shadow-warm transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-10 h-10 text-primary-foreground" />
@@ -172,8 +171,7 @@ const About = () => {
                     {member.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -205,8 +203,6 @@ const About = () => {
           </Card>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
