@@ -129,7 +129,7 @@ const Footer = () => {
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-8">
-            Ein Verbund der{" "}
+            Ein Haus der{" "}
             <a
               href="https://www.birnbaum-hotels.de"
               target="_blank"
