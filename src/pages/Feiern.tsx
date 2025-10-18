@@ -143,9 +143,7 @@ const Feiern = () => {
               <h2 className="text-3xl font-serif font-bold text-primary mb-4">
                 Räume & Kapazitäten
               </h2>
-              <p className="text-muted-foreground">
-                Flexible Raumaufteilung für 15 bis 80 Gäste
-              </p>
+              <p className="text-muted-foreground">Flexible Raumaufteilung für jede Gruppengröße bis 120 Gäste</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
