@@ -4,31 +4,38 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone, Mail } from "lucide-react";
 import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
-  const navigation = [
-    { name: "Startseite", href: "/" },
-    { name: "Restaurant", href: "/restaurant" },
-    { name: "Feiern", href: "/feiern" },
-    { name: "Tagung", href: "/tagung" },
-    { name: "Hotel", href: "/hotel" },
-    { name: "Angebote", href: "/angebote" },
-    { name: "Über uns", href: "/about" },
-    { name: "Kontakt", href: "/contact" },
-  ];
-
+  const navigation = [{
+    name: "Startseite",
+    href: "/"
+  }, {
+    name: "Restaurant",
+    href: "/restaurant"
+  }, {
+    name: "Feiern",
+    href: "/feiern"
+  }, {
+    name: "Tagung",
+    href: "/tagung"
+  }, {
+    name: "Hotel",
+    href: "/hotel"
+  }, {
+    name: "Angebote",
+    href: "/angebote"
+  }, {
+    name: "Über uns",
+    href: "/about"
+  }, {
+    name: "Kontakt",
+    href: "/contact"
+  }];
   const isActive = (path: string) => location.pathname === path;
-
-  return (
-    <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
+  return <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
       {/* Skip to content link for accessibility */}
-      <a 
-        href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:p-4 focus:m-4 focus:rounded"
-      >
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:p-4 focus:m-4 focus:rounded">
         Zum Hauptinhalt springen
       </a>
       {/* Top contact bar */}
@@ -39,7 +46,7 @@ const Header = () => {
               <div className="flex items-center gap-1">
                 <Phone className="w-4 h-4" />
                 <span className="hidden xs:inline">+49 9131 7665-0</span>
-                <span className="xs:hidden">Tel</span>
+                <span className="xs:hidden">Tel. +49 9131 7665-0</span>
               </div>
               <div className="flex items-center gap-1">
                 <Mail className="w-4 h-4" />
@@ -64,12 +71,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center min-w-0 flex-1">
             <Link to="/" className="flex items-center space-x-2 min-w-0">
-              <img 
-                src={ritterLogo} 
-                alt="Ritter St. Georg Logo" 
-                title="Ritter St. Georg Logo"
-                className="h-12 w-auto object-contain flex-shrink-0"
-              />
+              <img src={ritterLogo} alt="Ritter St. Georg Logo" title="Ritter St. Georg Logo" className="h-12 w-auto object-contain flex-shrink-0" />
               <div className="hidden md:block min-w-0">
                 <div className="font-serif text-lg lg:text-xl font-bold text-primary truncate">
                   Gasthof Ritter St. Georg
@@ -88,19 +90,9 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-6 flex-shrink-0">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
-                  isActive(item.href)
-                    ? "text-primary border-b-2 border-primary"
-                    : "text-foreground"
-                }`}
-              >
+            {navigation.map(item => <Link key={item.name} to={item.href} className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-foreground"}`}>
                 {item.name}
-              </Link>
-            ))}
+              </Link>)}
           </nav>
 
           {/* Mobile Navigation */}
@@ -113,20 +105,9 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col gap-4 mt-8">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
-                      isActive(item.href)
-                        ? "bg-primary text-primary-foreground"
-                        : "hover:bg-muted"
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
+                {navigation.map(item => <Link key={item.name} to={item.href} className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${isActive(item.href) ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`} onClick={() => setIsOpen(false)}>
                     {item.name}
-                  </Link>
-                ))}
+                  </Link>)}
                 <div className="flex flex-col gap-2 mt-4 pt-4 border-t">
                   <Button variant="secondary" className="w-full">
                     Tisch reservieren
@@ -140,8 +121,6 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
