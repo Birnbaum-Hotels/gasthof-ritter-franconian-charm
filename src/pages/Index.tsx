@@ -111,12 +111,12 @@ const Index = () => {
             <div className="hidden md:block w-px h-6 bg-border"></div>
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5" />
-              <span className="text-sm font-medium">Eigener Biergarten</span>
+              <span className="text-sm font-medium">Biergarten direkt an der Regnitz</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-border"></div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
-              <span className="text-sm font-medium">Nähe Siemens-Campus & Uni-Klinikum</span>
+              <span className="text-sm font-medium">Nähe Stadtzentrum, Siemens-Campus & Uni-Klinikum</span>
             </div>
             <div className="hidden md:block w-px h-6 bg-border"></div>
             <div className="flex items-center gap-2">
@@ -142,8 +142,8 @@ const Index = () => {
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                 </div>
-                <span className="text-lg font-semibold text-foreground">4.8</span>
-                <span className="text-muted-foreground">aus 150+ Bewertungen</span>
+                <span className="text-lg font-semibold text-foreground">4.2</span>
+                <span className="text-muted-foreground">aus 1.500+ Bewertungen</span>
               </div>
             </div>
 
@@ -215,9 +215,7 @@ const Index = () => {
               <h2 className="text-3xl font-serif font-bold text-foreground mb-4">
                 Perfekte Lage in Erlangen
               </h2>
-              <p className="text-muted-foreground">
-                Zentral gelegen zwischen Siemens-Campus und Uni-Klinikum
-              </p>
+              <p className="text-muted-foreground">Perfekt gelegen in Erlangen Bruck</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -255,10 +253,7 @@ const Index = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-foreground mb-2">Verkehrsanbindung</h3>
-                      <p className="text-muted-foreground text-sm">
-                        A3/A73 in 15 Minuten. Busverbindung zur Innenstadt. 
-                        Kostenlose Parkplätze direkt am Haus.
-                      </p>
+                      <p className="text-muted-foreground text-sm">A3/A73 in 3 Minuten. Busverbindung zur Innenstadt. Kostenlose Parkplätze direkt am Haus.</p>
                     </div>
                   </div>
                 </div>
@@ -266,16 +261,9 @@ const Index = () => {
 
               <div className="bg-muted rounded-lg p-6">
                 <div className="aspect-video bg-white border rounded-lg overflow-hidden mb-4">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.9945978738253!2d11.015089776826644!3d49.62089334929842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57b3e6b3e6e3%3A0x6b8b8b8b8b8b8b8b!2sHerzogenauracher%20Damm%2011%2C%2091058%20Erlangen%2C%20Germany!5e0!3m2!1sen!2sde!4v1234567890123!5m2!1sen!2sde"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Gasthof Ritter St. Georg Location"
-                  />
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.9945978738253!2d11.015089776826644!3d49.62089334929842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57b3e6b3e6e3%3A0x6b8b8b8b8b8b8b8b!2sHerzogenauracher%20Damm%2011%2C%2091058%20Erlangen%2C%20Germany!5e0!3m2!1sen!2sde!4v1234567890123!5m2!1sen!2sde" width="100%" height="100%" style={{
+                  border: 0
+                }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Gasthof Ritter St. Georg Location" />
                 </div>
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-2">
