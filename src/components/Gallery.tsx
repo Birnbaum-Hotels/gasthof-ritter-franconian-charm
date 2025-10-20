@@ -86,6 +86,7 @@ const Gallery = () => {
               onClick={() => openLightbox(index)}
               role="button"
               tabIndex={0}
+              aria-label={`Bild öffnen: ${image.alt}`}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   openLightbox(index);
@@ -113,15 +114,15 @@ const Gallery = () => {
           onKeyDown={handleKeyDown}
           role="dialog"
           aria-modal="true"
+          aria-label="Bildansicht"
           tabIndex={-1}
         >
           <button
             onClick={closeLightbox}
             className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
-            aria-label="Galerie schließen"
+            aria-label="Bildansicht schließen"
           >
-            <X className="w-8 h-8" />
-          </button>
+            <X className="w-8 h-8" aria-hidden="true" />
           <img
             src={images[selectedImage].src}
             alt={images[selectedImage].alt}
