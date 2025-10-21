@@ -123,6 +123,7 @@ const Gallery = () => {
             aria-label="Bildansicht schließen"
           >
             <X className="w-8 h-8" aria-hidden="true" />
+          </button>
           <img
             src={images[selectedImage].src}
             alt={images[selectedImage].alt}

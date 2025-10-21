@@ -8,25 +8,47 @@ import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
   const navigation = [
-    { name: "Startseite", href: "/" },
-    { name: "Restaurant", href: "/restaurant" },
-    { name: "Feiern", href: "/feiern" },
-    { name: "Tagung", href: "/tagung" },
-    { name: "Hotel", href: "/hotel" },
-    { name: "Angebote", href: "/angebote" },
-    { name: "Über uns", href: "/about" },
-    { name: "Kontakt", href: "/contact" },
+    {
+      name: "Startseite",
+      href: "/",
+    },
+    {
+      name: "Restaurant",
+      href: "/restaurant",
+    },
+    {
+      name: "Feiern",
+      href: "/feiern",
+    },
+    {
+      name: "Tagung",
+      href: "/tagung",
+    },
+    {
+      name: "Hotel",
+      href: "/hotel",
+    },
+    {
+      name: "Angebote",
+      href: "/angebote",
+    },
+    {
+      name: "Über uns",
+      href: "/about",
+    },
+    {
+      name: "Kontakt",
+      href: "/contact",
+    },
   ];
-
   const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b border-border">
       {/* Skip to content link for accessibility */}
-      <a 
-        href="#main-content" 
+      <a
+        href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:p-4 focus:m-4 focus:rounded"
       >
         Zum Hauptinhalt springen
@@ -36,12 +58,21 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-2 sm:gap-4">
-              <a href="tel:+4991317665-0" className="flex items-center gap-1" aria-label="Telefonnummer: +49 9131 7665-0">
+              {/* RESOLUTION FOR CONFLICT 1 */}
+              <a
+                href="tel:+4991317665-0"
+                className="flex items-center gap-1"
+                aria-label="Telefonnummer: +49 9131 7665-0"
+              >
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 <span className="hidden xs:inline">+49 9131 7665-0</span>
-                <span className="xs:hidden">Tel</span>
+                <span className="xs:hidden">Tel</span> {/* Kept "Tel" for brevity on small screens */}
               </a>
-              <a href="mailto:ritter@birnbaum-hotels.de" className="flex items-center gap-1" aria-label="E-Mail: ritter@birnbaum-hotels.de">
+              <a
+                href="mailto:ritter@birnbaum-hotels.de"
+                className="flex items-center gap-1"
+                aria-label="E-Mail: ritter@birnbaum-hotels.de"
+              >
                 <Mail className="w-4 h-4" aria-hidden="true" />
                 <span className="hidden sm:inline">ritter@birnbaum-hotels.de</span>
                 <span className="sm:hidden">Mail</span>
@@ -64,9 +95,9 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center min-w-0 flex-1">
             <Link to="/" className="flex items-center space-x-2 min-w-0">
-              <img 
-                src={ritterLogo} 
-                alt="Ritter St. Georg Logo" 
+              <img
+                src={ritterLogo}
+                alt="Ritter St. Georg Logo"
                 title="Ritter St. Georg Logo"
                 className="h-12 w-auto object-contain flex-shrink-0"
               />
@@ -79,9 +110,7 @@ const Header = () => {
                 </div>
               </div>
               <div className="hidden sm:block md:hidden min-w-0">
-                <div className="font-serif text-base font-bold text-primary truncate">
-                  Gasthof Ritter St. Georg
-                </div>
+                <div className="font-serif text-base font-bold text-primary truncate">Gasthof Ritter St. Georg</div>
               </div>
             </Link>
           </div>
@@ -93,9 +122,7 @@ const Header = () => {
                 key={item.name}
                 to={item.href}
                 className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
-                  isActive(item.href)
-                    ? "text-primary border-b-2 border-primary"
-                    : "text-foreground"
+                  isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-foreground"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
               >
@@ -107,8 +134,8 @@ const Header = () => {
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="xl:hidden flex-shrink-0">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="icon"
                 aria-label="Hauptmenü öffnen"
                 aria-expanded={isOpen}
@@ -124,11 +151,7 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${
-                      isActive(item.href)
-                        ? "bg-primary text-primary-foreground"
-                        : "hover:bg-muted"
-                    }`}
+                    className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${isActive(item.href) ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
                     onClick={() => setIsOpen(false)}
                     aria-current={isActive(item.href) ? "page" : undefined}
                   >

@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, Users, Calendar, Camera, Utensils, MapPin } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
 import { useState } from "react";
-
 const Feiern = () => {
   const [selectedPackage, setSelectedPackage] = useState(1); // Premium package selected by default
   const celebrationTypes = [
@@ -12,46 +11,49 @@ const Feiern = () => {
       title: "Hochzeiten",
       description: "Ihr schönster Tag in romantischer Atmosphäre",
       icon: Heart,
-      features: ["Bis zu 80 Gäste", "Menü-Auswahl", "Dekoration", "Fotoshooting möglich"]
+      features: ["Bis zu 80 Gäste", "Menü-Auswahl", "Dekoration", "Fotoshooting möglich"],
     },
     {
       title: "Familienfeiern",
       description: "Geburtstage, Taufen, Kommunion & Konfirmation",
       icon: Users,
-      features: ["Flexible Raumaufteilung", "Kindergerechte Menüs", "Spielecke", "Parkplätze vorhanden"]
+      features: ["Flexible Raumaufteilung", "Kindergerechte Menüs", "Spielecke", "Parkplätze vorhanden"],
     },
     {
       title: "Trauerfeiern",
       description: "Würdevoller Abschied in ruhiger Umgebung",
       icon: Calendar,
-      features: ["Separate Räumlichkeiten", "Individuelle Menüs", "Persönliche Betreuung", "Kurzfristige Buchung möglich"]
-    }
+      features: [
+        "Separate Räumlichkeiten",
+        "Individuelle Menüs",
+        "Persönliche Betreuung",
+        "Kurzfristige Buchung möglich",
+      ],
+    },
   ];
-
   const packages = [
     {
       name: "Klassisch Fränkisch",
       description: "Traditionelle fränkische Küche für Ihre Feier",
       price: "ab 28€",
       features: ["3-Gang Menü", "Sauerbraten oder Schäufele", "Klöße und Kraut", "Fränkisches Bier inkl."],
-      popular: false
+      popular: false,
     },
     {
       name: "Premium Paket",
       description: "Gehobene Küche mit regionalen Spezialitäten",
-      price: "ab 42€", 
+      price: "ab 42€",
       features: ["4-Gang Menü", "Forelle oder Hirschmedaillons", "Saisonale Beilagen", "Weinbegleitung möglich"],
-      popular: true
+      popular: true,
     },
     {
       name: "Rundum-Sorglos",
       description: "Komplettpaket mit Dekoration und Service",
       price: "ab 55€",
       features: ["5-Gang Menü", "Tischdekoration", "Menükarten gestaltet", "Fotograf-Empfehlungen"],
-      popular: false
-    }
+      popular: false,
+    },
   ];
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -64,11 +66,9 @@ const Feiern = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60" />
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl font-serif font-bold text-primary-foreground mb-4">
-            Feiern ohne Stress
-          </h1>
+          <h1 className="text-5xl font-serif font-bold text-primary-foreground mb-4">Feiern ohne Stress</h1>
           <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
             Räume, Menü & Dekoration aus einer Hand - Ihre Feier in fränkischer Tradition
           </p>
@@ -79,9 +79,7 @@ const Feiern = () => {
       <section className="py-16 bg-gradient-warm">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">
-              Ihre Feier bei uns
-            </h2>
+            <h2 className="text-3xl font-serif font-bold text-primary mb-4">Ihre Feier bei uns</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Vom intimen Familienkreis bis zur großen Hochzeit - wir schaffen den passenden Rahmen
             </p>
@@ -120,9 +118,7 @@ const Feiern = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">
-              Unsere Feier-Pakete
-            </h2>
+            <h2 className="text-3xl font-serif font-bold text-primary mb-4">Unsere Feier-Pakete</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Wählen Sie das passende Paket für Ihre Feier - alle Preise pro Person
             </p>
@@ -130,13 +126,9 @@ const Feiern = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
-              <Card 
-                key={index} 
-                className={`shadow-card relative cursor-pointer transition-all duration-300 ${
-                  selectedPackage === index 
-                    ? 'ring-2 ring-wine-red' 
-                    : 'hover:ring-2 hover:ring-wine-red/50'
-                }`}
+              <Card
+                key={index}
+                className={`shadow-card relative cursor-pointer transition-all duration-300 ${selectedPackage === index ? "ring-2 ring-wine-red" : "hover:ring-2 hover:ring-wine-red/50"}`}
                 onClick={() => setSelectedPackage(index)}
               >
                 {pkg.popular && (
@@ -174,12 +166,8 @@ const Feiern = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-serif font-bold text-primary mb-4">
-                Räume & Kapazitäten
-              </h2>
-              <p className="text-muted-foreground">
-                Flexible Raumaufteilung für 15 bis 80 Gäste
-              </p>
+              <h2 className="text-3xl font-serif font-bold text-primary mb-4">Räume & Kapazitäten</h2>
+              <p className="text-muted-foreground">Flexible Raumaufteilung für jede Gruppengröße bis 120 Gäste</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -187,7 +175,7 @@ const Feiern = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Users className="w-5 h-5 text-wine-red" />
-                    Gesellschaftsraum
+                    Regnitzsalon
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -238,12 +226,10 @@ const Feiern = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-serif font-bold text-primary mb-6">
-              Ihre Feier planen
-            </h2>
+            <h2 className="text-3xl font-serif font-bold text-primary mb-6">Ihre Feier planen</h2>
             <p className="text-muted-foreground mb-8">
-              Lassen Sie uns gemeinsam Ihre perfekte Feier planen. Wir beraten Sie gerne 
-              persönlich und erstellen Ihnen ein individuelles Angebot.
+              Lassen Sie uns gemeinsam Ihre perfekte Feier planen. Wir beraten Sie gerne persönlich und schneiden die
+              Feier auf Ihre Wünsche zu
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="default" className="px-8">
@@ -251,7 +237,7 @@ const Feiern = () => {
                 Kostenlos anfragen
               </Button>
               <Button size="lg" variant="outline" className="px-8">
-                +49 9131 123456
+                +49 9131 7665-0
               </Button>
             </div>
           </div>
@@ -260,5 +246,4 @@ const Feiern = () => {
     </div>
   );
 };
-
 export default Feiern;

@@ -3,32 +3,27 @@ import { ArrowRight, Users, Calendar, Star, CheckCircle2 } from "lucide-react";
 import { isConsentGranted } from "@/lib/consent";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-ritter-st-georg.jpg";
-
 const HeroSection = () => {
   const handleReserveClick = () => {
     // GA4 event only if analytics consent granted
     if (isConsentGranted('analytics') && typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'reserve_click', { section: 'hero' });
+      (window as any).gtag('event', 'reserve_click', {
+        section: 'hero'
+      });
     }
   };
-
-  const handleBookingClick = () => { 
+  const handleBookingClick = () => {
     // GA4 event only if analytics consent granted
     if (isConsentGranted('analytics') && typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'booking_start', { section: 'hero' });
+      (window as any).gtag('event', 'booking_start', {
+        section: 'hero'
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center">
+  return <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Historische Sandstein-Fassade des Gasthof Ritter St. Georg in Erlangen"
-          title="Historische Sandstein-Fassade des Gasthof Ritter St. Georg in Erlangen"
-          className="w-full h-full object-cover object-[center_65%]"
-        />
+        <img src={heroImage} alt="Historische Sandstein-Fassade des Gasthof Ritter St. Georg in Erlangen" title="Historische Sandstein-Fassade des Gasthof Ritter St. Georg in Erlangen" className="w-full h-full object-cover object-[center_65%]" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/0" />
       </div>
 
@@ -49,12 +44,14 @@ const HeroSection = () => {
               ))}
               <div className="relative w-4 h-4">
                 <Star className="w-4 h-4 text-white/90 absolute inset-0" />
-                <div className="overflow-hidden absolute inset-0" style={{ width: '80%' }}>
+                <div className="overflow-hidden absolute inset-0" style={{
+                width: '80%'
+              }}>
                   <Star className="w-4 h-4 fill-white/90 text-white/90" />
                 </div>
               </div>
             </div>
-            <span className="text-sm">4.8 • 150+ Bewertungen</span>
+            <span className="text-sm">4.2 • 1.500+ Bewertungen</span>
           </a>
 
           {/* H1 */}
@@ -118,16 +115,16 @@ const HeroSection = () => {
           {/* Quick Stats */}
           <div className="grid grid-cols-3 gap-6 md:gap-8 pt-6 border-t border-white/20">
             <div className="text-white">
-              <div className="text-2xl md:text-3xl font-bold">175+</div>
-              <div className="text-xs md:text-sm opacity-90">Jahre Tradition</div>
+              <div className="text-2xl md:text-3xl font-bold">1891</div>
+              <div className="text-xs md:text-sm opacity-90">Familienunternehmen seit</div>
             </div>
             <div className="text-white">
-              <div className="text-2xl md:text-3xl font-bold">15</div>
+              <div className="text-2xl md:text-3xl font-bold">25</div>
               <div className="text-xs md:text-sm opacity-90">Komfortable Zimmer</div>
             </div>
             <div className="text-white">
-              <div className="text-2xl md:text-3xl font-bold">4.8</div>
-              <div className="text-xs md:text-sm opacity-90">Gästebewertung</div>
+              <div className="text-2xl md:text-3xl font-bold">XX</div>
+              <div className="text-xs md:text-sm opacity-90">XX</div>
             </div>
           </div>
         </div>
@@ -141,8 +138,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
