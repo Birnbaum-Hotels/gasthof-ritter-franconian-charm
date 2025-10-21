@@ -31,9 +31,6 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 pt-8">
         <div className="max-w-3xl">
           {/* Social Proof */}
-          <a href="https://www.google.com/search?q=Gasthof+Ritter+St.+Georg+Erlangen" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 mb-4 text-white/90 hover:text-white transition-colors">
-            <div className="flex items-center gap-0.5">
-              {[...Array(4)].map((_, i) => <Star key={i} className="w-4 h-4 fill-white/90 text-white/90" />)}
           <a
             href="https://www.google.com/search?q=Gasthof+Ritter+St.+Georg+Erlangen"
             target="_blank"
@@ -84,9 +81,6 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 h-auto border-white bg-white/10 text-white hover:bg-white hover:text-primary backdrop-blur-sm w-full sm:w-auto" onClick={handleBookingClick} asChild>
-              <a href="https://www.booking.com" target="_self">
-                <Calendar className="w-5 h-5 mr-2" />
             <Button 
               size="lg" 
               variant="outline" 
