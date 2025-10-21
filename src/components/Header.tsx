@@ -59,18 +59,18 @@ const Header = () => {
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center gap-2 sm:gap-4">
               {/* RESOLUTION FOR CONFLICT 1 */}
-              <a 
-                href="tel:+4991317665-0" 
-                className="flex items-center gap-1" 
+              <a
+                href="tel:+4991317665-0"
+                className="flex items-center gap-1"
                 aria-label="Telefonnummer: +49 9131 7665-0"
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 <span className="hidden xs:inline">+49 9131 7665-0</span>
                 <span className="xs:hidden">Tel</span> {/* Kept "Tel" for brevity on small screens */}
               </a>
-              <a 
-                href="mailto:ritter@birnbaum-hotels.de" 
-                className="flex items-center gap-1" 
+              <a
+                href="mailto:ritter@birnbaum-hotels.de"
+                className="flex items-center gap-1"
                 aria-label="E-Mail: ritter@birnbaum-hotels.de"
               >
                 <Mail className="w-4 h-4" aria-hidden="true" />
@@ -121,11 +121,8 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                {/* RESOLUTION FOR CONFLICT 2: Used the 'main' version for accessibility */}
                 className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
-                  isActive(item.href)
-                    ? "text-primary border-b-2 border-primary"
-                    : "text-foreground"
+                  isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-foreground"
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
               >
@@ -137,8 +134,8 @@ const Header = () => {
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="xl:hidden flex-shrink-0">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="icon"
                 aria-label="Hauptmenü öffnen"
                 aria-expanded={isOpen}
