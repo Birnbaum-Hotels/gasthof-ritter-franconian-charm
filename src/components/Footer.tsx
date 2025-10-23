@@ -261,18 +261,20 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Birnbaum Hotels & Actions */}
+            {/* Traditional Building */}
             <div className="space-y-4">
-              <div className="pt-4 border-t border-border">
-                <p className="text-xs text-muted-foreground mb-3">Ein Haus der</p>
+              <div className="p-4 bg-card rounded-lg border border-border">
                 <img
-                  src={birnbaumLogo}
-                  alt="Birnbaum Hotels & Restaurants"
-                  title="Birnbaum Hotels & Restaurants"
-                  className="h-16 w-auto object-contain hover:opacity-80 transition-opacity mb-4"
+                  src={traditionalBuilding}
+                  alt="Historisches Gebäude Ritter St. Georg"
+                  title="Traditionelles Gasthaus seit 1891"
+                  className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
                 />
+                <p className="text-xs text-center text-muted-foreground mt-2 italic">
+                  Im Familienbesitz seit 1891
+                </p>
               </div>
-
+              
               {/* Action Buttons */}
               <div className="space-y-2">
                 <Button variant="default" size="sm" className="w-full bg-wine-red hover:bg-wine-red-dark text-white">
