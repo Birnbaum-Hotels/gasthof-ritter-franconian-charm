@@ -4,7 +4,7 @@ import StickyBookingBar from "@/components/StickyBookingBar";
 import Gallery from "@/components/Gallery";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Utensils, Bed, Star, Clock, MapPin } from "lucide-react";
+import { ArrowRight, Utensils, Bed, Star, Clock, MapPin, Flame, Users } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
 import hotelImage from "@/assets/hotel-room.jpg";
 const Index = () => {
@@ -122,6 +122,96 @@ const Index = () => {
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5" />
               <span className="text-sm font-medium">Kostenlose Parkplätze</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Grillhütte USP Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+                  <Flame className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-semibold text-primary">Einzigartiges Erlebnis</span>
+                </div>
+                <h2 className="text-4xl font-serif font-bold text-foreground mb-6">
+                  Unsere Grillhütte
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Erleben Sie ein unvergessliches Beisammensein in unserer authentischen Grillhütte. 
+                  Sitzen Sie mit bis zu 15 Personen in geselliger Runde um das offene Feuer und 
+                  genießen die urig-gemütliche Atmosphäre.
+                </p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Flame className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Offenes Feuer</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Grillen Sie Steaks, Bratwürste und andere Spezialitäten am offenen Feuer
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Users className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Bis zu 15 Personen</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Perfekt für Familienfeste, Geburtstage oder kleine Firmenfeiern
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Winter & Sommer</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Ganzjährig verfügbar für unvergessliche Momente
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" asChild>
+                    <a href="/grillhuette">
+                      Mehr erfahren
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="/contact">
+                      Jetzt reservieren
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="relative rounded-lg overflow-hidden shadow-warm">
+                  <img 
+                    src={restaurantImage} 
+                    alt="Grillhütte - Einzigartiges Ambiente mit offenem Feuer" 
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <p className="text-sm font-medium mb-2">Unser Highlight</p>
+                    <h3 className="text-2xl font-serif font-bold">Authentische Grillhütte</h3>
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg shadow-warm hidden md:block">
+                  <p className="text-3xl font-bold mb-1">15</p>
+                  <p className="text-sm">Personen</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

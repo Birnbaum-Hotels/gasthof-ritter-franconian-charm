@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, ShoppingCart, Star, Utensils } from "lucide-react";
+import { Clock, Users, ShoppingCart, Star, Utensils, Flame, ArrowRight } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
 
 const Restaurant = () => {
@@ -122,6 +122,59 @@ const Restaurant = () => {
                   <span className="font-semibold">Ausgezeichnet</span>
                 </p>
               </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Grillhütte Highlight */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <Card className="overflow-hidden shadow-warm border-primary/20">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative h-64 md:h-auto">
+                  <img 
+                    src={restaurantImage} 
+                    alt="Grillhütte - Einzigartiges Grillerlebnis" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+                </div>
+                <div className="p-8 md:p-10 flex flex-col justify-center bg-gradient-warm">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full mb-4 w-fit">
+                    <Flame className="w-4 h-4 text-primary" />
+                    <span className="text-xs font-semibold text-primary">Besonderes Erlebnis</span>
+                  </div>
+                  <h3 className="text-3xl font-serif font-bold text-primary mb-4">
+                    Unsere Grillhütte
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    Erleben Sie ein unvergessliches Grillerlebnis am offenen Feuer. 
+                    Perfekt für gesellige Runden bis zu 15 Personen in urig-gemütlicher Atmosphäre.
+                  </p>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-2 text-sm">
+                      <Flame className="w-4 h-4 text-primary" />
+                      <span className="text-muted-foreground">Zentrale Feuerstelle zum Grillen</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <Users className="w-4 h-4 text-primary" />
+                      <span className="text-muted-foreground">Für bis zu 15 Personen</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <Clock className="w-4 h-4 text-primary" />
+                      <span className="text-muted-foreground">Ganzjährig verfügbar</span>
+                    </div>
+                  </div>
+                  <Button variant="default" size="lg" asChild className="w-full sm:w-auto">
+                    <a href="/grillhuette">
+                      Mehr zur Grillhütte
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
