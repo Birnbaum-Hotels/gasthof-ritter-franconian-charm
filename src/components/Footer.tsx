@@ -200,7 +200,7 @@ const Footer = () => {
                   src={birnbaumLogo}
                   alt="Birnbaum Hotels & Restaurants"
                   title="Birnbaum Hotels & Restaurants"
-                  className="h-16 w-auto object-contain hover:opacity-80 transition-opacity"
+                  className="h-24 w-auto object-contain hover:opacity-80 transition-opacity"
                 />
               </div>
             </div>
