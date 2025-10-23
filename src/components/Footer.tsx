@@ -196,16 +196,14 @@ const Footer = () => {
                   Kontakt
                 </Link>
               </div>
-              <div className="mt-6 p-4 bg-card rounded-lg border border-border">
+              <div className="mt-6 pt-4 border-t border-border">
+                <p className="text-xs text-muted-foreground mb-3">Ein Haus der</p>
                 <img
-                  src={traditionalBuilding}
-                  alt="Historisches Gebäude Ritter St. Georg"
-                  title="Traditionelles Gasthaus seit 1891"
-                  className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
+                  src={birnbaumLogo}
+                  alt="Birnbaum Hotels & Restaurants"
+                  title="Birnbaum Hotels & Restaurants"
+                  className="h-16 w-auto object-contain hover:opacity-80 transition-opacity"
                 />
-                <p className="text-xs text-center text-muted-foreground mt-2 italic">
-                  Im Familienbesitz seit 1891
-                </p>
               </div>
             </div>
 
