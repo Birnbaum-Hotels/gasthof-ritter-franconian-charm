@@ -31,10 +31,6 @@ const Header = () => {
       href: "/feiern",
     },
     {
-      name: "Tagung",
-      href: "/tagung",
-    },
-    {
       name: "Hotel",
       href: "/hotel",
     },
@@ -217,7 +213,7 @@ const Header = () => {
                                     isActive("/tagung") && "bg-accent"
                                   )}
                                 >
-                                  <div className="text-sm font-medium leading-none">Tagungen & Konferenzen</div>
+                                  <div className="text-sm font-medium leading-none">Tagung</div>
                                   <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                     Professionelle Tagungsräume
                                   </p>
@@ -302,7 +298,7 @@ const Header = () => {
                           onClick={() => setIsOpen(false)}
                           aria-current={isActive("/tagung") ? "page" : undefined}
                         >
-                          → Tagungen & Konferenzen
+                          → Tagung
                         </Link>
                       </div>
                     );
