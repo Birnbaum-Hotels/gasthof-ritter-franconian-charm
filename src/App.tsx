@@ -12,6 +12,7 @@ import Feiern from "./pages/Feiern";
 import Tagung from "./pages/Tagung";
 import Hotel from "./pages/Hotel";
 import Angebote from "./pages/Angebote";
+import FamilyLeisure from "./pages/FamilyLeisure";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Impressum from "./pages/Impressum";
@@ -41,6 +42,7 @@ const App = () => (
                 <Route path="/tagung" element={<Tagung />} />
                 <Route path="/hotel" element={<Hotel />} />
                 <Route path="/angebote" element={<Angebote />} />
+                <Route path="/family-leisure" element={<FamilyLeisure />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/impressum" element={<Impressum />} />

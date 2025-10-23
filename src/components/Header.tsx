@@ -39,6 +39,10 @@ const Header = () => {
       href: "/angebote",
     },
     {
+      name: "Familie & Freizeit",
+      href: "/family-leisure",
+    },
+    {
       name: "Über uns",
       href: "/about",
     },
