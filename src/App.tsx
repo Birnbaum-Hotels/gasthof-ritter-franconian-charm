@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Restaurant from "./pages/Restaurant";
+import Grillhuette from "./pages/Grillhuette";
 import Feiern from "./pages/Feiern";
 import Tagung from "./pages/Tagung";
 import Hotel from "./pages/Hotel";
@@ -35,6 +36,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/restaurant" element={<Restaurant />} />
+                <Route path="/grillhuette" element={<Grillhuette />} />
                 <Route path="/feiern" element={<Feiern />} />
                 <Route path="/tagung" element={<Tagung />} />
                 <Route path="/hotel" element={<Hotel />} />

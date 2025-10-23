@@ -2,8 +2,17 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Mail } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { Menu, Phone, Mail, ChevronDown } from "lucide-react";
 import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,18 +126,72 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-6 flex-shrink-0" aria-label="Hauptnavigation">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
-                  isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-foreground"
-                }`}
-                aria-current={isActive(item.href) ? "page" : undefined}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              if (item.name === "Restaurant") {
+                return (
+                  <NavigationMenu key={item.name}>
+                    <NavigationMenuList>
+                      <NavigationMenuItem>
+                        <NavigationMenuTrigger className={cn(
+                          "text-sm font-medium transition-colors hover:text-primary whitespace-nowrap bg-transparent",
+                          (isActive(item.href) || isActive("/grillhuette")) ? "text-primary" : "text-foreground"
+                        )}>
+                          {item.name}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="w-[240px] p-2">
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/restaurant"
+                                  className={cn(
+                                    "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                    isActive("/restaurant") && "bg-accent"
+                                  )}
+                                >
+                                  <div className="text-sm font-medium leading-none">Restaurant & Speisekarte</div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                    Fränkische Küche mit Tradition
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/grillhuette"
+                                  className={cn(
+                                    "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                    isActive("/grillhuette") && "bg-accent"
+                                  )}
+                                >
+                                  <div className="text-sm font-medium leading-none">Grillhütte</div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                    Für Feiern bis zu 15 Personen
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          </ul>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    </NavigationMenuList>
+                  </NavigationMenu>
+                );
+              }
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
+                    isActive(item.href) ? "text-primary border-b-2 border-primary" : "text-foreground"
+                  }`}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Mobile Navigation */}
@@ -147,17 +210,41 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col gap-4 mt-8" id="mobile-navigation" aria-label="Hauptnavigation">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${isActive(item.href) ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
-                    onClick={() => setIsOpen(false)}
-                    aria-current={isActive(item.href) ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                {navigation.map((item) => {
+                  if (item.name === "Restaurant") {
+                    return (
+                      <div key={item.name} className="flex flex-col gap-2">
+                        <Link
+                          to={item.href}
+                          className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${isActive(item.href) ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+                          onClick={() => setIsOpen(false)}
+                          aria-current={isActive(item.href) ? "page" : undefined}
+                        >
+                          {item.name}
+                        </Link>
+                        <Link
+                          to="/grillhuette"
+                          className={`text-base font-medium py-2 px-4 ml-4 rounded-lg transition-colors ${isActive("/grillhuette") ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+                          onClick={() => setIsOpen(false)}
+                          aria-current={isActive("/grillhuette") ? "page" : undefined}
+                        >
+                          → Grillhütte
+                        </Link>
+                      </div>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${isActive(item.href) ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+                      onClick={() => setIsOpen(false)}
+                      aria-current={isActive(item.href) ? "page" : undefined}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
                 <div className="flex flex-col gap-2 mt-4 pt-4 border-t">
                   <Button variant="secondary" className="w-full">
                     Tisch reservieren

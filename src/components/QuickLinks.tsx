@@ -21,7 +21,7 @@ const QuickLinks = () => {
           </Link>
           <span className="text-muted-foreground hidden sm:inline">•</span>
           <Link 
-            to="/restaurant#grillhuette" 
+            to="/grillhuette" 
             className="text-foreground hover:text-primary transition-colors underline-offset-4 hover:underline"
           >
             Grillhütte (Reservieren)
