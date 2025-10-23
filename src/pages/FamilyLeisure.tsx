@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bike, Trees, Castle, Baby, MapPin, ExternalLink } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const FamilyLeisure = () => {
   const sights = [
@@ -40,8 +38,7 @@ const FamilyLeisure = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
-      <main id="main-content" className="flex-grow">
+      <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-gradient-to-r from-primary to-primary-glow">
           <div className="absolute inset-0 bg-black/20"></div>
@@ -232,7 +229,6 @@ const FamilyLeisure = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };
