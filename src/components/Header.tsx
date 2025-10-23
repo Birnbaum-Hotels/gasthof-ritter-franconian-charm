@@ -31,16 +31,16 @@ const Header = () => {
       href: "/feiern",
     },
     {
-      name: "Tagung",
-      href: "/tagung",
-    },
-    {
       name: "Hotel",
       href: "/hotel",
     },
     {
       name: "Angebote",
       href: "/angebote",
+    },
+    {
+      name: "Familie & Freizeit",
+      href: "/family-leisure",
     },
     {
       name: "Über uns",
@@ -179,6 +179,58 @@ const Header = () => {
                   </NavigationMenu>
                 );
               }
+              if (item.name === "Hotel") {
+                return (
+                  <NavigationMenu key={item.name}>
+                    <NavigationMenuList>
+                      <NavigationMenuItem>
+                        <NavigationMenuTrigger className={cn(
+                          "text-sm font-medium transition-colors hover:text-primary whitespace-nowrap bg-transparent",
+                          (isActive(item.href) || isActive("/tagung")) ? "text-primary" : "text-foreground"
+                        )}>
+                          {item.name}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="w-[240px] p-2">
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/hotel"
+                                  className={cn(
+                                    "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                    isActive("/hotel") && "bg-accent"
+                                  )}
+                                >
+                                  <div className="text-sm font-medium leading-none">Hotel & Zimmer</div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                    Komfortable Übernachtung
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/tagung"
+                                  className={cn(
+                                    "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                                    isActive("/tagung") && "bg-accent"
+                                  )}
+                                >
+                                  <div className="text-sm font-medium leading-none">Tagung</div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                    Professionelle Tagungsräume
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          </ul>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    </NavigationMenuList>
+                  </NavigationMenu>
+                );
+              }
               return (
                 <Link
                   key={item.name}
@@ -229,6 +281,28 @@ const Header = () => {
                           aria-current={isActive("/grillhuette") ? "page" : undefined}
                         >
                           → Grillhütte
+                        </Link>
+                      </div>
+                    );
+                  }
+                  if (item.name === "Hotel") {
+                    return (
+                      <div key={item.name} className="flex flex-col gap-2">
+                        <Link
+                          to={item.href}
+                          className={`text-lg font-medium py-2 px-4 rounded-lg transition-colors ${isActive(item.href) ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+                          onClick={() => setIsOpen(false)}
+                          aria-current={isActive(item.href) ? "page" : undefined}
+                        >
+                          {item.name}
+                        </Link>
+                        <Link
+                          to="/tagung"
+                          className={`text-base font-medium py-2 px-4 ml-4 rounded-lg transition-colors ${isActive("/tagung") ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+                          onClick={() => setIsOpen(false)}
+                          aria-current={isActive("/tagung") ? "page" : undefined}
+                        >
+                          → Tagung
                         </Link>
                       </div>
                     );
