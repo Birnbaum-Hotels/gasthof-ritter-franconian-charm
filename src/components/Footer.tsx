@@ -149,17 +149,15 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <img
-                  src={ritterLogo}
-                  alt="Ritter St. Georg Logo"
-                  title="Ritter St. Georg Logo"
-                  className="h-12 w-auto object-contain"
-                />
-                <div>
-                  <div className="font-serif text-lg font-bold">Gasthof Ritter St. Georg</div>
-                  <div className="text-sm opacity-90">Fränkische Gastlichkeit seit 1847</div>
-                </div>
+              <img
+                src={ritterLogo}
+                alt="Ritter St. Georg Logo"
+                title="Ritter St. Georg Logo"
+                className="h-16 w-auto object-contain"
+              />
+              <div>
+                <div className="font-serif text-lg font-bold">Gasthof Ritter St. Georg</div>
+                <div className="text-sm opacity-90">Fränkische Gastlichkeit seit 1847</div>
               </div>
               <p className="text-sm opacity-90">
                 Traditionelle fränkische Küche und gemütliche Hotelzimmer im Herzen Frankens. Erleben Sie echte
