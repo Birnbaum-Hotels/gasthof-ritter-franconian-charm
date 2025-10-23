@@ -149,33 +149,20 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <img
-                  src={ritterLogo}
-                  alt="Ritter St. Georg Logo"
-                  title="Ritter St. Georg Logo"
-                  className="h-12 w-auto object-contain"
-                />
-                <div>
-                  <div className="font-serif text-lg font-bold">Gasthof Ritter St. Georg</div>
-                  <div className="text-sm opacity-90">Fränkische Gastlichkeit seit 1847</div>
-                </div>
+              <img
+                src={ritterLogo}
+                alt="Ritter St. Georg Logo"
+                title="Ritter St. Georg Logo"
+                className="h-16 w-auto object-contain"
+              />
+              <div>
+                <div className="font-serif text-lg font-bold">Gasthof Ritter St. Georg</div>
+                <div className="text-sm opacity-90">Fränkische Gastlichkeit seit 1847</div>
               </div>
               <p className="text-sm opacity-90">
                 Traditionelle fränkische Küche und gemütliche Hotelzimmer im Herzen Frankens. Erleben Sie echte
                 Gastlichkeit.
               </p>
-              <div className="mt-6 p-4 bg-card rounded-lg border border-border">
-                <img
-                  src={traditionalBuilding}
-                  alt="Historisches Gebäude Ritter St. Georg"
-                  title="Traditionelles Gasthaus seit 1891"
-                  className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
-                />
-                <p className="text-xs text-center text-muted-foreground mt-2 italic">
-                  Im Familienbesitz seit 1891
-                </p>
-              </div>
             </div>
 
             {/* Quick Links */}
@@ -206,6 +193,15 @@ const Footer = () => {
                 >
                   Kontakt
                 </Link>
+              </div>
+              <div className="mt-6 pt-4 border-t border-border">
+                <p className="text-xs text-muted-foreground mb-3">Ein Haus der</p>
+                <img
+                  src={birnbaumLogo}
+                  alt="Birnbaum Hotels & Restaurants"
+                  title="Birnbaum Hotels & Restaurants"
+                  className="h-24 w-auto object-contain hover:opacity-80 transition-opacity"
+                />
               </div>
             </div>
 
@@ -261,18 +257,20 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Birnbaum Hotels & Actions */}
+            {/* Traditional Building */}
             <div className="space-y-4">
-              <div className="pt-4 border-t border-border">
-                <p className="text-xs text-muted-foreground mb-3">Ein Haus der</p>
+              <div className="p-4 bg-card rounded-lg border border-border">
                 <img
-                  src={birnbaumLogo}
-                  alt="Birnbaum Hotels & Restaurants"
-                  title="Birnbaum Hotels & Restaurants"
-                  className="h-16 w-auto object-contain hover:opacity-80 transition-opacity mb-4"
+                  src={traditionalBuilding}
+                  alt="Historisches Gebäude Ritter St. Georg"
+                  title="Traditionelles Gasthaus seit 1891"
+                  className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
                 />
+                <p className="text-xs text-center text-muted-foreground mt-2 italic">
+                  Im Familienbesitz seit 1891
+                </p>
               </div>
-
+              
               {/* Action Buttons */}
               <div className="space-y-2">
                 <Button variant="default" size="sm" className="w-full bg-wine-red hover:bg-wine-red-dark text-white">
