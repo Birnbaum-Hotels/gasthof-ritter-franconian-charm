@@ -5,6 +5,7 @@ import { useState } from "react";
 import CookieSettingsDialog from "@/components/CookieSettingsDialog";
 import ritterLogo from "@/assets/ritter-st-georg-logo.jpg";
 import birnbaumLogo from "@/assets/birnbaum-hotels-logo.png";
+import traditionalBuilding from "@/assets/traditional-building.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const properties = [
@@ -164,6 +165,17 @@ const Footer = () => {
                 Traditionelle fränkische Küche und gemütliche Hotelzimmer im Herzen Frankens. Erleben Sie echte
                 Gastlichkeit.
               </p>
+              <div className="mt-6 p-4 bg-card rounded-lg border border-border">
+                <img
+                  src={traditionalBuilding}
+                  alt="Historisches Gebäude Ritter St. Georg"
+                  title="Traditionelles Gasthaus seit 1891"
+                  className="w-full h-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <p className="text-xs text-center text-muted-foreground mt-2 italic">
+                  Im Familienbesitz seit 1891
+                </p>
+              </div>
             </div>
 
             {/* Quick Links */}
