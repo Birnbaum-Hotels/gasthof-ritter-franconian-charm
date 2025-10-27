@@ -34,7 +34,7 @@ const StickyBookingBar = () => {
         section: 'sticky_bar'
       });
     }
-    window.location.href = '/restaurant#reservieren';
+    window.open('https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M', '_blank');
   };
 
   const handleCallClick = () => {

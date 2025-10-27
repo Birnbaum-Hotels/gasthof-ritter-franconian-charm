@@ -273,8 +273,10 @@ const Footer = () => {
               
               {/* Action Buttons */}
               <div className="space-y-2">
-                <Button variant="default" size="sm" className="w-full bg-wine-red hover:bg-wine-red-dark text-white">
-                  Tisch reservieren
+                <Button variant="default" size="sm" className="w-full bg-wine-red hover:bg-wine-red-dark text-white" asChild>
+                  <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer">
+                    Tisch reservieren
+                  </a>
                 </Button>
                 <Button variant="outline" size="sm" className="w-full">
                   Zimmer buchen
