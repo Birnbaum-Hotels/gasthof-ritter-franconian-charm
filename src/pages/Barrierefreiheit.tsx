@@ -74,9 +74,9 @@ const Barrierefreiheit = () => {
                       <Mail className="w-4 h-4" />
                       <span>barrierefreiheit@gasthof-ritter-st-georg.de</span>
                     </a>
-                    <a href="tel:+4993211234567" className="text-primary hover:underline flex items-center gap-2">
+                    <a href="tel:+4991317665-0" className="text-primary hover:underline flex items-center gap-2">
                       <Phone className="w-4 h-4" />
-                      <span>+49 9321 123456</span>
+                      <span>+49 9131 7665-0</span>
                     </a>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ const Barrierefreiheit = () => {
                     <div>
                       <h4 className="font-medium text-primary mb-2">Telefonisch</h4>
                       <p className="text-muted-foreground text-sm">
-                        +49 (0) 9131 123456<br />
+                        +49 9131 7665-0<br />
                         Montag - Sonntag<br />
                         8:00 - 22:00 Uhr
                       </p>

@@ -33,7 +33,7 @@ const Impressum = () => {
                 <div>
                   <h4 className="font-medium text-primary mb-2">Kontakt</h4>
                   <p className="text-muted-foreground">
-                    Telefon: +49 (0) 9131 123456<br />
+                    Telefon: +49 9131 7665-0<br />
                     E-Mail: info@gasthof-ritter-st-georg.de<br />
                     Website: www.gasthof-ritter-st-georg.de
                   </p>

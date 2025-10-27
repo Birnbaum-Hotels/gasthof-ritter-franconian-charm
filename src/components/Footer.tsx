@@ -12,7 +12,7 @@ const Footer = () => {
     {
       name: "Art-Hotel Erlangen",
       address: "Äußere Brucker Straße 90, 91052 Erlangen",
-      phone: "+49 (0) 9131 7140-0",
+      phone: "+49 9131 7665-0",
       email: "art@birnbaum-hotels.de",
       website: "https://www.art-hotel-erlangen.de",
       maps: "https://maps.google.com/?q=Äußere+Brucker+Straße+90,+91052+Erlangen",

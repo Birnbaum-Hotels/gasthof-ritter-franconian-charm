@@ -27,7 +27,7 @@ const Datenschutz = () => {
                   Ritter-von-Spix-Straße 7<br />
                   91054 Erlangen<br />
                   Deutschland<br /><br />
-                  Telefon: +49 (0) 9131 123456<br />
+                  Telefon: +49 9131 7665-0<br />
                   E-Mail: info@gasthof-ritter-st-georg.de
                 </p>
               </CardContent>

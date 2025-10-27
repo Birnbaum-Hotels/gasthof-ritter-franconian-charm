@@ -311,9 +311,9 @@ const Contact = () => {
                           Oder rufen Sie uns direkt an:
                         </p>
                         <Button variant="outline" className="w-full" type="button" asChild>
-                          <a href="tel:+4993211234567">
+                          <a href="tel:+4991317665-0">
                             <Phone className="w-4 h-4 mr-2" />
-                            +49 9321 123456
+                            +49 9131 7665-0
                           </a>
                         </Button>
                       </div>
