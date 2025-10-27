@@ -12,12 +12,12 @@ interface OpeningHours {
 // Opening hours based on typical German restaurant schedule
 const OPENING_HOURS: OpeningHours[] = [
   { day: 0, open: '11:00', close: '22:00' }, // Sunday
-  { day: 1, open: '11:00', close: '22:00' }, // Monday
-  { day: 2, open: '11:00', close: '22:00' }, // Tuesday
-  { day: 3, open: '11:00', close: '22:00' }, // Wednesday
-  { day: 4, open: '11:00', close: '22:00' }, // Thursday
-  { day: 5, open: '11:00', close: '22:00' }, // Friday
-  { day: 6, open: '11:00', close: '22:00' }, // Saturday
+  { day: 1, open: '11:00', close: '23:00' }, // Monday
+  { day: 2, open: '11:00', close: '23:00' }, // Tuesday
+  { day: 3, open: '11:00', close: '23:00' }, // Wednesday
+  { day: 4, open: '11:00', close: '23:00' }, // Thursday
+  { day: 5, open: '11:00', close: '23:00' }, // Friday
+  { day: 6, open: '11:00', close: '23:00' }, // Saturday
 ];
 
 interface OpeningStatus {
