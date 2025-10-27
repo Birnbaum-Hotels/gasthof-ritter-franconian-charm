@@ -220,7 +220,7 @@ const FamilyLeisure = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="secondary" size="lg" asChild>
-                <Link to="/hotel">Zimmer buchen</Link>
+                <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer">Zimmer buchen</a>
               </Button>
               <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 border-white text-white" asChild>
                 <Link to="/contact">Kontakt aufnehmen</Link>

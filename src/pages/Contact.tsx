@@ -108,9 +108,11 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   Buchen Sie Ihr Zimmer für einen erholsamen Aufenthalt
                 </p>
-                <Button variant="accent" className="w-full">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Verfügbarkeit prüfen
+                <Button variant="accent" className="w-full" asChild>
+                  <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Verfügbarkeit prüfen
+                  </a>
                 </Button>
               </CardContent>
             </Card>

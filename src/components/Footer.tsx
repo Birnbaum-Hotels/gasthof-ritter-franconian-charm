@@ -278,8 +278,10 @@ const Footer = () => {
                     Tisch reservieren
                   </a>
                 </Button>
-                <Button variant="outline" size="sm" className="w-full">
-                  Zimmer buchen
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer">
+                    Zimmer buchen
+                  </a>
                 </Button>
               </div>
             </div>

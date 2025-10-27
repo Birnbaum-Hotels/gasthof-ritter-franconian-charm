@@ -24,7 +24,7 @@ const StickyBookingBar = () => {
       });
     }
     // Navigate to booking engine
-    window.open('https://www.booking.com', '_self');
+    window.open('https://booking.roomraccoon.de/ritter-st-georg/', '_blank');
   };
 
   const handleReserveClick = () => {
