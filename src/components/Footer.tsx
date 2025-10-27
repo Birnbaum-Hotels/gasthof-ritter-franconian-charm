@@ -303,6 +303,14 @@ const Footer = () => {
                 Barrierefreiheit
               </Link>
               <span className="hidden md:inline">·</span>
+              <Link to="/terms-conditions" className="underline hover:text-wine-red transition-colors">
+                AGB
+              </Link>
+              <span className="hidden md:inline">·</span>
+              <Link to="/sitemap" className="underline hover:text-wine-red transition-colors">
+                Sitemap
+              </Link>
+              <span className="hidden md:inline">·</span>
               <button
                 type="button"
                 onClick={() => setCookieDialogOpen(true)}

@@ -18,6 +18,8 @@ import Contact from "./pages/Contact";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Barrierefreiheit from "./pages/Barrierefreiheit";
+import TermsConditions from "./pages/TermsConditions";
+import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 import { ConsentProvider } from "@/contexts/ConsentContext";
 import CookieBanner from "@/components/CookieBanner";
@@ -48,6 +50,8 @@ const App = () => (
                 <Route path="/impressum" element={<Impressum />} />
                 <Route path="/datenschutz" element={<Datenschutz />} />
                 <Route path="/barrierefreiheit" element={<Barrierefreiheit />} />
+                <Route path="/terms-conditions" element={<TermsConditions />} />
+                <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

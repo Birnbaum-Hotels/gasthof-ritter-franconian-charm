@@ -3,7 +3,10 @@ import { ArrowRight, Users, Calendar, Star, CheckCircle2 } from "lucide-react";
 import { isConsentGranted } from "@/lib/consent";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-ritter-st-georg.jpg";
+import { useOpeningStatus } from "@/hooks/useOpeningStatus";
 const HeroSection = () => {
+  const openingStatus = useOpeningStatus();
+  
   const handleReserveClick = () => {
     // GA4 event only if analytics consent granted
     if (isConsentGranted('analytics') && typeof window !== 'undefined' && (window as any).gtag) {
@@ -66,9 +69,17 @@ const HeroSection = () => {
 
           {/* Live Status Badge */}
           <div className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm border border-green-500/30">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span>Heute geöffnet bis 22:00</span>
+            <div className={`inline-flex items-center gap-2 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm border ${
+              openingStatus.statusColor === 'green' 
+                ? 'bg-green-500/20 border-green-500/30' 
+                : 'bg-red-500/20 border-red-500/30'
+            }`}>
+              <div className={`w-2 h-2 rounded-full ${
+                openingStatus.statusColor === 'green' 
+                  ? 'bg-green-400 animate-pulse' 
+                  : 'bg-red-400'
+              }`}></div>
+              <span>{openingStatus.message}</span>
             </div>
           </div>
 
