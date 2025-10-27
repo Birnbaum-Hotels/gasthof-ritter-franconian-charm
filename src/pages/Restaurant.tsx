@@ -69,9 +69,11 @@ const Restaurant = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" variant="accent" className="px-8">
-                <Users className="w-5 h-5 mr-2" />
-                Tisch reservieren
+              <Button size="lg" variant="accent" className="px-8" asChild>
+                <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer">
+                  <Users className="w-5 h-5 mr-2" />
+                  Tisch reservieren
+                </a>
               </Button>
               <Button size="lg" variant="secondary" className="px-8">
                 <ShoppingCart className="w-5 h-5 mr-2" />

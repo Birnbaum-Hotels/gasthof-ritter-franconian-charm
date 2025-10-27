@@ -88,8 +88,10 @@ const Header = () => {
               </a>
             </div>
             <div className="hidden lg:flex gap-2">
-              <Button variant="secondary" size="sm" className="h-7" aria-label="Tisch reservieren">
-                Tisch reservieren
+              <Button variant="secondary" size="sm" className="h-7" aria-label="Tisch reservieren" asChild>
+                <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer">
+                  Tisch reservieren
+                </a>
               </Button>
               <Button variant="accent" size="sm" className="h-7" aria-label="Zimmer buchen">
                 Zimmer buchen
@@ -320,8 +322,10 @@ const Header = () => {
                   );
                 })}
                 <div className="flex flex-col gap-2 mt-4 pt-4 border-t">
-                  <Button variant="secondary" className="w-full">
-                    Tisch reservieren
+                  <Button variant="secondary" className="w-full" asChild>
+                    <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer">
+                      Tisch reservieren
+                    </a>
                   </Button>
                   <Button variant="accent" className="w-full">
                     Zimmer buchen

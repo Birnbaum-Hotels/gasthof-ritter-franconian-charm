@@ -92,9 +92,11 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   Sichern Sie sich Ihren Platz in unserem Restaurant
                 </p>
-                <Button variant="accent" className="w-full">
-                  <Users className="w-4 h-4 mr-2" />
-                  Jetzt reservieren
+                <Button variant="accent" className="w-full" asChild>
+                  <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer">
+                    <Users className="w-4 h-4 mr-2" />
+                    Jetzt reservieren
+                  </a>
                 </Button>
               </CardContent>
             </Card>

@@ -85,13 +85,18 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <Link to="/restaurant#reservieren" onClick={handleReserveClick} aria-label="Tisch im Restaurant reservieren">
-              <Button size="lg" className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 h-auto w-full sm:w-auto">
+            <Button 
+              size="lg" 
+              className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 h-auto w-full sm:w-auto"
+              onClick={handleReserveClick}
+              asChild
+            >
+              <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer" aria-label="Tisch im Restaurant reservieren">
                 <Users className="w-5 h-5 mr-2" aria-hidden="true" />
                 Tisch reservieren
                 <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
-              </Button>
-            </Link>
+              </a>
+            </Button>
             <Button 
               size="lg" 
               variant="outline" 

@@ -50,9 +50,11 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm mb-3">
                   Fränkische Spezialitäten in gemütlicher Atmosphäre
                 </p>
-                <Button variant="default" className="w-full" size="sm">
-                  <Clock className="w-4 h-4 mr-2" />
-                  Tisch reservieren
+                <Button variant="default" className="w-full" size="sm" asChild>
+                  <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer">
+                    <Clock className="w-4 h-4 mr-2" />
+                    Tisch reservieren
+                  </a>
                 </Button>
               </CardContent>
             </Card>
