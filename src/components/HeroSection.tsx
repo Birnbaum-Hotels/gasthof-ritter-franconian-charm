@@ -104,7 +104,7 @@ const HeroSection = () => {
               onClick={handleBookingClick}
               asChild
             >
-              <a href="https://www.booking.com" target="_self" aria-label="Zimmer im Hotel buchen">
+              <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer" aria-label="Zimmer im Hotel buchen">
                 <Calendar className="w-5 h-5 mr-2" aria-hidden="true" />
                 Zimmer buchen
                 <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />

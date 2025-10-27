@@ -93,8 +93,10 @@ const Header = () => {
                   Tisch reservieren
                 </a>
               </Button>
-              <Button variant="accent" size="sm" className="h-7" aria-label="Zimmer buchen">
-                Zimmer buchen
+              <Button variant="accent" size="sm" className="h-7" aria-label="Zimmer buchen" asChild>
+                <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer">
+                  Zimmer buchen
+                </a>
               </Button>
             </div>
           </div>
@@ -327,8 +329,10 @@ const Header = () => {
                       Tisch reservieren
                     </a>
                   </Button>
-                  <Button variant="accent" className="w-full">
-                    Zimmer buchen
+                  <Button variant="accent" className="w-full" asChild>
+                    <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer">
+                      Zimmer buchen
+                    </a>
                   </Button>
                 </div>
               </div>

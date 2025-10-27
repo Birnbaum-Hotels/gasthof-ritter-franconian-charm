@@ -92,9 +92,11 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm mb-3">
                   15 gemütliche Zimmer nahe Siemens-Campus & Uni-Klinikum
                 </p>
-                <Button variant="default" className="w-full" size="sm">
-                  <Bed className="w-4 h-4 mr-2" />
-                  Zimmer buchen
+                <Button variant="default" className="w-full" size="sm" asChild>
+                  <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer">
+                    <Bed className="w-4 h-4 mr-2" />
+                    Zimmer buchen
+                  </a>
                 </Button>
               </CardContent>
             </Card>
