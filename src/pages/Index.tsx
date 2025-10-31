@@ -290,7 +290,7 @@ const Index = () => {
 
             <div className="text-center">
               <p className="text-muted-foreground mb-4">Vertrauen Sie auf über 150 positive Bewertungen</p>
-              <Button variant="outline" asChild>
+              <Button variant="default" className="shadow-elegant hover:shadow-glow hover-scale" asChild>
                 <a href="https://www.google.com/search?q=Gasthof+Ritter+St.+Georg+Erlangen" target="_blank" rel="nofollow noopener noreferrer">
                   Alle Bewertungen auf Google ansehen
                   <ArrowRight className="w-4 h-4 ml-2" />

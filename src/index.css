@@ -97,6 +97,8 @@ Warm, rustic elements with modern typography. All colors MUST be HSL.
     --shadow-warm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     --shadow-hero: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-elegant: 0 4px 12px -2px rgba(165, 16, 10, 0.2), 0 2px 4px -1px rgba(165, 16, 10, 0.1);
+    --shadow-glow: 0 0 20px rgba(165, 16, 10, 0.3), 0 4px 12px -2px rgba(165, 16, 10, 0.25);
     
     /* Animation keyframes for smooth interactions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
