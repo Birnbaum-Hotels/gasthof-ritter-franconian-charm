@@ -183,7 +183,12 @@ const Hotel = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" variant="accent" className="px-8" onClick={handleBooking}>
+              <Button 
+                size="lg" 
+                variant="accent" 
+                className="px-8 shadow-elegant hover:shadow-glow hover-scale font-semibold text-base"
+                onClick={handleBooking}
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 Zimmer buchen
               </Button>
@@ -260,8 +265,13 @@ const Hotel = () => {
                     </div>
 
                     <div className="flex gap-3 mt-auto">
-                      <Button variant="accent" className="flex-1" onClick={handleBooking}>
-                        <Calendar className="w-4 h-4 mr-2" />
+                      <Button 
+                        variant="accent" 
+                        size="lg"
+                        className="flex-1 shadow-elegant hover:shadow-glow hover-scale font-semibold text-base"
+                        onClick={handleBooking}
+                      >
+                        <Calendar className="w-5 h-5 mr-2" />
                         Jetzt buchen
                       </Button>
                       <Button 
@@ -432,8 +442,13 @@ const Hotel = () => {
             </div>
 
             <div className="pt-4 border-t">
-              <Button variant="accent" className="w-full" onClick={handleBooking}>
-                <Calendar className="w-4 h-4 mr-2" />
+              <Button 
+                variant="accent" 
+                size="lg"
+                className="w-full shadow-elegant hover:shadow-glow hover-scale font-semibold"
+                onClick={handleBooking}
+              >
+                <Calendar className="w-5 h-5 mr-2" />
                 Jetzt buchen
               </Button>
             </div>
