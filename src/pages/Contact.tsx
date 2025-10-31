@@ -92,7 +92,7 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   Sichern Sie sich Ihren Platz in unserem Restaurant
                 </p>
-                <Button variant="accent" className="w-full" asChild>
+                <Button variant="default" className="w-full shadow-elegant hover:shadow-glow hover-scale" asChild>
                   <a href="https://www.google.com/maps/reserve/v/dine/c/FEVKeqdKz-M" target="_blank" rel="noopener noreferrer">
                     <Users className="w-4 h-4 mr-2" />
                     Jetzt reservieren
@@ -108,7 +108,7 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground mb-4">
                   Buchen Sie Ihr Zimmer für einen erholsamen Aufenthalt
                 </p>
-                <Button variant="accent" className="w-full" asChild>
+                <Button variant="default" className="w-full shadow-elegant hover:shadow-glow hover-scale" asChild>
                   <a href="https://booking.roomraccoon.de/ritter-st-georg/" target="_blank" rel="noopener noreferrer">
                     <Calendar className="w-4 h-4 mr-2" />
                     Verfügbarkeit prüfen
@@ -300,7 +300,7 @@ const Contact = () => {
                         <p className="text-xs text-muted-foreground">
                           * Pflichtfelder
                         </p>
-                        <Button type="submit" variant="accent" className="w-full" size="lg" disabled={form.formState.isSubmitting} aria-label="Nachricht senden">
+                        <Button type="submit" variant="default" className="w-full shadow-elegant hover:shadow-glow hover-scale" size="lg" disabled={form.formState.isSubmitting} aria-label="Nachricht senden">
                           <Mail className="w-4 h-4 mr-2" aria-hidden="true" />
                           {form.formState.isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
                         </Button>

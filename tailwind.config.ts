@@ -128,7 +128,9 @@ export default {
 			boxShadow: {
 				'warm': 'var(--shadow-warm)',
 				'card': 'var(--shadow-card)',
-				'hero': 'var(--shadow-hero)'
+				'hero': 'var(--shadow-hero)',
+				'elegant': 'var(--shadow-elegant)',
+				'glow': 'var(--shadow-glow)'
 			},
 			fontFamily: {
 				'serif': ['Georgia', 'Times New Roman', 'serif'],
