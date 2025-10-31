@@ -25,7 +25,7 @@ const Grillhuette = () => {
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
             Für Feiern bis zu 15 Personen
           </p>
-          <Button size="lg" variant="accent" className="px-12 py-6 text-lg h-auto">
+          <Button size="lg" variant="default" className="px-12 py-6 text-lg h-auto shadow-elegant hover:shadow-glow hover-scale">
             <Calendar className="w-6 h-6 mr-2" />
             Jetzt Grillhütte reservieren
           </Button>
@@ -170,7 +170,7 @@ const Grillhuette = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="lg" variant="accent" className="px-10 py-6 text-lg h-auto">
+              <Button size="lg" variant="default" className="px-10 py-6 text-lg h-auto shadow-elegant hover:shadow-glow hover-scale">
                 <Calendar className="w-6 h-6 mr-2" />
                 Grillhütte reservieren
               </Button>

@@ -185,7 +185,7 @@ const Hotel = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button 
                 size="lg" 
-                variant="accent" 
+                variant="default" 
                 className="px-8 shadow-elegant hover:shadow-glow hover-scale font-semibold text-base"
                 onClick={handleBooking}
               >
@@ -266,7 +266,7 @@ const Hotel = () => {
 
                     <div className="flex gap-3 mt-auto">
                       <Button 
-                        variant="accent" 
+                        variant="default" 
                         size="lg"
                         className="flex-1 shadow-elegant hover:shadow-glow hover-scale font-semibold text-base"
                         onClick={handleBooking}
@@ -276,6 +276,7 @@ const Hotel = () => {
                       </Button>
                       <Button 
                         variant="outline" 
+                        size="lg"
                         className="flex-1"
                         onClick={() => setSelectedRoom(room)}
                       >
@@ -443,7 +444,7 @@ const Hotel = () => {
 
             <div className="pt-4 border-t">
               <Button 
-                variant="accent" 
+                variant="default" 
                 size="lg"
                 className="w-full shadow-elegant hover:shadow-glow hover-scale font-semibold"
                 onClick={handleBooking}
