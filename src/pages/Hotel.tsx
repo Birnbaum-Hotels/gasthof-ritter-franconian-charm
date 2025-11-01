@@ -10,6 +10,10 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Bed, Wifi, Car, Coffee, Calendar, PawPrint, Ban, Baby, Users } from "lucide-react";
+import roomSingle from "@/assets/room-single.jpg";
+import roomDouble from "@/assets/room-double.jpg";
+import roomTriple from "@/assets/room-triple.jpg";
+import roomSuite from "@/assets/room-suite.jpg";
 import hotelImage from "@/assets/hotel-room.jpg";
 
 interface RoomType {
@@ -19,6 +23,7 @@ interface RoomType {
   guests: number;
   features: string[];
   fullDescription?: string;
+  image: string;
 }
 
 const Hotel = () => {
@@ -40,7 +45,8 @@ const Hotel = () => {
         "Kostenloses W-LAN",
         "Garderobe mit Spiegel"
       ],
-      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche - teilweise Badewanne, Kosmetikartikel, Föhn und Minibar"
+      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche - teilweise Badewanne, Kosmetikartikel, Föhn und Minibar",
+      image: roomSingle
     },
     {
       name: "Doppelzimmer Komfort",
@@ -58,7 +64,8 @@ const Hotel = () => {
         "Garderobe mit Spiegel",
         "Minibar"
       ],
-      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche, Kosmetikartikel, Föhn und Minibar"
+      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche, Kosmetikartikel, Föhn und Minibar",
+      image: roomDouble
     },
     {
       name: "Dreibettzimmer",
@@ -76,7 +83,8 @@ const Hotel = () => {
         "Garderobe mit Spiegel",
         "Minibar"
       ],
-      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche, Kosmetikartikel, Föhn und Minibar"
+      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche, Kosmetikartikel, Föhn und Minibar",
+      image: roomTriple
     },
     {
       name: "Vierbettzimmer / Suite",
@@ -92,7 +100,8 @@ const Hotel = () => {
         "Badezimmer mit Dusche",
         "Kosmetikartikel, Föhn und Minibar"
       ],
-      fullDescription: "Die Suiten haben Wohncharakter und bieten großzügig Platz für bis zu 4 Personen. Die Ausstattung mit Schreibtisch, kostenlosem WLAN, einer Zimmergröße von 30 m², einer Aufteilung auf zwei Räume und mit einer gemütlichen Sitzecke garantiert einen entspannten Aufenthalt. Immer mit Dusche, Kosmetikartikel, Föhn und Minibar"
+      fullDescription: "Die Suiten haben Wohncharakter und bieten großzügig Platz für bis zu 4 Personen. Die Ausstattung mit Schreibtisch, kostenlosem WLAN, einer Zimmergröße von 30 m², einer Aufteilung auf zwei Räume und mit einer gemütlichen Sitzecke garantiert einen entspannten Aufenthalt. Immer mit Dusche, Kosmetikartikel, Föhn und Minibar",
+      image: roomSuite
     },
     {
       name: "Doppelzimmer Premium",
@@ -111,7 +120,8 @@ const Hotel = () => {
         "Minibar",
         "Teilweise Badewanne"
       ],
-      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche - teilweise Badewanne, Kosmetikartikel, Föhn und Minibar"
+      fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche - teilweise Badewanne, Kosmetikartikel, Föhn und Minibar",
+      image: hotelImage
     },
     {
       name: "Familienzimmer",
@@ -127,7 +137,8 @@ const Hotel = () => {
         "Badezimmer mit Dusche",
         "Kosmetikartikel, Föhn und Minibar"
       ],
-      fullDescription: "Die Familienzimmer haben Wohncharakter und bieten großzügig Platz für bis zu 6 Personen. Die Ausstattung mit Schreibtisch, kostenlosem WLAN, einer Zimmergröße von 40 m², einer Aufteilung auf zwei Räume und mit einer Sitzgelegenheit mit Tisch garantiert einen entspannten Aufenthalt."
+      fullDescription: "Die Familienzimmer haben Wohncharakter und bieten großzügig Platz für bis zu 6 Personen. Die Ausstattung mit Schreibtisch, kostenlosem WLAN, einer Zimmergröße von 40 m², einer Aufteilung auf zwei Räume und mit einer Sitzgelegenheit mit Tisch garantiert einen entspannten Aufenthalt.",
+      image: hotelImage
     }
   ];
 
@@ -227,7 +238,7 @@ const Hotel = () => {
                 <div className="md:flex">
                   <div className="md:w-1/3">
                     <img
-                      src={hotelImage}
+                      src={room.image}
                       alt={`${room.name} - Gasthof Ritter St. Georg`}
                       className="w-full h-64 md:h-full object-cover"
                     />
