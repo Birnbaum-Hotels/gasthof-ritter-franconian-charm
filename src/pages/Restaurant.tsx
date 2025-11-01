@@ -32,7 +32,7 @@ const Restaurant = () => {
       ]
     }
   ];
-  const menuSrc = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/menu-proxy?url=${encodeURIComponent('https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen')}`;
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -316,7 +316,7 @@ const Restaurant = () => {
             <Card className="overflow-hidden shadow-elegant">
               <CardContent className="p-0">
                 <iframe
-                  src={menuSrc}
+                  src="https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen"
                   className="w-full h-[900px] md:h-[1100px] border-0"
                   title="Live Speisekarte – Gasthof Ritter St. Georg"
                   loading="lazy"
