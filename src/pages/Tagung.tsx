@@ -62,7 +62,7 @@ const Tagung = () => {
                   Jetzt Anfragen
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="px-10 py-6 text-lg border-white text-white hover:bg-white hover:text-primary shadow-elegant">
+              <Button size="lg" variant="outline" className="px-10 py-6 text-lg border-2 border-white !text-white hover:bg-white hover:!text-primary shadow-elegant bg-transparent">
                 <Phone className="w-6 h-6 mr-2" />
                 +49 9131 7665-0
               </Button>
