@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Flame, Users, MapPin, Calendar, Phone, Mail } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
+import VacationBanner from "@/components/VacationBanner";
 
 const Grillhuette = () => {
   return (
@@ -204,6 +205,9 @@ const Grillhuette = () => {
           </div>
         </div>
       </section>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

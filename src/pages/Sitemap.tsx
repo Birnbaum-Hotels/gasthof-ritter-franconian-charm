@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Home, UtensilsCrossed, Flame, PartyPopper, Building, Hotel, Gift, Users, Info, Mail, FileText, Shield, Eye } from "lucide-react";
+import VacationBanner from "@/components/VacationBanner";
 
 const Sitemap = () => {
   const siteLinks = [
@@ -97,6 +98,9 @@ const Sitemap = () => {
           </ul>
         </div>
       </div>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Heart, Building, Stethoscope, Beer, Gift, Clock, MapPin } from "lucide-react";
 import hotelImage from "@/assets/hotel-room.jpg";
+import VacationBanner from "@/components/VacationBanner";
 
 const Angebote = () => {
   const seasonalOffers = [
@@ -339,6 +340,9 @@ const Angebote = () => {
           </div>
         </div>
       </section>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

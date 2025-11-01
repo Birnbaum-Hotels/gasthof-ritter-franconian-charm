@@ -15,6 +15,7 @@ import roomDouble from "@/assets/room-double.jpg";
 import roomTriple from "@/assets/room-triple.jpg";
 import roomSuite from "@/assets/room-suite.jpg";
 import hotelImage from "@/assets/hotel-room.jpg";
+import VacationBanner from "@/components/VacationBanner";
 
 interface RoomType {
   name: string;
@@ -467,6 +468,9 @@ const Hotel = () => {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

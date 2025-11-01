@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Utensils, Bed, Star, Clock, MapPin, Flame, Users } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
 import hotelImage from "@/assets/hotel-room.jpg";
+import VacationBanner from "@/components/VacationBanner";
 const Index = () => {
   return <>
       {/* Hero Section */}
@@ -379,6 +380,9 @@ const Index = () => {
       <div className="md:hidden">
         <StickyBookingBar />
       </div>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </>;
 };
 export default Index;

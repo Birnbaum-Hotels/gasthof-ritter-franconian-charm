@@ -10,6 +10,7 @@ import * as z from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import VacationBanner from "@/components/VacationBanner";
 const contactFormSchema = z.object({
   firstName: z.string().trim().min(1, "Vorname ist erforderlich").max(100, "Vorname muss weniger als 100 Zeichen haben"),
   lastName: z.string().trim().min(1, "Nachname ist erforderlich").max(100, "Nachname muss weniger als 100 Zeichen haben"),
@@ -345,6 +346,9 @@ const Contact = () => {
           </Card>
         </div>
       </section>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>;
 };
 export default Contact;

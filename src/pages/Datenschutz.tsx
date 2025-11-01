@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import VacationBanner from "@/components/VacationBanner";
 
 const Datenschutz = () => {
   return (
@@ -166,6 +167,9 @@ const Datenschutz = () => {
           </div>
         </div>
       </div>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

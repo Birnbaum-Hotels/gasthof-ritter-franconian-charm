@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, Users, Calendar, Camera, Utensils, MapPin } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
 import { useState } from "react";
+import VacationBanner from "@/components/VacationBanner";
 const Feiern = () => {
   const [selectedPackage, setSelectedPackage] = useState(1); // Premium package selected by default
   const celebrationTypes = [
@@ -243,6 +244,9 @@ const Feiern = () => {
           </div>
         </div>
       </section>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };
