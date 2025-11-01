@@ -5,6 +5,7 @@ import biergarten from "@/assets/gallery-biergarten.jpg";
 import breakfast from "@/assets/gallery-breakfast.jpg";
 import exterior from "@/assets/gallery-exterior.jpg";
 import wedding from "@/assets/gallery-wedding.jpg";
+import biergartenNight from "@/assets/gallery-biergarten-night.jpg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -29,6 +30,10 @@ const Gallery = () => {
     {
       src: wedding,
       alt: "Hochzeitsfeier im Regnitzsalon – Traumhafte Feiern im Gasthof Ritter St. Georg",
+    },
+    {
+      src: biergartenNight,
+      alt: "Biergarten bei Nacht – Romantische Abendstimmung unter Lichterketten im Gasthof Ritter St. Georg",
     },
   ];
 
