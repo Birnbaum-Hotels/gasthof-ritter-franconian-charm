@@ -46,6 +46,7 @@ serve(async (req: Request) => {
 
     headers.set("Access-Control-Allow-Origin", "*");
     headers.set("Cache-Control", "s-maxage=300, max-age=60");
+    headers.set("Content-Type", "text/html; charset=utf-8");
 
     return new Response(upstream.body, {
       status: upstream.status,
