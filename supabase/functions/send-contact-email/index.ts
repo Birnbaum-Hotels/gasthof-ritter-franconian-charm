@@ -31,7 +31,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to the business
     const emailResponse = await resend.emails.send({
       from: "Kontaktformular <onboarding@resend.dev>",
-      to: ["info@gasthof-ritter-st-georg.de"],
+      to: ["ritter@birnbaum-hotels.de"],
       subject: `Neue Kontaktanfrage: ${formData.subject}`,
       html: `
         <h2>Neue Kontaktanfrage</h2>
