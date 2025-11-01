@@ -32,6 +32,7 @@ const Restaurant = () => {
       ]
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-background">
@@ -76,9 +77,11 @@ const Restaurant = () => {
                   Tisch reservieren
                 </a>
               </Button>
-              <Button size="lg" variant="secondary" className="px-8">
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Online bestellen
+              <Button size="lg" variant="secondary" className="px-8" asChild>
+                <a href="https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen" target="_blank" rel="noopener noreferrer">
+                  <ShoppingCart className="w-5 h-5 mr-2" />
+                  Online bestellen
+                </a>
               </Button>
             </div>
           </div>
@@ -311,28 +314,34 @@ const Restaurant = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden shadow-elegant text-center p-12">
-              <CardContent className="space-y-6">
-                <Utensils className="w-16 h-16 mx-auto text-primary" />
-                <h3 className="text-2xl font-serif font-bold">
-                  Aktuelle Speisekarte
-                </h3>
-                <p className="text-muted-foreground">
-                  Sehen Sie sich unsere vollständige Speisekarte mit tagesaktuellen Gerichten und Preisen an.
-                </p>
-                <Button size="lg" variant="default" className="px-12 shadow-elegant hover:shadow-glow hover-scale" asChild>
-                  <a 
-                    href="https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    Speisekarte ansehen
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </a>
-                </Button>
+          <div className="max-w-6xl mx-auto">
+            <Card className="overflow-hidden shadow-elegant">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen"
+                  className="w-full h-[900px] md:h-[1100px] border-0"
+                  title="Live Speisekarte – Gasthof Ritter St. Georg"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </CardContent>
             </Card>
+
+            <div className="text-center mt-6">
+              <Button size="lg" variant="default" className="px-12 shadow-elegant hover:shadow-glow hover-scale" asChild>
+                <a 
+                  href="https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Speisekarte in neuem Tab öffnen
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+              </Button>
+              <p className="text-xs text-muted-foreground mt-3">
+                Hinweis: Falls die eingebettete Ansicht nicht lädt, nutzen Sie bitte den Button.
+              </p>
+            </div>
           </div>
         </div>
       </section>
