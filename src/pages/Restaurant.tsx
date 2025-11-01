@@ -241,38 +241,6 @@ const Restaurant = () => {
               </CardContent>
             </Card>
 
-            {/* Vierte Stube - placeholder name */}
-            <Card className="overflow-hidden shadow-warm">
-              <div className="relative h-56">
-                <img 
-                  src={restaurantImage} 
-                  alt="Weitere Gaststube" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-2xl font-serif">[Name der vierten Stube]</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  [Beschreibung folgt - Atmosphäre und Besonderheiten]
-                </p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-primary" />
-                    <span className="text-muted-foreground">Kapazität: [XX Personen]</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Star className="w-4 h-4 text-primary mt-0.5" />
-                    <span className="text-muted-foreground">Ambiente: [Beschreibung folgt]</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Utensils className="w-4 h-4 text-primary mt-0.5" />
-                    <span className="text-muted-foreground">Ideal für: [Anlässe folgen]</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
