@@ -1,52 +1,39 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import heroImage from "@/assets/hero-ritter-st-georg.jpg";
-import restaurantImage from "@/assets/restaurant-interior.jpg";
-import hotelImage from "@/assets/hotel-room.jpg";
+import grillhuetteRiver from "@/assets/gallery-grillhuette-river.jpg";
+import biergarten from "@/assets/gallery-biergarten.jpg";
+import breakfast from "@/assets/gallery-breakfast.jpg";
+import exterior from "@/assets/gallery-exterior.jpg";
+import wedding from "@/assets/gallery-wedding.jpg";
+import biergartenNight from "@/assets/gallery-biergarten-night.jpg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const images = [
     {
-      src: heroImage,
-      alt: "Historische Sandstein-Fassade im Abendlicht – Eingang im Gasthof Ritter St. Georg in Erlangen",
+      src: grillhuetteRiver,
+      alt: "Grillhütte am Fluss – Idyllischer Biergarten am Wasser im Gasthof Ritter St. Georg",
     },
     {
-      src: restaurantImage,
-      alt: "Traditionelle Gaststube mit gedeckten Tischen im Gasthof Ritter St. Georg in Erlangen",
+      src: biergarten,
+      alt: "Biergarten im Frühling – Blühende Bäume und gemütliche Bierbänke",
     },
     {
-      src: hotelImage,
-      alt: "Doppelzimmer mit Tageslicht & Schreibtisch im Gasthof Ritter St. Georg in Erlangen",
+      src: breakfast,
+      alt: "Frühstücksbuffet – Reichhaltiges Frühstück mit regionalen Spezialitäten",
     },
     {
-      src: heroImage,
-      alt: "Außenansicht bei Dämmerung – Gasthof Ritter St. Georg in Erlangen",
+      src: exterior,
+      alt: "Historische Sandstein-Fassade mit Frühlingsblüten – Gasthof Ritter St. Georg Erlangen",
     },
     {
-      src: restaurantImage,
-      alt: "Gemütliche Restaurant-Atmosphäre im Gasthof Ritter St. Georg in Erlangen",
+      src: wedding,
+      alt: "Hochzeitsfeier im Regnitzsalon – Traumhafte Feiern im Gasthof Ritter St. Georg",
     },
     {
-      src: hotelImage,
-      alt: "Komfortables Einzelzimmer im Gasthof Ritter St. Georg in Erlangen",
-    },
-    {
-      src: heroImage,
-      alt: "Historisches Sandsteingebäude – Gasthof Ritter St. Georg in Erlangen",
-    },
-    {
-      src: restaurantImage,
-      alt: "Fränkische Spezialitäten – Restaurant im Gasthof Ritter St. Georg",
-    },
-    {
-      src: hotelImage,
-      alt: "Moderne Zimmerausstattung im Gasthof Ritter St. Georg in Erlangen",
-    },
-    {
-      src: heroImage,
-      alt: "Abendstimmung am Gasthof Ritter St. Georg in Erlangen",
+      src: biergartenNight,
+      alt: "Biergarten bei Nacht – Romantische Abendstimmung unter Lichterketten im Gasthof Ritter St. Georg",
     },
   ];
 
