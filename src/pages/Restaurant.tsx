@@ -77,9 +77,11 @@ const Restaurant = () => {
                   Tisch reservieren
                 </a>
               </Button>
-              <Button size="lg" variant="secondary" className="px-8">
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Online bestellen
+              <Button size="lg" variant="secondary" className="px-8" asChild>
+                <a href="https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen" target="_blank" rel="noopener noreferrer">
+                  <ShoppingCart className="w-5 h-5 mr-2" />
+                  Online bestellen
+                </a>
               </Button>
             </div>
           </div>
