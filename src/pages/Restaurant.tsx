@@ -299,7 +299,7 @@ const Restaurant = () => {
         </div>
       </section>
 
-      {/* Menu Section */}
+      {/* Live Menu Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -307,55 +307,21 @@ const Restaurant = () => {
               Unsere Speisekarte
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Eine Auswahl unserer beliebtesten fränkischen Spezialitäten
+              Entdecken Sie unsere aktuelle Speisekarte mit allen fränkischen Spezialitäten
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-12">
-            {menuCategories.map((category, index) => (
-              <div key={index}>
-                <h3 className="text-2xl font-serif font-semibold text-primary mb-6 text-center">
-                  {category.name}
-                </h3>
-                <div className="grid gap-6">
-                  {category.items.map((item, itemIndex) => (
-                    <Card key={itemIndex} className="shadow-card">
-                      <CardContent className="p-6">
-                        <div className="flex justify-between items-start">
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <h4 className="text-lg font-semibold text-primary">
-                                {item.name}
-                              </h4>
-                              {item.popular && (
-                                <Badge variant="secondary" className="text-xs">
-                                  Beliebt
-                                </Badge>
-                              )}
-                            </div>
-                            <p className="text-muted-foreground text-sm">
-                              {item.description}
-                            </p>
-                          </div>
-                          <div className="text-xl font-bold text-accent ml-4">
-                            {item.price}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
-              Möchten Sie unsere komplette Speisekarte sehen?
-            </p>
-            <Button variant="outline" size="lg">
-              Vollständige Speisekarte (PDF)
-            </Button>
+          <div className="max-w-6xl mx-auto">
+            <Card className="overflow-hidden shadow-elegant">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://eat.allo.restaurant/restaurant/gasthof-ritter-sankt-georg-erlangen"
+                  className="w-full h-[800px] md:h-[1000px] border-0"
+                  title="Live Restaurant Menu - Gasthof Ritter St. Georg"
+                  loading="lazy"
+                />
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
