@@ -23,7 +23,7 @@ const Footer = () => {
       address: "Leipziger Straße 3, 91058 Erlangen",
       phone: "+49 (0) 9131 7665-0",
       email: "ritter@birnbaum-hotels.de",
-      website: "https://hotel-im-bauerngarten.de",
+      website: "https://hotel-bauerngarten.hotel-restaurant-erlangen.de/",
       maps: "https://maps.google.com/?q=Leipziger+Straße+3,+91058+Erlangen",
       description: "Ruhig gelegen. Kostenlose Parkplätze.",
     },
