@@ -101,7 +101,7 @@ const Hotel = () => {
         "Kosmetikartikel, Föhn und Minibar"
       ],
       fullDescription: "Die Suiten haben Wohncharakter und bieten großzügig Platz für bis zu 4 Personen. Die Ausstattung mit Schreibtisch, kostenlosem WLAN, einer Zimmergröße von 30 m², einer Aufteilung auf zwei Räume und mit einer gemütlichen Sitzecke garantiert einen entspannten Aufenthalt. Immer mit Dusche, Kosmetikartikel, Föhn und Minibar",
-      image: roomTriple
+      image: roomSuite
     },
     {
       name: "Doppelzimmer Premium",
@@ -121,7 +121,7 @@ const Hotel = () => {
         "Teilweise Badewanne"
       ],
       fullDescription: "Dieses modern eingerichtete und geräumige Nichtraucherzimmer bietet Ihnen kostenfreies W-LAN, Sat-TV, Radiowecker, Telefon, Garderobe mit Spiegel, Badezimmer mit Dusche - teilweise Badewanne, Kosmetikartikel, Föhn und Minibar",
-      image: roomDouble
+      image: hotelImage
     },
     {
       name: "Familienzimmer",
@@ -138,7 +138,7 @@ const Hotel = () => {
         "Kosmetikartikel, Föhn und Minibar"
       ],
       fullDescription: "Die Familienzimmer haben Wohncharakter und bieten großzügig Platz für bis zu 6 Personen. Die Ausstattung mit Schreibtisch, kostenlosem WLAN, einer Zimmergröße von 40 m², einer Aufteilung auf zwei Räume und mit einer Sitzgelegenheit mit Tisch garantiert einen entspannten Aufenthalt.",
-      image: roomSuite
+      image: hotelImage
     }
   ];
 
