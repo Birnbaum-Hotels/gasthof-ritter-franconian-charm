@@ -129,6 +129,122 @@ const Restaurant = () => {
         </div>
       </section>
 
+      {/* Dining Rooms Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-serif font-bold text-primary mb-4">
+              Unsere Gaststuben
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Entdecken Sie unsere verschiedenen Räumlichkeiten - jede mit eigenem Charakter und Charme
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto space-y-8">
+            {/* Urige Stube */}
+            <Card className="overflow-hidden shadow-warm">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative h-64 md:h-auto">
+                  <img 
+                    src={restaurantImage} 
+                    alt="Urige Stube" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:p-8 flex flex-col justify-center">
+                  <CardTitle className="text-2xl font-serif mb-4">Urige Stube</CardTitle>
+                  <p className="text-muted-foreground mb-6">
+                    [Beschreibung folgt - Atmosphäre und Besonderheiten der Urigen Stube]
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Users className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Kapazität: [XX Personen]</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Star className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">Ambiente: [Beschreibung folgt]</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Utensils className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">Ideal für: [Anlässe folgen]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Regnitzsalon */}
+            <Card className="overflow-hidden shadow-warm">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative h-64 md:h-auto md:order-2">
+                  <img 
+                    src={restaurantImage} 
+                    alt="Regnitzsalon" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:p-8 flex flex-col justify-center md:order-1">
+                  <CardTitle className="text-2xl font-serif mb-4">Regnitzsalon</CardTitle>
+                  <p className="text-muted-foreground mb-6">
+                    [Beschreibung folgt - Atmosphäre und Besonderheiten des Regnitzsalons]
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Users className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Kapazität: [XX Personen]</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Star className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">Ambiente: [Beschreibung folgt]</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Utensils className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">Ideal für: [Anlässe folgen]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Schwarz-Weiß-Stube */}
+            <Card className="overflow-hidden shadow-warm">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative h-64 md:h-auto">
+                  <img 
+                    src={restaurantImage} 
+                    alt="Schwarz-Weiß-Stube" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:p-8 flex flex-col justify-center">
+                  <CardTitle className="text-2xl font-serif mb-4">Schwarz‑Weiß‑Stube</CardTitle>
+                  <p className="text-muted-foreground mb-6">
+                    [Beschreibung folgt - Atmosphäre und Besonderheiten der Schwarz-Weiß-Stube]
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Users className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">Kapazität: [XX Personen]</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Star className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">Ambiente: [Beschreibung folgt]</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Utensils className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">Ideal für: [Anlässe folgen]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+          </div>
+        </div>
+      </section>
+
       {/* Grillhütte Highlight */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
