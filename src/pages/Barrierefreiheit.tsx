@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accessibility, Phone, Mail } from "lucide-react";
+import VacationBanner from "@/components/VacationBanner";
 
 const Barrierefreiheit = () => {
   return (
@@ -232,6 +233,9 @@ const Barrierefreiheit = () => {
           </div>
         </div>
       </div>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

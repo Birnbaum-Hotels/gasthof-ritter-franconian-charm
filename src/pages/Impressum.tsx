@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import VacationBanner from "@/components/VacationBanner";
 
 const Impressum = () => {
   return (
@@ -121,6 +122,9 @@ const Impressum = () => {
           </div>
         </div>
       </div>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

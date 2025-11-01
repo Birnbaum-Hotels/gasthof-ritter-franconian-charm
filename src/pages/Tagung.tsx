@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Phone, Mail, Wifi, Tv, Monitor } from "lucide-react";
 import hotelImage from "@/assets/hotel-room.jpg";
+import VacationBanner from "@/components/VacationBanner";
 
 const Tagung = () => {
   const rooms = [
@@ -216,6 +217,9 @@ const Tagung = () => {
           </div>
         </div>
       </section>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

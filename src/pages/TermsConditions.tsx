@@ -1,3 +1,5 @@
+import VacationBanner from "@/components/VacationBanner";
+
 const TermsConditions = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -11,6 +13,9 @@ const TermsConditions = () => {
           </p>
         </div>
       </div>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

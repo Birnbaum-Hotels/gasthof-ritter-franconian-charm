@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Award, Heart, Clock, MapPin, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-gasthof.jpg";
+import VacationBanner from "@/components/VacationBanner";
 const About = () => {
   const familyMembers = [
     {
@@ -212,6 +213,9 @@ const About = () => {
           </Card>
         </div>
       </section>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };

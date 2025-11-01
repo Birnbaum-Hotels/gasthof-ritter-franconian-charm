@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, ShoppingCart, Star, Utensils, Flame, ArrowRight } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
+import VacationBanner from "@/components/VacationBanner";
 
 const Restaurant = () => {
   const menuCategories = [
@@ -358,6 +359,9 @@ const Restaurant = () => {
           </div>
         </div>
       </section>
+
+      {/* Vacation Banner */}
+      <VacationBanner />
     </div>
   );
 };
